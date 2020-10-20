@@ -1,0 +1,35 @@
+Executing: bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries -g mkMult1  mult4/Mult1.bsv 
+WARNING: + bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries -g mkMult1 mult4/Mult1.bsv
+RESULT: checking package dependencies
+RESULT: compiling mult4/Mult.bsv
+RESULT: compiling mult4/Mult1.bsv
+RESULT: code generation for mkMult1 starts
+WARNING: Warning: "mult4/Mult1.bsv", line 8, column 8: (G0117)
+WARNING:   Rule `start' shadows the effects of `cycle' when they execute in the same
+WARNING:   clock cycle. Affected method calls:
+WARNING:     product.write, mcand.write, mplr.write
+WARNING:   To silence this warning, use the `-no-warn-action-shadowing' flag.
+RESULT: Elaborated module file created: mult4/mkMult1.ba
+RESULT: All packages are up to date.
+The module 'mkMult4Tbbb' does not exist.
+There is no module loaded.
+The module 'mkMultvv2' does not exist.
+There is no module loaded.
+mkMult1
+The module 'mkMult4Tbbb' does not exist.
+{{mult4/Mult1.bsv 8 8} G0117 {Warning: "mult4/Mult1.bsv", line 8, column 8: (G0117)
+  Rule `start' shadows the effects of `cycle' when they execute in the same
+  clock cycle. Affected method calls:
+    product.write, mcand.write, mplr.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+}}
+result RL_cycle start
+result RL_cycle start
+The module 'mkMultvv2' does not exist.
+The rule is not specified
+Incorrect rule name "sss"
+The rules are not specified
+The second rule is not specified
+The second rule is not specified
+Incorrect rule name "ddd"
+Incorrect rule name "asss"

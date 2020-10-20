@@ -1,0 +1,13 @@
+set here [file join [absolute $srcdir] $subdir]
+source $here/../../bdw.tcl
+ 
+if { [info exists env(DISPLAY)] && $env(DISPLAY) != "" } {
+
+# Checks the Project menu functionality
+bdw_run_compare_pass project_menu_test.tcl
+
+# Checks the File menu functionality
+bdw_run_compare_pass file_menu_test.tcl
+
+}
+

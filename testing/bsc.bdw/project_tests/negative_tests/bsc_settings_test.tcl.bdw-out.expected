@@ -1,0 +1,9 @@
+The compilation type is not specified
+The compilation type should be either make or bsc.
+There is no option specified
+Unknown option: -bluesimmm
+Unknown option: -opt
+There are no arguments specified
+Argument -vdir expects an argument none found
+The option -vdir has already been specified
+Argument -bdir expects an argument none found

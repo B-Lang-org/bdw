@@ -1,0 +1,77 @@
+
+# Compile a file to query (generating .bi, .bo, and .ba)
+bsc_compile Test.bsv {-verilog -elab}
+bsc_compile Test2.bsv {-verilog -elab}
+
+set sedPosition {-e /position.*%/s/\[0-9\]/N/g}
+
+# -------------------------
+# Add BDWDIR/tcllib/util/ to the Tcl search path
+
+# Set up BDW so that we can query it for BDWDIR
+set here [file join [absolute $srcdir] $subdir]
+source $here/../bdw.tcl
+
+set bdwdir [exec $bdw --show-bdwdir]
+
+# Set the path in the environment
+# so that exec calls will also see it
+#
+# First record the existing BLUETCLLIBPATH
+# so that it can be restored when we are done
+#
+if { [info exist env(BLUETCLLIBPATH)] } {
+    set prev_bluetcllibpath $env(BLUETCLLIBPATH)
+} else {
+    unset -nocomplain prev_bluetcllibpath
+}
+lappend env(BLUETCLLIBPATH) $bdwdir/tcllib/util
+#note "BLUETCLLIBPATH $env(BLUETCLLIBPATH)"
+
+# -------------------------
+
+bluetcl_run_compare_pass vtype.tcl "" $sedPosition
+
+# -------------------------
+
+# Test virtual objects
+proc virtual_subset {suffix} {
+    upvar sedPosition sedP
+    bluetcl_run_compare_pass virtual_$suffix.tcl "" $sedP
+    compare_file $suffix.GtkWaveScript.bits.dump
+    compare_file $suffix.GtkWaveScript.typed.dump
+    compare_file $suffix.NovasRC.bits.dump
+    compare_file $suffix.NovasRC.typed.dump
+
+    # Compare a history script
+    compare_file $suffix.NovasRC.typed.tcl-out 
+    set outfile  $suffix.NovasRC.typed.replay.dump
+
+
+    exit_status [list ./$suffix.NovasRC.typed.tcl-out -viewer NovasRC -ScriptFile $outfile] 0 \
+        "./$suffix.NovasRC.typed.tcl-out.exec-out"
+    compare_file $outfile  $suffix.NovasRC.typed.dump
+}
+
+
+bsc_compile HierTest.bsv {-verilog -elab}
+bsc_compile HierTest2.bsv {-verilog -elab}
+
+virtual_subset 1v
+virtual_subset 2v
+virtual_subset 3h
+virtual_subset 4h
+
+#dont test sim because bluesim does not do imported verilog
+#need to test another way xxx
+#virtual_subset 1s
+#virtual_subset 2s
+
+# -------------------------
+
+# Restore the BLUETCLLIBPATH
+if { [info exist prev_bluetcllibpath] } {
+    set env(BLUETCLLIBPATH) $prev_bluetcllibpath
+} else {
+    unset env(BLUETCLLIBPATH)
+}

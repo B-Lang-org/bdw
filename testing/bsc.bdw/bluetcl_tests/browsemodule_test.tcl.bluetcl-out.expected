@@ -1,0 +1,14 @@
+-verilog
+mkM mkT
+{1 {top (mkT)} {}}
+{2 {r1 (mkM)} {}} {3 {r2 (mkM)} {}}
+{4 {ptr (RegN)} {}} {5 {r1 (RegN)} {}} {6 {r2 (RegN)} {}}
+
+primitive
+user {instance r1} {module mkM} {interface Reg#(Bool)} {methods {_write _read}} {rules {RL_rHello RL_rWorld}} {schedule {parallel: [esposito: [_write -> [], _read -> [], RL_rHello -> [], RL_rWorld -> []]]
+order: [_read, RL_rHello, _write, RL_rWorld]}}
+user {instance top} {module mkT} {interface Reg#(Bool)} {methods {_write _read}} {rules {}} {schedule {parallel: [esposito: [_write -> [], _read -> []]]
+order: [_write, _read]}}
+mkM
+
+{1 {top (mkM)} {}}

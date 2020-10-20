@@ -1,0 +1,11 @@
+set here [file join [absolute $srcdir] $subdir]
+source $here/../../bdw.tcl
+ 
+if { [info exists env(DISPLAY)] && $env(DISPLAY) != "" } {
+
+if { [is_tcldot_available] } {
+        # Checks the graph commands
+        bdw_run_compare_pass graph_window_test.tcl
+}
+
+}

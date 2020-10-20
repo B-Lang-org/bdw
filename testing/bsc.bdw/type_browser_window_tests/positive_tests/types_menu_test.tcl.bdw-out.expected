@@ -1,0 +1,25 @@
+Executing: bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries  mult4/Mult4.bsv
+WARNING: + bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries mult4/Mult4.bsv
+RESULT: checking package dependencies
+RESULT: compiling mult4/Mult.bsv
+RESULT: compiling mult4/Mult1.bsv
+RESULT: code generation for mkMult1 starts
+WARNING: Warning: "mult4/Mult1.bsv", line 8, column 8: (G0117)
+WARNING:   Rule `start' shadows the effects of `cycle' when they execute in the same
+WARNING:   clock cycle. Affected method calls:
+WARNING:     product.write, mcand.write, mplr.write
+WARNING:   To silence this warning, use the `-no-warn-action-shadowing' flag.
+RESULT: Elaborated module file created: mult4/mkMult1.ba
+RESULT: compiling mult4/Mult2.bsv
+RESULT: code generation for mkMult2 starts
+WARNING: Warning: "mult4/Mult2.bsv", line 23, column 8: (G0117)
+WARNING:   Rule `start' shadows the effects of `cycle' when they execute in the same
+WARNING:   clock cycle. Affected method calls:
+WARNING:     product.write, mcand.write, mplr.write
+WARNING:   To silence this warning, use the `-no-warn-action-shadowing' flag.
+RESULT: Elaborated module file created: mult4/mkMult2.ba
+RESULT: compiling mult4/Mult4.bsv
+RESULT: All packages are up to date.
+Mult4 CompletionBuffer GetPut Connectable Vector RegFile Mult2 Mult1 Mult ListN Clocks Array List Inout FIFO FIFOF FIFOF_ Counter ConfigReg PreludeBSV Prelude
+Tin
+

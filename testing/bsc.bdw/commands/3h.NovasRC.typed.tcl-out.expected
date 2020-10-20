@@ -1,0 +1,312 @@
+#!/bin/sh
+# Extend comment for tcl \
+exec bluetcl "$0" "$@"
+
+package require Waves
+
+
+set wave_history [list]
+
+lappend wave_history {VSignal /CLK 0}
+lappend wave_history {VSignal /RST_N 0}
+lappend wave_history {VSignal /ms/_element_0/CLK 0}
+lappend wave_history {VSignal /ms/_element_0/RST_N 0}
+lappend wave_history {VSignal /ms/_element_0/request_put 0}
+lappend wave_history {VSignal /ms/_element_0/EN_request_put 0}
+lappend wave_history {VSignal /ms/_element_0/RDY_request_put 0}
+lappend wave_history {VSignal /ms/_element_0/response_get 0}
+lappend wave_history {VSignal /ms/_element_0/EN_response_get 0}
+lappend wave_history {VSignal /ms/_element_0/RDY_response_get 0}
+lappend wave_history {VSignal /ms/_element_0/inf/RST 0}
+lappend wave_history {VSignal /ms/_element_0/inf/CLK 0}
+lappend wave_history {VSignal /ms/_element_0/inf/D_IN 0}
+lappend wave_history {VSignal /ms/_element_0/inf/ENQ 0}
+lappend wave_history {VSignal /ms/_element_0/inf/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_0/inf/DEQ 0}
+lappend wave_history {VSignal /ms/_element_0/inf/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_0/inf/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_0/inf/CLR 0}
+lappend wave_history {VSignal /ms/_element_0/outf/RST 0}
+lappend wave_history {VSignal /ms/_element_0/outf/CLK 0}
+lappend wave_history {VSignal /ms/_element_0/outf/D_IN 0}
+lappend wave_history {VSignal /ms/_element_0/outf/ENQ 0}
+lappend wave_history {VSignal /ms/_element_0/outf/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_0/outf/DEQ 0}
+lappend wave_history {VSignal /ms/_element_0/outf/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_0/outf/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_0/outf/CLR 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f/RST 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f/CLK 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f/D_IN 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f/ENQ 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f/DEQ 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f/CLR 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f_1/RST 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f_1/CLK 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f_1/D_IN 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f_1/ENQ 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f_1/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f_1/DEQ 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f_1/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f_1/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_0/cs/f_1/CLR 0}
+lappend wave_history {VSignal /ms/_element_0/c1/ClientServerRequest/WILL_FIRE_RL_c1_ClientServerRequest 0}
+lappend wave_history {VSignal /ms/_element_0/c1/ClientServerRequest/CAN_FIRE_RL_c1_ClientServerRequest 0}
+lappend wave_history {VSignal /ms/_element_0/c1/ClientServerResponse/WILL_FIRE_RL_c1_ClientServerResponse 0}
+lappend wave_history {VSignal /ms/_element_0/c1/ClientServerResponse/CAN_FIRE_RL_c1_ClientServerResponse 0}
+lappend wave_history {VSignal /ms/_element_0/rw/WVAL 0}
+lappend wave_history {VSignal /ms/_element_0/rw/WSET 0}
+lappend wave_history {VSignal /ms/_element_0/rw/WGET 0}
+lappend wave_history {VSignal /ms/_element_0/rw/WHAS 0}
+lappend wave_history {VSignal /ms/_element_0/pw/WSET 0}
+lappend wave_history {VSignal /ms/_element_0/pw/WHAS 0}
+lappend wave_history {VSignal /ms/_element_0/ww/WVAL 0}
+lappend wave_history {VSignal /ms/_element_0/ww/WSET 0}
+lappend wave_history {VSignal /ms/_element_0/ww/WGET 0}
+lappend wave_history {VSignal /ms/_element_0/ww/WHAS 0}
+lappend wave_history {VSignal /ms/_element_0/tprocess/WILL_FIRE_RL_tprocess 0}
+lappend wave_history {VSignal /ms/_element_0/tprocess/CAN_FIRE_RL_tprocess 0}
+lappend wave_history {VSignal /ms/_element_1/CLK 0}
+lappend wave_history {VSignal /ms/_element_1/RST_N 0}
+lappend wave_history {VSignal /ms/_element_1/request_put 0}
+lappend wave_history {VSignal /ms/_element_1/EN_request_put 0}
+lappend wave_history {VSignal /ms/_element_1/RDY_request_put 0}
+lappend wave_history {VSignal /ms/_element_1/response_get 0}
+lappend wave_history {VSignal /ms/_element_1/EN_response_get 0}
+lappend wave_history {VSignal /ms/_element_1/RDY_response_get 0}
+lappend wave_history {VSignal /ms/_element_1/inf/RST 0}
+lappend wave_history {VSignal /ms/_element_1/inf/CLK 0}
+lappend wave_history {VSignal /ms/_element_1/inf/D_IN 0}
+lappend wave_history {VSignal /ms/_element_1/inf/ENQ 0}
+lappend wave_history {VSignal /ms/_element_1/inf/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_1/inf/DEQ 0}
+lappend wave_history {VSignal /ms/_element_1/inf/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_1/inf/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_1/inf/CLR 0}
+lappend wave_history {VSignal /ms/_element_1/outf/RST 0}
+lappend wave_history {VSignal /ms/_element_1/outf/CLK 0}
+lappend wave_history {VSignal /ms/_element_1/outf/D_IN 0}
+lappend wave_history {VSignal /ms/_element_1/outf/ENQ 0}
+lappend wave_history {VSignal /ms/_element_1/outf/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_1/outf/DEQ 0}
+lappend wave_history {VSignal /ms/_element_1/outf/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_1/outf/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_1/outf/CLR 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f/RST 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f/CLK 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f/D_IN 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f/ENQ 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f/DEQ 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f/CLR 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f_1/RST 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f_1/CLK 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f_1/D_IN 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f_1/ENQ 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f_1/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f_1/DEQ 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f_1/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f_1/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_1/cs/f_1/CLR 0}
+lappend wave_history {VSignal /ms/_element_1/c1/ClientServerRequest/WILL_FIRE_RL_c1_ClientServerRequest 0}
+lappend wave_history {VSignal /ms/_element_1/c1/ClientServerRequest/CAN_FIRE_RL_c1_ClientServerRequest 0}
+lappend wave_history {VSignal /ms/_element_1/c1/ClientServerResponse/WILL_FIRE_RL_c1_ClientServerResponse 0}
+lappend wave_history {VSignal /ms/_element_1/c1/ClientServerResponse/CAN_FIRE_RL_c1_ClientServerResponse 0}
+lappend wave_history {VSignal /ms/_element_1/rw/WVAL 0}
+lappend wave_history {VSignal /ms/_element_1/rw/WSET 0}
+lappend wave_history {VSignal /ms/_element_1/rw/WGET 0}
+lappend wave_history {VSignal /ms/_element_1/rw/WHAS 0}
+lappend wave_history {VSignal /ms/_element_1/pw/WSET 0}
+lappend wave_history {VSignal /ms/_element_1/pw/WHAS 0}
+lappend wave_history {VSignal /ms/_element_1/ww/WVAL 0}
+lappend wave_history {VSignal /ms/_element_1/ww/WSET 0}
+lappend wave_history {VSignal /ms/_element_1/ww/WGET 0}
+lappend wave_history {VSignal /ms/_element_1/ww/WHAS 0}
+lappend wave_history {VSignal /ms/_element_1/tprocess/WILL_FIRE_RL_tprocess 0}
+lappend wave_history {VSignal /ms/_element_1/tprocess/CAN_FIRE_RL_tprocess 0}
+lappend wave_history {VSignal /ms/_element_2/CLK 0}
+lappend wave_history {VSignal /ms/_element_2/RST_N 0}
+lappend wave_history {VSignal /ms/_element_2/request_put 0}
+lappend wave_history {VSignal /ms/_element_2/EN_request_put 0}
+lappend wave_history {VSignal /ms/_element_2/RDY_request_put 0}
+lappend wave_history {VSignal /ms/_element_2/response_get 0}
+lappend wave_history {VSignal /ms/_element_2/EN_response_get 0}
+lappend wave_history {VSignal /ms/_element_2/RDY_response_get 0}
+lappend wave_history {VSignal /ms/_element_2/inf/RST 0}
+lappend wave_history {VSignal /ms/_element_2/inf/CLK 0}
+lappend wave_history {VSignal /ms/_element_2/inf/D_IN 0}
+lappend wave_history {VSignal /ms/_element_2/inf/ENQ 0}
+lappend wave_history {VSignal /ms/_element_2/inf/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_2/inf/DEQ 0}
+lappend wave_history {VSignal /ms/_element_2/inf/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_2/inf/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_2/inf/CLR 0}
+lappend wave_history {VSignal /ms/_element_2/outf/RST 0}
+lappend wave_history {VSignal /ms/_element_2/outf/CLK 0}
+lappend wave_history {VSignal /ms/_element_2/outf/D_IN 0}
+lappend wave_history {VSignal /ms/_element_2/outf/ENQ 0}
+lappend wave_history {VSignal /ms/_element_2/outf/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_2/outf/DEQ 0}
+lappend wave_history {VSignal /ms/_element_2/outf/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_2/outf/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_2/outf/CLR 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f/RST 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f/CLK 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f/D_IN 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f/ENQ 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f/DEQ 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f/CLR 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f_1/RST 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f_1/CLK 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f_1/D_IN 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f_1/ENQ 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f_1/FULL_N 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f_1/DEQ 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f_1/EMPTY_N 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f_1/D_OUT 0}
+lappend wave_history {VSignal /ms/_element_2/cs/f_1/CLR 0}
+lappend wave_history {VSignal /ms/_element_2/c1/ClientServerRequest/WILL_FIRE_RL_c1_ClientServerRequest 0}
+lappend wave_history {VSignal /ms/_element_2/c1/ClientServerRequest/CAN_FIRE_RL_c1_ClientServerRequest 0}
+lappend wave_history {VSignal /ms/_element_2/c1/ClientServerResponse/WILL_FIRE_RL_c1_ClientServerResponse 0}
+lappend wave_history {VSignal /ms/_element_2/c1/ClientServerResponse/CAN_FIRE_RL_c1_ClientServerResponse 0}
+lappend wave_history {VSignal /ms/_element_2/rw/WVAL 0}
+lappend wave_history {VSignal /ms/_element_2/rw/WSET 0}
+lappend wave_history {VSignal /ms/_element_2/rw/WGET 0}
+lappend wave_history {VSignal /ms/_element_2/rw/WHAS 0}
+lappend wave_history {VSignal /ms/_element_2/pw/WSET 0}
+lappend wave_history {VSignal /ms/_element_2/pw/WHAS 0}
+lappend wave_history {VSignal /ms/_element_2/ww/WVAL 0}
+lappend wave_history {VSignal /ms/_element_2/ww/WSET 0}
+lappend wave_history {VSignal /ms/_element_2/ww/WGET 0}
+lappend wave_history {VSignal /ms/_element_2/ww/WHAS 0}
+lappend wave_history {VSignal /ms/_element_2/tprocess/WILL_FIRE_RL_tprocess 0}
+lappend wave_history {VSignal /ms/_element_2/tprocess/CAN_FIRE_RL_tprocess 0}
+lappend wave_history {VSignal /x1/mkConnectionGetPut/WILL_FIRE_RL_x1_mkConnectionGetPut 0}
+lappend wave_history {VSignal /x1/mkConnectionGetPut/CAN_FIRE_RL_x1_mkConnectionGetPut 0}
+lappend wave_history {VSignal /x2/mkConnectionGetPut/WILL_FIRE_RL_x2_mkConnectionGetPut 0}
+lappend wave_history {VSignal /x2/mkConnectionGetPut/CAN_FIRE_RL_x2_mkConnectionGetPut 0}
+lappend wave_history {VInst / ALL}
+lappend wave_history {VInst /ms ALL}
+lappend wave_history {VInst /ms/_element_0 ALL}
+lappend wave_history {VInst /ms/_element_0/inf ALL}
+lappend wave_history {VInst /ms/_element_0/outf ALL}
+lappend wave_history {VInst /ms/_element_0/cs ALL}
+lappend wave_history {VInst /ms/_element_0/cs/f ALL}
+lappend wave_history {VInst /ms/_element_0/cs/f_1 ALL}
+lappend wave_history {VInst /ms/_element_0/c1 ALL}
+lappend wave_history {VInst /ms/_element_0/c1/ClientServerRequest ALL}
+lappend wave_history {VInst /ms/_element_0/c1/ClientServerResponse ALL}
+lappend wave_history {VInst /ms/_element_0/rw ALL}
+lappend wave_history {VInst /ms/_element_0/pw ALL}
+lappend wave_history {VInst /ms/_element_0/ww ALL}
+lappend wave_history {VInst /ms/_element_0/tprocess ALL}
+lappend wave_history {VInst /ms/_element_1 ALL}
+lappend wave_history {VInst /ms/_element_1/inf ALL}
+lappend wave_history {VInst /ms/_element_1/outf ALL}
+lappend wave_history {VInst /ms/_element_1/cs ALL}
+lappend wave_history {VInst /ms/_element_1/cs/f ALL}
+lappend wave_history {VInst /ms/_element_1/cs/f_1 ALL}
+lappend wave_history {VInst /ms/_element_1/c1 ALL}
+lappend wave_history {VInst /ms/_element_1/c1/ClientServerRequest ALL}
+lappend wave_history {VInst /ms/_element_1/c1/ClientServerResponse ALL}
+lappend wave_history {VInst /ms/_element_1/rw ALL}
+lappend wave_history {VInst /ms/_element_1/pw ALL}
+lappend wave_history {VInst /ms/_element_1/ww ALL}
+lappend wave_history {VInst /ms/_element_1/tprocess ALL}
+lappend wave_history {VInst /ms/_element_2 ALL}
+lappend wave_history {VInst /ms/_element_2/inf ALL}
+lappend wave_history {VInst /ms/_element_2/outf ALL}
+lappend wave_history {VInst /ms/_element_2/cs ALL}
+lappend wave_history {VInst /ms/_element_2/cs/f ALL}
+lappend wave_history {VInst /ms/_element_2/cs/f_1 ALL}
+lappend wave_history {VInst /ms/_element_2/c1 ALL}
+lappend wave_history {VInst /ms/_element_2/c1/ClientServerRequest ALL}
+lappend wave_history {VInst /ms/_element_2/c1/ClientServerResponse ALL}
+lappend wave_history {VInst /ms/_element_2/rw ALL}
+lappend wave_history {VInst /ms/_element_2/pw ALL}
+lappend wave_history {VInst /ms/_element_2/ww ALL}
+lappend wave_history {VInst /ms/_element_2/tprocess ALL}
+lappend wave_history {VInst /x1 ALL}
+lappend wave_history {VInst /x1/mkConnectionGetPut ALL}
+lappend wave_history {VInst /x2 ALL}
+lappend wave_history {VInst /x2/mkConnectionGetPut ALL}
+lappend wave_history {VInst / ALL}
+lappend wave_history {VInst /ms ALL}
+lappend wave_history {VInst /ms/_element_0 ALL}
+lappend wave_history {VInst /ms/_element_0/inf ALL}
+lappend wave_history {VInst /ms/_element_0/outf ALL}
+lappend wave_history {VInst /ms/_element_0/cs ALL}
+lappend wave_history {VInst /ms/_element_0/cs/f ALL}
+lappend wave_history {VInst /ms/_element_0/cs/f_1 ALL}
+lappend wave_history {VInst /ms/_element_0/c1 ALL}
+lappend wave_history {VInst /ms/_element_0/c1/ClientServerRequest ALL}
+lappend wave_history {VInst /ms/_element_0/c1/ClientServerResponse ALL}
+lappend wave_history {VInst /ms/_element_0/rw ALL}
+lappend wave_history {VInst /ms/_element_0/pw ALL}
+lappend wave_history {VInst /ms/_element_0/ww ALL}
+lappend wave_history {VInst /ms/_element_0/tprocess ALL}
+lappend wave_history {VInst /ms/_element_1 ALL}
+lappend wave_history {VInst /ms/_element_1/inf ALL}
+lappend wave_history {VInst /ms/_element_1/outf ALL}
+lappend wave_history {VInst /ms/_element_1/cs ALL}
+lappend wave_history {VInst /ms/_element_1/cs/f ALL}
+lappend wave_history {VInst /ms/_element_1/cs/f_1 ALL}
+lappend wave_history {VInst /ms/_element_1/c1 ALL}
+lappend wave_history {VInst /ms/_element_1/c1/ClientServerRequest ALL}
+lappend wave_history {VInst /ms/_element_1/c1/ClientServerResponse ALL}
+lappend wave_history {VInst /ms/_element_1/rw ALL}
+lappend wave_history {VInst /ms/_element_1/pw ALL}
+lappend wave_history {VInst /ms/_element_1/ww ALL}
+lappend wave_history {VInst /ms/_element_1/tprocess ALL}
+lappend wave_history {VInst /ms/_element_2 ALL}
+lappend wave_history {VInst /ms/_element_2/inf ALL}
+lappend wave_history {VInst /ms/_element_2/outf ALL}
+lappend wave_history {VInst /ms/_element_2/cs ALL}
+lappend wave_history {VInst /ms/_element_2/cs/f ALL}
+lappend wave_history {VInst /ms/_element_2/cs/f_1 ALL}
+lappend wave_history {VInst /ms/_element_2/c1 ALL}
+lappend wave_history {VInst /ms/_element_2/c1/ClientServerRequest ALL}
+lappend wave_history {VInst /ms/_element_2/c1/ClientServerResponse ALL}
+lappend wave_history {VInst /ms/_element_2/rw ALL}
+lappend wave_history {VInst /ms/_element_2/pw ALL}
+lappend wave_history {VInst /ms/_element_2/ww ALL}
+lappend wave_history {VInst /ms/_element_2/tprocess ALL}
+lappend wave_history {VInst /x1 ALL}
+lappend wave_history {VInst /x1/mkConnectionGetPut ALL}
+lappend wave_history {VInst /x2 ALL}
+lappend wave_history {VInst /x2/mkConnectionGetPut ALL}
+
+
+
+
+if {[info frame]  == 2 } {
+  # Default option taken from the recorded environment
+  set newargs ""
+  append newargs " "
+  append newargs " -e sysHierTest"
+  append newargs " -backend -verilog"
+
+  # Start the viewer based on recored and command line options
+  if { [catch  [list Waves::start_replay_viewer  $newargs $argv] err] } {
+    puts stderr $err
+    Waves::start_replay_usage $argv0
+    exit -1
+  } else {
+    set viewer $err
+  }
+
+  # Replay script
+  if { [catch [list $viewer replay_history_list $wave_history] err] } {
+    puts stderr "Error:  Could not replay wave history: $err"
+    Waves::start_replay_usage $argv0
+    exit -1
+  }
+}

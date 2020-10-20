@@ -1,0 +1,10 @@
+# Tell Linguist not to include the following code
+# in statistics about this repo
+
+doc/*  linguist-documentation
+
+# The example BSV design used in many of the tests is vendored
+# but might as well ignore all of the test suite, so that its
+# stats don't drown out the actual product
+#
+testing/*  linguist-vendored

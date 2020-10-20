@@ -1,0 +1,525 @@
+COMP_BDIR = mult4
+COMP_BSC_OPTIONS = -keep-fires
+COMP_BSC_TYPE = bluesim
+COMP_INFO_DIR = .
+COMP_SIMDIR = mult4
+COMP_TYPE = bsc
+COPY_FLAGS = 0
+COMP_VDIR = .
+DIR = .
+EDITOR_NAME = gvim
+INCLUDED_FILES = *.bsv
+LINK_BSC_OPTIONS = -keep-fires
+LINK_OUTDIR = .
+LINK_OUTNAME = out
+LINK_TYPE = bsc
+MAIN_PLACEMENT = 700x350+0+0
+MODULE_PLACEMENT = 550x350+50+500
+NAME = project
+PATHS = .
+PATHS = Libraries
+PATHS = mult4
+PACKAGE_PLACEMENT = 770x420+475+150
+PROJECT_PLACEMENT = 250x460+0+385
+RUN_OPTIONS = -V
+SCHEDULE_PLACEMENT = 650x650+500+225
+SIM_NAME = iverilog
+TOP_FILE = mult4/Mult4Tb.bsv
+TOP_MODULE = mkMult4Tb
+TYPE_PLACEMENT = 770x420+475+540
+VIEWER_CLOSE = close
+WIZARD_PLACEMENT = 1024x700+50+50
+EDITOR_GVIM = gvim
+EDITOR_EMACS = emacs
+EDITOR_OTHER = gedit +%n %f
+Executing: bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries -g mkMult4Tb  mult4/Mult4Tb.bsv 
+WARNING: + bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries -g mkMult4Tb mult4/Mult4Tb.bsv
+RESULT: checking package dependencies
+RESULT: compiling mult4/Mult.bsv
+RESULT: compiling mult4/RandGen.bsv
+RESULT: compiling mult4/Mult1.bsv
+RESULT: code generation for mkMult1 starts
+WARNING: Warning: "mult4/Mult1.bsv", line 8, column 8: (G0117)
+WARNING:   Rule `start' shadows the effects of `cycle' when they execute in the same
+WARNING:   clock cycle. Affected method calls:
+WARNING:     product.write, mcand.write, mplr.write
+WARNING:   To silence this warning, use the `-no-warn-action-shadowing' flag.
+RESULT: Elaborated module file created: mult4/mkMult1.ba
+RESULT: compiling mult4/Mult2.bsv
+RESULT: code generation for mkMult2 starts
+WARNING: Warning: "mult4/Mult2.bsv", line 23, column 8: (G0117)
+WARNING:   Rule `start' shadows the effects of `cycle' when they execute in the same
+WARNING:   clock cycle. Affected method calls:
+WARNING:     product.write, mcand.write, mplr.write
+WARNING:   To silence this warning, use the `-no-warn-action-shadowing' flag.
+RESULT: Elaborated module file created: mult4/mkMult2.ba
+RESULT: compiling mult4/Mult4.bsv
+RESULT: compiling mult4/Mult4Tb.bsv
+RESULT: code generation for mkMult4Tb starts
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "fill_m1fifo" was treated as more urgent than "fill_m2fifo". Conflicts:
+WARNING:     "fill_m1fifo" cannot fire before "fill_m2fifo":
+WARNING:       calls to
+WARNING: 	rndm_thefi.deq vs. rndm_thefi.first
+WARNING: 	rndm_thefi.deq vs. rndm_thefi.deq
+WARNING:     "fill_m2fifo" cannot fire before "fill_m1fifo":
+WARNING:       calls to
+WARNING: 	rndm_thefi.deq vs. rndm_thefi.first
+WARNING: 	rndm_thefi.deq vs. rndm_thefi.deq
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "rule_tb_end_task" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server". Conflicts:
+WARNING:     "rule_tb_end_task" cannot fire before "farm1_ifc_start_server":
+WARNING:       calls to farm1_ifc_cbuff_n.addB vs. farm1_ifc_cbuff_n.value
+WARNING:     "farm1_ifc_start_server" cannot fire before "rule_tb_end_task":
+WARNING:       calls to farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_1". Conflicts:
+WARNING:     "farm1_ifc_start_server" cannot fire before "farm1_ifc_start_server_1":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING:     "farm1_ifc_start_server_1" cannot fire before "farm1_ifc_start_server":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_1". Conflicts:
+WARNING:     "farm1_ifc_end_server" cannot fire before "farm1_ifc_start_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_start_server_1" cannot fire before "farm1_ifc_end_server":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_1". Conflicts:
+WARNING:     "farm1_ifc_start_server" cannot fire before "farm1_ifc_end_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_1" cannot fire before "farm1_ifc_start_server":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_1". Conflicts:
+WARNING:     "farm1_ifc_end_server" cannot fire before "farm1_ifc_end_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_1" cannot fire before "farm1_ifc_end_server":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server_1" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_2". Conflicts:
+WARNING:     "farm1_ifc_start_server_1" cannot fire before "farm1_ifc_start_server_2":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING:     "farm1_ifc_start_server_2" cannot fire before "farm1_ifc_start_server_1":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server_1" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_2". Conflicts:
+WARNING:     "farm1_ifc_end_server_1" cannot fire before "farm1_ifc_start_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_start_server_2" cannot fire before "farm1_ifc_end_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server_1" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_2". Conflicts:
+WARNING:     "farm1_ifc_start_server_1" cannot fire before "farm1_ifc_end_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_2" cannot fire before "farm1_ifc_start_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server_1" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_2". Conflicts:
+WARNING:     "farm1_ifc_end_server_1" cannot fire before "farm1_ifc_end_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_2" cannot fire before "farm1_ifc_end_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server_2" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_3". Conflicts:
+WARNING:     "farm1_ifc_start_server_2" cannot fire before "farm1_ifc_start_server_3":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING:     "farm1_ifc_start_server_3" cannot fire before "farm1_ifc_start_server_2":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server_2" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_3". Conflicts:
+WARNING:     "farm1_ifc_end_server_2" cannot fire before "farm1_ifc_start_server_3":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_start_server_3" cannot fire before "farm1_ifc_end_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server_2" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_3". Conflicts:
+WARNING:     "farm1_ifc_start_server_2" cannot fire before "farm1_ifc_end_server_3":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_3" cannot fire before "farm1_ifc_start_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server_2" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_3". Conflicts:
+WARNING:     "farm1_ifc_end_server_2" cannot fire before "farm1_ifc_end_server_3":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_3" cannot fire before "farm1_ifc_end_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "rule_tb_end_task" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server". Conflicts:
+WARNING:     "rule_tb_end_task" cannot fire before "farm2_ifc_start_server":
+WARNING:       calls to farm2_ifc_cbuff_n.addB vs. farm2_ifc_cbuff_n.value
+WARNING:     "farm2_ifc_start_server" cannot fire before "rule_tb_end_task":
+WARNING:       calls to farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_1". Conflicts:
+WARNING:     "farm2_ifc_start_server" cannot fire before "farm2_ifc_start_server_1":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING:     "farm2_ifc_start_server_1" cannot fire before "farm2_ifc_start_server":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_1". Conflicts:
+WARNING:     "farm2_ifc_end_server" cannot fire before "farm2_ifc_start_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_start_server_1" cannot fire before "farm2_ifc_end_server":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_1". Conflicts:
+WARNING:     "farm2_ifc_start_server" cannot fire before "farm2_ifc_end_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_1" cannot fire before "farm2_ifc_start_server":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_1". Conflicts:
+WARNING:     "farm2_ifc_end_server" cannot fire before "farm2_ifc_end_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_1" cannot fire before "farm2_ifc_end_server":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server_1" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_2". Conflicts:
+WARNING:     "farm2_ifc_start_server_1" cannot fire before "farm2_ifc_start_server_2":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING:     "farm2_ifc_start_server_2" cannot fire before "farm2_ifc_start_server_1":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server_1" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_2". Conflicts:
+WARNING:     "farm2_ifc_end_server_1" cannot fire before "farm2_ifc_start_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_start_server_2" cannot fire before "farm2_ifc_end_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server_1" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_2". Conflicts:
+WARNING:     "farm2_ifc_start_server_1" cannot fire before "farm2_ifc_end_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_2" cannot fire before "farm2_ifc_start_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server_1" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_2". Conflicts:
+WARNING:     "farm2_ifc_end_server_1" cannot fire before "farm2_ifc_end_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_2" cannot fire before "farm2_ifc_end_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server_2" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_3". Conflicts:
+WARNING:     "farm2_ifc_start_server_2" cannot fire before "farm2_ifc_start_server_3":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING:     "farm2_ifc_start_server_3" cannot fire before "farm2_ifc_start_server_2":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server_2" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_3". Conflicts:
+WARNING:     "farm2_ifc_end_server_2" cannot fire before "farm2_ifc_start_server_3":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_start_server_3" cannot fire before "farm2_ifc_end_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server_2" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_3". Conflicts:
+WARNING:     "farm2_ifc_start_server_2" cannot fire before "farm2_ifc_end_server_3":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_3" cannot fire before "farm2_ifc_start_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server_2" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_3". Conflicts:
+WARNING:     "farm2_ifc_end_server_2" cannot fire before "farm2_ifc_end_server_3":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_3" cannot fire before "farm2_ifc_end_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+RESULT: Elaborated module file created: mult4/mkMult4Tb.ba
+RESULT: All packages are up to date.
+Executing: bsc -e mkMult4Tb -sim -o ./out -simdir mult4 -p .:%/Libraries -bdir mult4 -keep-fires 
+WARNING: + bsc -e mkMult4Tb -sim -o ./out -simdir mult4 -p .:%/Libraries -bdir mult4 -keep-fires
+RESULT: Bluesim object created: mult4/mkMult4Tb.{h,o}
+RESULT: Bluesim object created: mult4/mkMult1.{h,o}
+RESULT: Bluesim object created: mult4/mkMult2.{h,o}
+RESULT: Bluesim object created: mult4/model_mkMult4Tb.{h,o}
+RESULT: Simulation shared library created: out.so
+RESULT: Simulation executable created: ./out
+Executing: ./out -V
+WARNING: + ./out -V
+RESULT:     Inputs:  m1 = 32896, m2 =  8224
+RESULT:     Inputs:  m1 = 16448, m2 =  4112
+RESULT:     Inputs:  m1 =  2056, m2 =   514
+RESULT:     Inputs:  m1 =  1028, m2 =     1
+RESULT:     Inputs:  m1 =  2056, m2 =     3
+RESULT:     Inputs:  m1 =    48, m2 =   192
+RESULT:     Inputs:  m1 =    19, m2 =   152
+RESULT:     Inputs:  m1 =     2, m2 =     2
+RESULT:     Results: (32896 *  8224 = )  270536704,  270536704
+RESULT:     Results: (16448 *  4112 = )   67634176,   67634176
+RESULT:     Results: ( 2056 *   514 = )    1056784,    1056784
+RESULT:     Results: ( 1028 *     1 = )       1028,       1028
+RESULT:     Results: ( 2056 *     3 = )       6168,       6168
+RESULT:     Inputs:  m1 =     0, m2 =    24
+RESULT:     Inputs:  m1 =   531, m2 =     7
+RESULT:     Results: (   48 *   192 = )       9216,       9216
+RESULT:     Inputs:  m1 =   962, m2 =     3
+RESULT:     Inputs:  m1 =    31, m2 =     2
+RESULT:     Inputs:  m1 =     1, m2 =   111
+RESULT:     Results: (   19 *   152 = )       2888,       2888
+RESULT:     Results: (    2 *     2 = )          4,          4
+RESULT:     Results: (    0 *    24 = )          0,          0
+RESULT:     Results: (  531 *     7 = )       3717,       3717
+RESULT:     Results: (  962 *     3 = )       2886,       2886
+RESULT:     Inputs:  m1 =     0, m2 =     3
+RESULT:     Inputs:  m1 =     0, m2 =     2
+RESULT:     Results: (   31 *     2 = )         62,         62
+RESULT:     Inputs:  m1 =     0, m2 =    33
+RESULT:     Inputs:  m1 =     0, m2 =     1
+RESULT:     Inputs:  m1 =     4, m2 =     1
+RESULT:     Inputs:  m1 =     3, m2 =     1
+RESULT:     Results: (    1 *   111 = )        111,        111
+RESULT:     Results: (    0 *     3 = )          0,          0
+RESULT:     Results: (    0 *     2 = )          0,          0
+RESULT:     Inputs:  m1 =   496, m2 =  3972
+RESULT:     Inputs:  m1 =    31, m2 =   496
+RESULT:     Inputs:  m1 =   993, m2 =     3
+RESULT:     Inputs:  m1 =   993, m2 =  2079
+RESULT:     Results: (    0 *    33 = )          0,          0
+RESULT:     Results: (    0 *     1 = )          0,          0
+RESULT:     Results: (    4 *     1 = )          4,          4
+RESULT:     Results: (    3 *     1 = )          3,          3
+RESULT:     Inputs:  m1 = 12350, m2 = 12350
+RESULT:     Inputs:  m1 = 12350, m2 =  6175
+RESULT:     Results: (  496 *  3972 = )    1970112,    1970112
+RESULT:     Results: (   31 *   496 = )      15376,      15376
+RESULT:     Results: (  993 *     3 = )       2979,       2979
+RESULT:     Inputs:  m1 =    12, m2 =    12
+RESULT:     Inputs:  m1 =     0, m2 =     0
+RESULT:     Inputs:  m1 =     0, m2 =  2054
+RESULT:     Results: (  993 *  2079 = )    2064447,    2064447
+RESULT:     Inputs:  m1 =   513, m2 =    80
+RESULT:     Inputs:  m1 =     5, m2 =   672
+RESULT:     Inputs:  m1 =    26, m2 =     7
+RESULT:     Results: (12350 * 12350 = )  152522500,  152522500
+RESULT:     Results: (12350 *  6175 = )   76261250,   76261250
+RESULT:     Results: (   12 *    12 = )        144,        144
+RESULT:     Results: (    0 *     0 = )          0,          0
+RESULT:     Inputs:  m1 =   980, m2 =     7
+RESULT:     Inputs:  m1 =    31, m2 =   506
+RESULT:     Results: (    0 *  2054 = )          0,          0
+RESULT:     Inputs:  m1 =  6122, m2 =   239
+RESULT:     Results: (  513 *    80 = )      41040,      41040
+RESULT:     Inputs:  m1 = 28628, m2 =  1918
+RESULT:     Inputs:  m1 =  3837, m2 =    78
+RESULT:     Inputs:  m1 =  1263, m2 =    41
+RESULT:     Results: (    5 *   672 = )       3360,       3360
+RESULT:     Results: (   26 *     7 = )        182,        182
+RESULT:     Results: (  980 *     7 = )       6860,       6860
+RESULT:     Inputs:  m1 =  1693, m2 =     3
+RESULT:     Results: (   31 *   506 = )      15686,      15686
+RESULT:     Results: ( 6122 *   239 = )    1463158,    1463158
+RESULT:     Inputs:  m1 =    58, m2 =   745
+RESULT:     Inputs:  m1 =    27, m2 =  1908
+RESULT:     Results: (28628 *  1918 = )   54908504,   54908504
+RESULT:     Results: ( 3837 *    78 = )     299286,     299286
+RESULT:     Inputs:  m1 =    61, m2 =    15
+RESULT:     Results: ( 1263 *    41 = )      51783,      51783
+RESULT:     Results: ( 1693 *     3 = )       5079,       5079
+RESULT:     Inputs:  m1 =   989, m2 =   247
+RESULT:     Inputs:  m1 =   989, m2 =   989
+RESULT:     Inputs:  m1 = 33757, m2 = 24823
+RESULT:     Results: (   58 *   745 = )      43210,      43210
+RESULT:     Inputs:  m1 = 49646, m2 =   176
+RESULT:     Inputs:  m1 =  1411, m2 = 11015
+RESULT:     Results: (   27 *  1908 = )      51516,      51516
+RESULT:     Results: (   61 *    15 = )        915,        915
+RESULT:     Results: (  989 *   247 = )     244283,     244283
+RESULT:     Inputs:  m1 = 11015, m2 = 43783
+RESULT:     Inputs:  m1 = 54659, m2 = 60097
+RESULT:     Results: (  989 *   989 = )     978121,     978121
+RESULT:     Inputs:  m1 =   117, m2 =  1878
+RESULT:     Inputs:  m1 =   939, m2 =     7
+RESULT:     Results: (33757 * 24823 = )  837950011,  837950011
+RESULT:     Results: (49646 *   176 = )    8737696,    8737696
+RESULT:     Inputs:  m1 =  2165, m2 =  4330
+RESULT:     Results: ( 1411 * 11015 = )   15542165,   15542165
+RESULT:     Inputs:  m1 =    16, m2 =   270
+RESULT:     Results: (11015 * 43783 = )  482269745,  482269745
+RESULT:     Inputs:  m1 =   541, m2 =   541
+RESULT:     Results: (54659 * 60097 = ) 3284841923, 3284841923
+RESULT:     Results: (  117 *  1878 = )     219726,     219726
+RESULT:     Results: (  939 *     7 = )       6573,       6573
+RESULT:     Inputs:  m1 = 33309, m2 =   193
+RESULT:     Inputs:  m1 =  1544, m2 =    44
+RESULT:     Inputs:  m1 =     6, m2 =   108
+RESULT:     Results: ( 2165 *  4330 = )    9374450,    9374450
+RESULT:     Inputs:  m1 =     1, m2 =   864
+RESULT:     Results: (   16 *   270 = )       4320,       4320
+RESULT:     Results: (  541 *   541 = )     292681,     292681
+RESULT:     Results: (33309 *   193 = )    6428637,    6428637
+RESULT:     Inputs:  m1 =  1729, m2 = 34497
+RESULT:     Inputs:  m1 =    67, m2 =   539
+RESULT:     Results: ( 1544 *    44 = )      67936,      67936
+RESULT:     Inputs:  m1 =  1078, m2 =  1091
+RESULT:     Inputs:  m1 =    68, m2 =  2182
+RESULT:     Results: (    6 *   108 = )        648,        648
+RESULT:     Inputs:  m1 =     8, m2 =   273
+RESULT:     Results: (    1 *   864 = )        864,        864
+RESULT:     Inputs:  m1 =     8, m2 =     4
+RESULT:     Inputs:  m1 =  1160, m2 =    18
+RESULT:     Results: ( 1729 * 34497 = )   59645313,   59645313
+RESULT:     Results: (   67 *   539 = )      36113,      36113
+RESULT:     Results: ( 1078 *  1091 = )    1176098,    1176098
+RESULT:     Inputs:  m1 =   290, m2 =    36
+RESULT:     Inputs:  m1 =   584, m2 =     9
+RESULT:     Results: (   68 *  2182 = )     148376,     148376
+RESULT:     Results: (    8 *   273 = )       2184,       2184
+RESULT:     Results: (    8 *     4 = )         32,         32
+RESULT:     Inputs:  m1 =     0, m2 =     0
+RESULT:     Results: ( 1160 *    18 = )      20880,      20880
+RESULT:     Inputs:  m1 =     2, m2 =     1
+RESULT:     Inputs:  m1 =     1, m2 =     0
+RESULT:     Inputs:  m1 =   104, m2 =  1673
+RESULT:     Results: (  290 *    36 = )      10440,      10440
+RESULT:     Results: (  584 *     9 = )       5256,       5256
+RESULT:     Results: (    0 *     0 = )          0,          0
+RESULT:     Results: (    2 *     1 = )          2,          2
+RESULT:     Inputs:  m1 =   836, m2 =  1673
+RESULT:     Results: (    1 *     0 = )          0,          0
+RESULT:     Inputs:  m1 =     3, m2 =     8
+RESULT:     Inputs:  m1 =     3, m2 =     0
+RESULT:     Inputs:  m1 =    96, m2 =    70
+RESULT:     Inputs:  m1 =   771, m2 =  1120
+RESULT:     Inputs:  m1 =     8, m2 = 12848
+RESULT:     Inputs:  m1 =  1164, m2 =   114
+RESULT:     Results: (  104 *  1673 = )     173992,     173992
+RESULT:     Results: (  836 *  1673 = )    1398628,    1398628
+RESULT:     Results: (    3 *     8 = )         24,         24
+RESULT:     Results: (    3 *     0 = )          0,          0
+RESULT:     Results: (   96 *    70 = )       6720,       6720
+RESULT:     Inputs:  m1 =  3875, m2 =    62
+RESULT:     Inputs:  m1 = 15942, m2 =  3044
+RESULT:     Results: (  771 *  1120 = )     863520,     863520
+RESULT:     Inputs:  m1 =    55, m2 =  3570
+RESULT:     Inputs:  m1 =   892, m2 =    77
+RESULT:     Inputs:  m1 =  3295, m2 = 14782
+RESULT:     Inputs:  m1 = 14782, m2 = 14782
+RESULT:     Results: (    8 * 12848 = )     102784,     102784
+RESULT:     Results: ( 1164 *   114 = )     132696,     132696
+RESULT:     Results: ( 3875 *    62 = )     240250,     240250
+RESULT:     Results: (15942 *  3044 = )   48527448,   48527448
+RESULT:     Inputs:  m1 =  7391, m2 = 34615
+RESULT:     Inputs:  m1 =  3695, m2 =    67
+RESULT:     Results: (   55 *  3570 = )     196350,     196350
+RESULT:     Results: (  892 *    77 = )      68684,      68684
+RESULT:     Inputs:  m1 =   540, m2 =    36
+RESULT:     Inputs:  m1 =  1603, m2 =    57
+RESULT:     Results: ( 3295 * 14782 = )   48706690,   48706690
+RESULT:     Inputs:  m1 =     7, m2 =     1
+RESULT:     Results: (14782 * 14782 = )  218507524,  218507524
+RESULT:     Inputs:  m1 =     3, m2 =     0
+RESULT:     Inputs:  m1 =     0, m2 =     1
+RESULT:     Results: ( 7391 * 34615 = )  255839465,  255839465
+RESULT:     Results: ( 3695 *    67 = )     247565,     247565
+RESULT:     Results: (  540 *    36 = )      19440,      19440
+RESULT:     Inputs:  m1 =     0, m2 =     1
+RESULT:     Inputs:  m1 =     1, m2 =     0
+RESULT:     Inputs:  m1 =     0, m2 =    52
+RESULT:     Inputs:  m1 =    17, m2 =     6
+RESULT:     Results: ( 1603 *    57 = )      91371,      91371
+RESULT:     Results: (    7 *     1 = )          7,          7
+RESULT:     Results: (    3 *     0 = )          0,          0
+RESULT:     Results: (    0 *     1 = )          0,          0
+RESULT:     Inputs:  m1 =   909, m2 = 15465
+RESULT:     Results: (    0 *     1 = )          0,          0
+RESULT:     Inputs:  m1 =  7732, m2 = 48233
+RESULT:     Results: (    1 *     0 = )          0,          0
+RESULT:     Results: (    0 *    52 = )          0,          0
+RESULT:     Results: (   17 *     6 = )        102,        102
+RESULT:     Inputs:  m1 = 56884, m2 =     7
+RESULT:     Inputs:  m1 =   239, m2 =   239
+RESULT:     Inputs:  m1 =    19, m2 =    41
+RESULT:     Inputs:  m1 =   631, m2 =     6
+RESULT:     Inputs:  m1 =   423, m2 =   723
+RESULT:     Inputs:  m1 =    22, m2 =    11
+RESULT:     Results: (  909 * 15465 = )   14057685,   14057685
+RESULT:     Inputs:  m1 =  1204, m2 =    50
+RESULT:     Results: ( 7732 * 48233 = )  372937556,  372937556
+RESULT:     Results: (56884 *     7 = )     398188,     398188
+RESULT:     Results: (  239 *   239 = )      57121,      57121
+RESULT:     Results: (   19 *    41 = )        779,        779
+RESULT:     Results: (  631 *     6 = )       3786,       3786

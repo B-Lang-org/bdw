@@ -1,0 +1,17 @@
+set here [file join [absolute $srcdir] $subdir]
+source $here/../../bdw.tcl
+ 
+if { [info exists env(DISPLAY)] && $env(DISPLAY) != "" } {
+
+# create a subdir without write permission, for testing permission failures
+mkdir "subdir" 0400
+
+# Checks the Project menu functionality
+bdw_run_compare_pass project_menu_test.tcl
+
+# Checks the Build menu functionality
+bdw_run_compare_pass build_menu_test.tcl
+
+# "make clean" will also remove the subdir
+nukedir "subdir"
+}

@@ -1,0 +1,10 @@
+-verilog
+mkM mkT
+----------
+{r1 mkM {ports {{CLK Clock} {RST_N Reset} {_write_1 Bool} {EN__write Bool} {RDY__write Bool} {_read Bool} {RDY__read Bool}}}} {r2 mkM {ports {{CLK Clock} {RST_N Reset} {_write_1 Bool} {EN__write Bool} {RDY__write Bool} {_read Bool} {RDY__read Bool}}}}
+
+{ptr RegN {ports {{CLK Clock} {RST Reset} {D_IN Bool} {EN Bool} {Q_OUT Bool}}}} {r1 RegN {ports {{CLK Clock} {RST Reset} {D_IN Bool} {EN Bool} {Q_OUT Bool}}}} {r2 RegN {ports {{CLK Clock} {RST Reset} {D_IN Bool} {EN Bool} {Q_OUT Bool}}}}
+----------
+{r1 mkM {ports {{CLK Clock} {RST_N Reset} {_write_1 Bool} {EN__write Bool} {RDY__write Bool} {_read Bool} {RDY__read Bool}}} {mports {{_write _write_1} {_write EN__write} {RDY__write RDY__write} {_read _read} {RDY__read RDY__read}}} {position {Test.bsv 61 15}}} {r2 mkM {ports {{CLK Clock} {RST_N Reset} {_write_1 Bool} {EN__write Bool} {RDY__write Bool} {_read Bool} {RDY__read Bool}}} {mports {{_write _write_1} {_write EN__write} {RDY__write RDY__write} {_read _read} {RDY__read RDY__read}}} {position {Test.bsv 62 15}}}
+
+{ptr RegN {ports {{CLK Clock} {RST Reset} {D_IN Bool} {EN Bool} {Q_OUT Bool}}} {users {read {} _write {}}} {mports {{read Q_OUT} {write D_IN} {write EN}}} {position {Test.bsv 69 15}}} {r1 RegN {ports {{CLK Clock} {RST Reset} {D_IN Bool} {EN Bool} {Q_OUT Bool}}} {users {read RL_rHello _read {}} {write {} _write {}}} {mports {{read Q_OUT} {write D_IN} {write EN}}} {position {Test.bsv 70 15}}} {r2 RegN {ports {{CLK Clock} {RST Reset} {D_IN Bool} {EN Bool} {Q_OUT Bool}}} {users {read {} _read {}} {write {} _write {}}} {mports {{read Q_OUT} {write D_IN} {write EN}}} {position {Test.bsv 71 15}}}

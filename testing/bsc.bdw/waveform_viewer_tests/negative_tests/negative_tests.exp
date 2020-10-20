@@ -1,0 +1,14 @@
+set here [file join [absolute $srcdir] $subdir]
+source $here/../../bdw.tcl
+
+if { [info exists env(DISPLAY)] && $env(DISPLAY) != "" } {
+
+# Enabling the tests as the functionality of the waveform viewer is not
+# completed.
+
+# Checks the Module menu functionality
+#bdw_run_compare_pass waveform_viewer_options_test.tcl
+#bdw_run_compare_pass waveform_viewer_test.tcl
+
+}
+ 

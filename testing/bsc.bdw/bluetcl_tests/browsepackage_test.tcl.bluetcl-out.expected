@@ -1,0 +1,25 @@
+Test Vector PrimArray List PreludeBSV Prelude
+{1 . {}} {2 %/Libraries {}}
+{3 Test {}}
+{4 List {}} {5 Prelude {}} {6 PreludeBSV {}} {7 PrimArray {}} {8 Vector {}}
+
+{9 {Functions and Modules} {}} {10 {Types and Interfaces} {}}
+{11 f {}} {12 mkBVI {}} {13 mkM {}} {14 mkS {}} {15 mkT {}} {16 x {}}
+
+{17 Bar {}} {18 Baz {}} {19 Foo {}} {20 SubIFC {}} {21 Sz {}} {22 T {}} {23 TopIFC {}} {24 U {}} {25 U2 {}}
+.
+Test {position {Test.bsv 1 1}}
+Functions
+function Test::f {result Bool} {arguments {Bool Bool}} {position {Test.bsv 55 15}}
+Types
+Alias Test::Sz {Definition 9} {position {Test.bsv 7 11}}
+TaggedUnion {{Test::U#(type a)}} polymorphic {members {{void  F1  // width 0} {a  F2  } {List#(a)  F3  } {function Bool f(Bool x1)  F4  }}} {position {Test.bsv 35 3}}
+Directory
+Package
+Function List
+Function
+Type List
+Type
+Test Vector RegFile PrimArray List PreludeBSV Prelude
+
+{1 . {}} {2 %/Libraries {}}

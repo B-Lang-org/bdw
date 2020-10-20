@@ -1,0 +1,58 @@
+COMP_BDIR = mult4
+COMP_BSC_OPTIONS = -sched-dot
+COMP_BSC_TYPE = bluesim
+COMP_INFO_DIR = mult4
+COMP_SIMDIR = mult4
+COMP_TYPE = bsc
+COPY_FLAGS = 0
+COMP_VDIR = .
+DIR = .
+EDITOR_NAME = gvim
+INCLUDED_FILES = *.bsv
+LINK_BSC_OPTIONS = -keep-fires
+LINK_OUTDIR = .
+LINK_OUTNAME = out
+LINK_TYPE = bsc
+MAIN_PLACEMENT = 700x350+0+0
+MODULE_PLACEMENT = 550x350+50+500
+NAME = project
+PATHS = mult4
+PATHS = .
+PATHS = Libraries
+PACKAGE_PLACEMENT = 770x420+475+150
+PROJECT_PLACEMENT = 250x460+0+385
+SCHEDULE_PLACEMENT = 650x650+500+225
+SIM_NAME = iverilog
+STATUS = saved
+TOP_FILE = mult4/Mult4Tb.bsv
+TOP_MODULE = mkMult4Tb
+TYPE_PLACEMENT = 770x420+475+540
+VIEWER_CLOSE = close
+WIZARD_PLACEMENT = 1024x700+50+50
+EDITOR_GVIM = gvim
+EDITOR_EMACS = emacs
+EDITOR_OTHER = gedit +%n %f
+Executing: bsc -u -sim -simdir mult4 -bdir mult4 -info-dir mult4 -sched-dot -p .:%/Libraries  mult4/Mult2.bsv
+WARNING: + bsc -u -sim -simdir mult4 -bdir mult4 -info-dir mult4 -sched-dot -p .:%/Libraries mult4/Mult2.bsv
+RESULT: checking package dependencies
+RESULT: compiling mult4/Mult.bsv
+RESULT: compiling mult4/Mult2.bsv
+RESULT: code generation for mkMult2 starts
+RESULT: DOT file created: mult4/mkMult2_conflict.dot
+RESULT: DOT file created: mult4/mkMult2_exec.dot
+RESULT: DOT file created: mult4/mkMult2_urgency.dot
+WARNING: Warning: "mult4/Mult2.bsv", line 23, column 8: (G0117)
+WARNING:   Rule `start' shadows the effects of `cycle' when they execute in the same
+WARNING:   clock cycle. Affected method calls:
+WARNING:     product.write, mcand.write, mplr.write
+WARNING:   To silence this warning, use the `-no-warn-action-shadowing' flag.
+RESULT: DOT file created: mult4/mkMult2_combined.dot
+RESULT: DOT file created: mult4/mkMult2_combined_full.dot
+RESULT: Elaborated module file created: mult4/mkMult2.ba
+RESULT: All packages are up to date.
+mkMult2
+The Conflict Graph is opened.
+The Execution Graph is opened.
+The Urgency Graph is opened.
+The Combined Graph is opened.
+The Combined Full Graph is opened.

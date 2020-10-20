@@ -1,0 +1,320 @@
+COMP_BDIR = mult4
+COMP_BSC_OPTIONS = -keep-fires
+COMP_BSC_TYPE = bluesim
+COMP_INFO_DIR = .
+COMP_SIMDIR = mult4
+COMP_TYPE = bsc
+COPY_FLAGS = 0
+COMP_VDIR = .
+DIR = .
+EDITOR_NAME = gvim
+INCLUDED_FILES = *.bsv
+LINK_BSC_OPTIONS = -keep-fires
+LINK_OUTDIR = .
+LINK_OUTNAME = out
+LINK_TYPE = bsc
+MAIN_PLACEMENT = 700x350+0+0
+MODULE_PLACEMENT = 550x350+50+500
+NAME = project
+PATHS = .
+PATHS = Libraries
+PATHS = mult4
+PACKAGE_PLACEMENT = 770x420+475+150
+PROJECT_PLACEMENT = 250x460+0+385
+RUN_OPTIONS = -V
+SCHEDULE_PLACEMENT = 650x650+500+225
+SIM_NAME = iverilog
+TOP_FILE = mult4/Mult4Tb.bsv
+TOP_MODULE = mkMult4Tb
+TYPE_PLACEMENT = 770x420+475+540
+VIEWER_CLOSE = close
+WIZARD_PLACEMENT = 1024x700+50+50
+EDITOR_GVIM = gvim
+EDITOR_EMACS = emacs
+EDITOR_OTHER = gedit +%n %f
+Executing: bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries -g mkMult4Tb  mult4/Mult4Tb.bsv 
+WARNING: + bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries -g mkMult4Tb mult4/Mult4Tb.bsv
+RESULT: checking package dependencies
+RESULT: compiling mult4/Mult.bsv
+RESULT: compiling mult4/RandGen.bsv
+RESULT: compiling mult4/Mult1.bsv
+RESULT: code generation for mkMult1 starts
+WARNING: Warning: "mult4/Mult1.bsv", line 8, column 8: (G0117)
+WARNING:   Rule `start' shadows the effects of `cycle' when they execute in the same
+WARNING:   clock cycle. Affected method calls:
+WARNING:     product.write, mcand.write, mplr.write
+WARNING:   To silence this warning, use the `-no-warn-action-shadowing' flag.
+RESULT: Elaborated module file created: mult4/mkMult1.ba
+RESULT: compiling mult4/Mult2.bsv
+RESULT: code generation for mkMult2 starts
+WARNING: Warning: "mult4/Mult2.bsv", line 23, column 8: (G0117)
+WARNING:   Rule `start' shadows the effects of `cycle' when they execute in the same
+WARNING:   clock cycle. Affected method calls:
+WARNING:     product.write, mcand.write, mplr.write
+WARNING:   To silence this warning, use the `-no-warn-action-shadowing' flag.
+RESULT: Elaborated module file created: mult4/mkMult2.ba
+RESULT: compiling mult4/Mult4.bsv
+RESULT: compiling mult4/Mult4Tb.bsv
+RESULT: code generation for mkMult4Tb starts
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "fill_m1fifo" was treated as more urgent than "fill_m2fifo". Conflicts:
+WARNING:     "fill_m1fifo" cannot fire before "fill_m2fifo":
+WARNING:       calls to
+WARNING: 	rndm_thefi.deq vs. rndm_thefi.first
+WARNING: 	rndm_thefi.deq vs. rndm_thefi.deq
+WARNING:     "fill_m2fifo" cannot fire before "fill_m1fifo":
+WARNING:       calls to
+WARNING: 	rndm_thefi.deq vs. rndm_thefi.first
+WARNING: 	rndm_thefi.deq vs. rndm_thefi.deq
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "rule_tb_end_task" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server". Conflicts:
+WARNING:     "rule_tb_end_task" cannot fire before "farm1_ifc_start_server":
+WARNING:       calls to farm1_ifc_cbuff_n.addB vs. farm1_ifc_cbuff_n.value
+WARNING:     "farm1_ifc_start_server" cannot fire before "rule_tb_end_task":
+WARNING:       calls to farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_1". Conflicts:
+WARNING:     "farm1_ifc_start_server" cannot fire before "farm1_ifc_start_server_1":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING:     "farm1_ifc_start_server_1" cannot fire before "farm1_ifc_start_server":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_1". Conflicts:
+WARNING:     "farm1_ifc_end_server" cannot fire before "farm1_ifc_start_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_start_server_1" cannot fire before "farm1_ifc_end_server":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_1". Conflicts:
+WARNING:     "farm1_ifc_start_server" cannot fire before "farm1_ifc_end_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_1" cannot fire before "farm1_ifc_start_server":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_1". Conflicts:
+WARNING:     "farm1_ifc_end_server" cannot fire before "farm1_ifc_end_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_1" cannot fire before "farm1_ifc_end_server":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server_1" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_2". Conflicts:
+WARNING:     "farm1_ifc_start_server_1" cannot fire before "farm1_ifc_start_server_2":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING:     "farm1_ifc_start_server_2" cannot fire before "farm1_ifc_start_server_1":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server_1" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_2". Conflicts:
+WARNING:     "farm1_ifc_end_server_1" cannot fire before "farm1_ifc_start_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_start_server_2" cannot fire before "farm1_ifc_end_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server_1" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_2". Conflicts:
+WARNING:     "farm1_ifc_start_server_1" cannot fire before "farm1_ifc_end_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_2" cannot fire before "farm1_ifc_start_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server_1" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_2". Conflicts:
+WARNING:     "farm1_ifc_end_server_1" cannot fire before "farm1_ifc_end_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_2" cannot fire before "farm1_ifc_end_server_1":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server_2" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_3". Conflicts:
+WARNING:     "farm1_ifc_start_server_2" cannot fire before "farm1_ifc_start_server_3":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING:     "farm1_ifc_start_server_3" cannot fire before "farm1_ifc_start_server_2":
+WARNING:       calls to
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.first
+WARNING: 	farm1_ifc_infifo.deq vs. farm1_ifc_infifo.deq
+WARNING: 	farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: 	farm1_ifc_cbuff_i.write vs. farm1_ifc_cbuff_i.read
+WARNING: 	farm1_ifc_cbuff_n.addA vs. farm1_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server_2" was treated as more urgent than
+WARNING:   "farm1_ifc_start_server_3". Conflicts:
+WARNING:     "farm1_ifc_end_server_2" cannot fire before "farm1_ifc_start_server_3":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_start_server_3" cannot fire before "farm1_ifc_end_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_start_server_2" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_3". Conflicts:
+WARNING:     "farm1_ifc_start_server_2" cannot fire before "farm1_ifc_end_server_3":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_3" cannot fire before "farm1_ifc_start_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm1_ifc_end_server_2" was treated as more urgent than
+WARNING:   "farm1_ifc_end_server_3". Conflicts:
+WARNING:     "farm1_ifc_end_server_2" cannot fire before "farm1_ifc_end_server_3":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING:     "farm1_ifc_end_server_3" cannot fire before "farm1_ifc_end_server_2":
+WARNING:       calls to farm1_ifc_cbuff_buff.upd vs. farm1_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "rule_tb_end_task" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server". Conflicts:
+WARNING:     "rule_tb_end_task" cannot fire before "farm2_ifc_start_server":
+WARNING:       calls to farm2_ifc_cbuff_n.addB vs. farm2_ifc_cbuff_n.value
+WARNING:     "farm2_ifc_start_server" cannot fire before "rule_tb_end_task":
+WARNING:       calls to farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_1". Conflicts:
+WARNING:     "farm2_ifc_start_server" cannot fire before "farm2_ifc_start_server_1":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING:     "farm2_ifc_start_server_1" cannot fire before "farm2_ifc_start_server":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_1". Conflicts:
+WARNING:     "farm2_ifc_end_server" cannot fire before "farm2_ifc_start_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_start_server_1" cannot fire before "farm2_ifc_end_server":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_1". Conflicts:
+WARNING:     "farm2_ifc_start_server" cannot fire before "farm2_ifc_end_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_1" cannot fire before "farm2_ifc_start_server":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_1". Conflicts:
+WARNING:     "farm2_ifc_end_server" cannot fire before "farm2_ifc_end_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_1" cannot fire before "farm2_ifc_end_server":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server_1" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_2". Conflicts:
+WARNING:     "farm2_ifc_start_server_1" cannot fire before "farm2_ifc_start_server_2":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING:     "farm2_ifc_start_server_2" cannot fire before "farm2_ifc_start_server_1":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server_1" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_2". Conflicts:
+WARNING:     "farm2_ifc_end_server_1" cannot fire before "farm2_ifc_start_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_start_server_2" cannot fire before "farm2_ifc_end_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server_1" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_2". Conflicts:
+WARNING:     "farm2_ifc_start_server_1" cannot fire before "farm2_ifc_end_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_2" cannot fire before "farm2_ifc_start_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server_1" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_2". Conflicts:
+WARNING:     "farm2_ifc_end_server_1" cannot fire before "farm2_ifc_end_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_2" cannot fire before "farm2_ifc_end_server_1":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server_2" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_3". Conflicts:
+WARNING:     "farm2_ifc_start_server_2" cannot fire before "farm2_ifc_start_server_3":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING:     "farm2_ifc_start_server_3" cannot fire before "farm2_ifc_start_server_2":
+WARNING:       calls to
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.first
+WARNING: 	farm2_ifc_infifo.deq vs. farm2_ifc_infifo.deq
+WARNING: 	farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: 	farm2_ifc_cbuff_i.write vs. farm2_ifc_cbuff_i.read
+WARNING: 	farm2_ifc_cbuff_n.addA vs. farm2_ifc_cbuff_n.value
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server_2" was treated as more urgent than
+WARNING:   "farm2_ifc_start_server_3". Conflicts:
+WARNING:     "farm2_ifc_end_server_2" cannot fire before "farm2_ifc_start_server_3":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_start_server_3" cannot fire before "farm2_ifc_end_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_start_server_2" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_3". Conflicts:
+WARNING:     "farm2_ifc_start_server_2" cannot fire before "farm2_ifc_end_server_3":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_3" cannot fire before "farm2_ifc_start_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING: Warning: "mult4/Mult4Tb.bsv", line 10, column 8: (G0010)
+WARNING:   Rule "farm2_ifc_end_server_2" was treated as more urgent than
+WARNING:   "farm2_ifc_end_server_3". Conflicts:
+WARNING:     "farm2_ifc_end_server_2" cannot fire before "farm2_ifc_end_server_3":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+WARNING:     "farm2_ifc_end_server_3" cannot fire before "farm2_ifc_end_server_2":
+WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
+RESULT: Elaborated module file created: mult4/mkMult4Tb.ba
+RESULT: All packages are up to date.
+Executing: bsc -e mkMult4Tb -sim -o ./out -simdir mult4 -p .:%/Libraries -bdir mult4 -keep-fires 
+WARNING: + bsc -e mkMult4Tb -sim -o ./out -simdir mult4 -p .:%/Libraries -bdir mult4 -keep-fires
+RESULT: Bluesim object created: mult4/mkMult4Tb.{h,o}
+RESULT: Bluesim object created: mult4/mkMult1.{h,o}
+RESULT: Bluesim object created: mult4/mkMult2.{h,o}
+RESULT: Bluesim object created: mult4/model_mkMult4Tb.{h,o}
+RESULT: Simulation shared library created: out.so
+RESULT: Simulation executable created: ./out

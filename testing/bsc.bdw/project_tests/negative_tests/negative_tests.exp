@@ -1,0 +1,35 @@
+set here [file join [absolute $srcdir] $subdir]
+source $here/../../bdw.tcl
+ 
+if { [info exists env(DISPLAY)] && $env(DISPLAY) != "" } {
+
+# Checks the new_project command
+# TODO 
+# bdw_run_compare_pass new_project_test.tcl 
+
+# Checks the open_project command
+# TODO 
+# bdw_run_compare_pass open_project_test.tcl 
+
+# Checks the backup_project command
+bdw_run_compare_pass backup_project_test.tcl 
+
+# Checks the project specific settings(editor, top file/module, search path)
+bdw_run_compare_pass project_settings_test.tcl 
+
+# Checks the bsc specific settings
+bdw_run_compare_pass bsc_settings_test.tcl 
+
+# Checks the make specific settings
+# TODO 
+# bdw_run_compare_pass make_settings_test.tcl 
+
+# Checks the link specific settings
+# TODO 
+# bdw_run_compare_pass link_settings_test.tcl 
+
+# Checks the simulator specific settings
+# TODO 
+# bdw_run_compare_pass simulator_settings_test.tcl 
+
+}

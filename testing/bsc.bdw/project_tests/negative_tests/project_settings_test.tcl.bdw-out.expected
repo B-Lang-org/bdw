@@ -1,0 +1,9 @@
+The search path is not specified
+Search path entry 'mult5' is not  a directory.
+Search path entry 'negative_tests.exp' is not  a directory.
+The editor name is not specified
+Wrong editor name. 
+The editor name can be  gvim, emacs, other
+Unknown option: -path
+Unknown option: -options
+The top file is not specified

@@ -1,0 +1,22 @@
+#
+# @brief Definition of version commands.
+#
+
+namespace eval commands {
+
+##
+# @brief Returns the version in thre parts (release, date, revision)
+#
+proc version {} {
+    set rel {}
+    set dat {}
+    set rev {REVISION}
+    return [list $rel $dat $rev]
+}
+
+# End of namespace commands
+}
+
+## Local Variables:
+## eval: (set (make-local-variable 'tcl-indent-level) 8)
+## End:

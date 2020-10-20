@@ -1,0 +1,29 @@
+
+# Compile a file to query (generating .bi, .bo, and .ba)
+bsc_compile Test.bsv {-verilog -elab}
+
+# Tests the 'bpackage' command
+bluetcl_run_compare_pass bpackage_test.tcl
+
+# Tests the 'browsepackage' command
+# bluetcl_run_compare_pass browsepackage_test.tcl
+
+# Tests the 'type' command
+bluetcl_run_compare_pass type_test.tcl
+
+# Tests the 'browsetype' command
+bluetcl_run_compare_pass browsetype_test.tcl
+
+# Tests the 'module' command
+bluetcl_run_compare_pass module_test.tcl
+
+# Tests the 'browsemodule' command
+bluetcl_run_compare_pass browsemodule_test.tcl
+
+# Tests the 'submodule' command
+bluetcl_run_compare_pass submodule_test.tcl
+
+# Tests the 'schedule' command
+bluetcl_run_compare_pass schedule_test.tcl
+
+foreach f {mkM.v mkS.v mkT.v} {erase $f}

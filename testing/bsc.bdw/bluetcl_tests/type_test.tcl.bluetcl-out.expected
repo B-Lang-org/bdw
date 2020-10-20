@@ -1,0 +1,36 @@
+Test Vector Array List PreludeBSV Prelude
+
+Sz
+Alias Test::Sz 9 {position {Test.bsv 7 11}}
+
+T#(a, b)
+Alias {Test::T#(type a, type b)} {Tuple2#(t2, t1)} {position {Test.bsv 9 22}}
+Alias {Test::T#(type a, type b)} {Tuple2#(Int#(32), Bit#(1))} {position {Test.bsv 9 22}}
+
+Bar
+Enum Test::Bar {members {Red Yellow Blue}} {width 2} {position {Test.bsv 11 36}}
+
+Baz#(t, n)
+Struct {Test::Baz#(type t, numeric type n)} polymorphic {members {{Bool f1 {width 1}} {Bit#(sz) f2} {{Vector::Vector#(sz, x)} v}}} {position {Test.bsv 16 18}}
+Struct {Test::Baz#(type t, numeric type n)} {members {{Bool f1 {width 1}} {Bit#(2) f2 {width 2}} {{Vector::Vector#(2, Bool)} v {width 2}}}} {position {Test.bsv 16 18}}
+
+TopIFC#(a)
+Interface {Test::TopIFC#(type a)} polymorphic {members {{method {Bool f {ty ty} {{(* ports = ["x", "y"] *)}}}} {interface Clock clk_out {}} {interface Reset rst_out {}} {method {Bool g ty {{(* ports = ["z"] *)}}}} {interface Test::SubIFC#(ty) s {}}}} {position {Test.bsv 18 11}}
+Interface {Test::TopIFC#(type a)} {members {{method {Bool f {Bit#(8) Bit#(8)} {{(* ports = ["x", "y"] *)}}}} {interface Clock clk_out {}} {interface Reset rst_out {}} {method {Bool g Bit#(8) {{(* ports = ["z"] *)}}}} {interface Test::SubIFC#(Bit#(8)) s {}}}} {position {Test.bsv 18 11}}
+
+SubIFC#(a)
+Interface {Test::SubIFC#(type a)} polymorphic {members {{interface Reg#(ty) r {}}}} {position {Test.bsv 26 11}}
+Interface {Test::SubIFC#(type a)} {members {{interface Reg#(Bit#(8)) r {}}}} {position {Test.bsv 26 11}}
+
+U#(a)
+TaggedUnion {Test::U#(type a)} polymorphic {members {{void F1 {width 0}} {t F2} {List#(t) F3} {{function Bool f(Bool x1)} F4}}} {position {Test.bsv 35 3}}
+TaggedUnion {Test::U#(type a)} {members {{void F1 {width 0}} {Bool F2 {width 1}} {List#(Bool) F3} {{function Bool f(Bool x1)} F4}}} {position {Test.bsv 35 3}}
+
+U2#(a)
+TaggedUnion {Test::U#(type a)} polymorphic {members {{void F1 {width 0}} {t F2} {List#(t) F3} {{function Bool f(Bool x1)} F4}}} {position {Test.bsv 35 3}}
+TaggedUnion {Test::U#(type a)} {members {{void F1 {width 0}} {Bit#(1) F2 {width 1}} {List#(Bit#(1)) F3} {{function Bool f(Bool x1)} F4}}} {position {Test.bsv 35 3}}
+
+Foo#(a)
+Interface {Test::Foo#(type a)} polymorphic {members {{method {Action wset x {{(* ports = ["x1"] *)}}}} {method {x wget {} {{(* ports = [] *)}}}} {method {Bool whas {} {{(* ports = [] *)}}}}}} {position {Test.bsv 43 11}}
+Interface {Test::Foo#(type a)} {members {{method {Action wset Int#(32) {{(* ports = ["x1"] *)}}}} {method {Int#(32) wget {} {{(* ports = [] *)}}}} {method {Bool whas {} {{(* ports = [] *)}}}}}} {position {Test.bsv 43 11}}
+

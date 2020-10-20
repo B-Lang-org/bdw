@@ -1,0 +1,5 @@
+# Ignore editor backup files
+*~
+
+# Ignore the inst directory
+inst

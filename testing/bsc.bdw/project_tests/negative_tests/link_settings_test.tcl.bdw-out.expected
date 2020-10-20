@@ -1,0 +1,13 @@
+There is no open project.
+The link type is not specified
+The link type should be bsc, make, custom_command.
+The output for link is not specified
+Unknown option: -wrong
+The path '/wrong' is not a directory.
+The link type is not set to "make"  for the current project.
+The link type is not set to "bsc"  for the current project.
+The makefile for the link is not specified
+The file mmm doesn't exist.
+Unknown option: -tget
+The link type is not set to "custom_comand"  for the current project.
+The custom command for the link is not specified

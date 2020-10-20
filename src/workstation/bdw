@@ -1,0 +1,119 @@
+#!/bin/sh
+# \
+exec bluetcl "$0" -quiet "$@"
+
+global env
+
+
+lappend auto_path $env(BDWDIR)/tcllib/iwidgets4.0
+lappend auto_path $env(BDWDIR)/tcllib/util
+lappend auto_path $env(BDWDIR)/tcllib/workstation
+
+# Remove RTS arguments
+regsub -all  --  {\+RTS.*?-RTS} $argv "" argv
+regsub  -- {--RTS.*$} $argv "" argv
+
+set arg1 [lindex $argv 0]
+set arg2 [lindex $argv 1]
+set arg3 [lindex $argv 2]
+
+if {[lindex $argv 3] != ""} {
+        puts "More arguments then expected!"
+        exit
+}
+
+set bspec ""
+set script ""
+set out ""
+
+if {$arg1 != ""} {
+        switch -exact -- [file extension $arg1] {
+                ".bspec" {
+                        set bspec $arg1
+                }
+                ".tcl" {
+                        set script $arg1
+                }
+                default {
+                        if { $arg1 == "--show-bdwdir" } {
+                                puts $env(BDWDIR)
+                                exit
+                        }
+                        set out $arg1
+                }
+        }
+}
+
+if {$arg2 != ""} {
+        switch -exact -- [file extension $arg2] {
+                ".bspec" {
+                        if {$bspec == ""} {
+                                set bspec $arg2
+                        } else {
+                                puts "wrong argument $arg2"
+                                exit
+                        }
+                }
+                ".tcl" {
+                        if {$script == ""} {
+                                set script $arg2
+                        } else {
+                                puts "wrong argument $arg2"
+                                exit
+                        }
+                }
+                default {
+                        if {$out == ""} {
+                                set out $arg2
+                        } else {
+                                puts "$arg2 file is invalid"
+                                exit
+                        }
+                }
+        }
+}
+
+if {$arg3 != ""} {
+        switch -exact -- [file extension $arg3] {
+                ".bspec" {
+                        if {$bspec == ""} {
+                                set bspec $arg3
+                        } else {
+                                puts "wrong argument $arg2"
+                                exit
+                        }
+                }
+                ".tcl" {
+                        if {$script == ""} {
+                                set script $arg3
+                        } else {
+                                puts "wrong argument $arg2"
+                                exit
+                        }
+                }
+                default {
+                        if {$out == ""} {
+                                set out $arg3
+                        } else {
+                                puts "$arg2 file is invalid"
+                                exit
+                        }
+                }
+        }
+}
+
+if {$bspec != "" && ![file exists $bspec]} {
+        puts "$bspec doesn't exists"
+        exit 
+
+}
+
+if {$script != "" && ![file exists $script]} {
+        puts "$script doesn't exists"
+        exit
+}
+
+set argv [list $out $bspec $script]
+
+source  $env(BDWDIR)/tcllib/workstation/workstation.tcl
+

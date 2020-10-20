@@ -1,0 +1,1602 @@
+addSignal -HIDDEN  /main/top/i[0:0]
+
+addRenameSig "/main/top/i [Inout]" "/main/top/i"
+addSignal   /main/top/i [Inout]
+
+addSignal -HIDDEN  /main/top/CLK[0:0]
+
+addRenameSig "/main/top/CLK [Clock]" "/main/top/CLK"
+addSignal   /main/top/CLK [Clock]
+
+addSignal -HIDDEN  /main/top/RST_N[0:0]
+
+addRenameSig "/main/top/RST_N [Reset]" "/main/top/RST_N"
+addSignal   /main/top/RST_N [Reset]
+
+addSignal -HIDDEN  /main/top/y_0$D_IN[0:0]
+
+addRenameSig "/main/top/y_0$D_IN [Int#(32)]" "/main/top/y_0$D_IN"
+addSignal   /main/top/y_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_0$EN[0:0]
+
+addRenameSig "/main/top/y_0$EN [Bool]" "/main/top/y_0$EN"
+addSignal   /main/top/y_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_0[0:0]
+
+addRenameSig "/main/top/y_0 [Int#(32)]" "/main/top/y_0"
+addSignal   /main/top/y_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_1$D_IN[0:0]
+
+addRenameSig "/main/top/y_1$D_IN [Int#(32)]" "/main/top/y_1$D_IN"
+addSignal   /main/top/y_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_1$EN[0:0]
+
+addRenameSig "/main/top/y_1$EN [Bool]" "/main/top/y_1$EN"
+addSignal   /main/top/y_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_1[0:0]
+
+addRenameSig "/main/top/y_1 [Int#(32)]" "/main/top/y_1"
+addSignal   /main/top/y_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_2$D_IN[0:0]
+
+addRenameSig "/main/top/y_2$D_IN [Int#(32)]" "/main/top/y_2$D_IN"
+addSignal   /main/top/y_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_2$EN[0:0]
+
+addRenameSig "/main/top/y_2$EN [Bool]" "/main/top/y_2$EN"
+addSignal   /main/top/y_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_2[0:0]
+
+addRenameSig "/main/top/y_2 [Int#(32)]" "/main/top/y_2"
+addSignal   /main/top/y_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_3$D_IN[0:0]
+
+addRenameSig "/main/top/y_3$D_IN [Int#(32)]" "/main/top/y_3$D_IN"
+addSignal   /main/top/y_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_3$EN[0:0]
+
+addRenameSig "/main/top/y_3$EN [Bool]" "/main/top/y_3$EN"
+addSignal   /main/top/y_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_3[0:0]
+
+addRenameSig "/main/top/y_3 [Int#(32)]" "/main/top/y_3"
+addSignal   /main/top/y_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_0$D_IN[0:0]
+
+addRenameSig "/main/top/zw_0$D_IN [Int#(32)]" "/main/top/zw_0$D_IN"
+addSignal   /main/top/zw_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_0$EN[0:0]
+
+addRenameSig "/main/top/zw_0$EN [Bool]" "/main/top/zw_0$EN"
+addSignal   /main/top/zw_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_0[0:0]
+
+addRenameSig "/main/top/zw_0 [Int#(32)]" "/main/top/zw_0"
+addSignal   /main/top/zw_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_1$D_IN[0:0]
+
+addRenameSig "/main/top/zw_1$D_IN [Int#(32)]" "/main/top/zw_1$D_IN"
+addSignal   /main/top/zw_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_1$EN[0:0]
+
+addRenameSig "/main/top/zw_1$EN [Bool]" "/main/top/zw_1$EN"
+addSignal   /main/top/zw_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_1[0:0]
+
+addRenameSig "/main/top/zw_1 [Int#(32)]" "/main/top/zw_1"
+addSignal   /main/top/zw_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_2$D_IN[0:0]
+
+addRenameSig "/main/top/zw_2$D_IN [Int#(32)]" "/main/top/zw_2$D_IN"
+addSignal   /main/top/zw_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_2$EN[0:0]
+
+addRenameSig "/main/top/zw_2$EN [Bool]" "/main/top/zw_2$EN"
+addSignal   /main/top/zw_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_2[0:0]
+
+addRenameSig "/main/top/zw_2 [Int#(32)]" "/main/top/zw_2"
+addSignal   /main/top/zw_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_3$D_IN[0:0]
+
+addRenameSig "/main/top/zw_3$D_IN [Int#(32)]" "/main/top/zw_3$D_IN"
+addSignal   /main/top/zw_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_3$EN[0:0]
+
+addRenameSig "/main/top/zw_3$EN [Bool]" "/main/top/zw_3$EN"
+addSignal   /main/top/zw_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_3[0:0]
+
+addRenameSig "/main/top/zw_3 [Int#(32)]" "/main/top/zw_3"
+addSignal   /main/top/zw_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_4$D_IN[0:0]
+
+addRenameSig "/main/top/zw_4$D_IN [Int#(32)]" "/main/top/zw_4$D_IN"
+addSignal   /main/top/zw_4$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_4$EN[0:0]
+
+addRenameSig "/main/top/zw_4$EN [Bool]" "/main/top/zw_4$EN"
+addSignal   /main/top/zw_4$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_4[0:0]
+
+addRenameSig "/main/top/zw_4 [Int#(32)]" "/main/top/zw_4"
+addSignal   /main/top/zw_4 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/xx_0/V[0:0]
+
+addRenameSig "/main/top/xx_0/V [Int#(32)]" "/main/top/xx_0/V"
+addSignal   /main/top/xx_0/V [Int#(32)]
+
+addSignal -HIDDEN  /main/top/xx_0/I_IN[0:0]
+
+addRenameSig "/main/top/xx_0/I_IN [Inout]" "/main/top/xx_0/I_IN"
+addSignal   /main/top/xx_0/I_IN [Inout]
+
+addSignal -HIDDEN  /main/top/xx_0/WVAL[0:0]
+
+addRenameSig "/main/top/xx_0/WVAL [Bar]" "/main/top/xx_0/WVAL"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WVAL [Bar]
+
+addSignal -HIDDEN  /main/top/xx_0/WSET[0:0]
+
+addRenameSig "/main/top/xx_0/WSET [Bool]" "/main/top/xx_0/WSET"
+addSignal   /main/top/xx_0/WSET [Bool]
+
+addSignal -HIDDEN  /main/top/xx_0/WGET[0:0]
+
+addRenameSig "/main/top/xx_0/WGET [Bar]" "/main/top/xx_0/WGET"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WGET [Bar]
+
+addSignal -HIDDEN  /main/top/xx_0/WHAS[0:0]
+
+addRenameSig "/main/top/xx_0/WHAS [Bool]" "/main/top/xx_0/WHAS"
+addSignal   /main/top/xx_0/WHAS [Bool]
+
+addSignal -HIDDEN  /main/top/xx_0/I_OUT[0:0]
+
+addRenameSig "/main/top/xx_0/I_OUT [Inout]" "/main/top/xx_0/I_OUT"
+addSignal   /main/top/xx_0/I_OUT [Inout]
+
+addSignal -HIDDEN  /main/top/xx_1/V[0:0]
+
+addRenameSig "/main/top/xx_1/V [Int#(32)]" "/main/top/xx_1/V"
+addSignal   /main/top/xx_1/V [Int#(32)]
+
+addSignal -HIDDEN  /main/top/xx_1/I_IN[0:0]
+
+addRenameSig "/main/top/xx_1/I_IN [Inout]" "/main/top/xx_1/I_IN"
+addSignal   /main/top/xx_1/I_IN [Inout]
+
+addSignal -HIDDEN  /main/top/xx_1/WVAL[0:0]
+
+addRenameSig "/main/top/xx_1/WVAL [Bar]" "/main/top/xx_1/WVAL"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WVAL [Bar]
+
+addSignal -HIDDEN  /main/top/xx_1/WSET[0:0]
+
+addRenameSig "/main/top/xx_1/WSET [Bool]" "/main/top/xx_1/WSET"
+addSignal   /main/top/xx_1/WSET [Bool]
+
+addSignal -HIDDEN  /main/top/xx_1/WGET[0:0]
+
+addRenameSig "/main/top/xx_1/WGET [Bar]" "/main/top/xx_1/WGET"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WGET [Bar]
+
+addSignal -HIDDEN  /main/top/xx_1/WHAS[0:0]
+
+addRenameSig "/main/top/xx_1/WHAS [Bool]" "/main/top/xx_1/WHAS"
+addSignal   /main/top/xx_1/WHAS [Bool]
+
+addSignal -HIDDEN  /main/top/xx_1/I_OUT[0:0]
+
+addRenameSig "/main/top/xx_1/I_OUT [Inout]" "/main/top/xx_1/I_OUT"
+addSignal   /main/top/xx_1/I_OUT [Inout]
+
+addSignal -HIDDEN  /main/top/x_0$D_IN[0:0]
+
+addRenameSig "/main/top/x_0$D_IN [Int#(32)]" "/main/top/x_0$D_IN"
+addSignal   /main/top/x_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_0$EN[0:0]
+
+addRenameSig "/main/top/x_0$EN [Bool]" "/main/top/x_0$EN"
+addSignal   /main/top/x_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_0[0:0]
+
+addRenameSig "/main/top/x_0 [Int#(32)]" "/main/top/x_0"
+addSignal   /main/top/x_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_1$D_IN[0:0]
+
+addRenameSig "/main/top/x_1$D_IN [Int#(32)]" "/main/top/x_1$D_IN"
+addSignal   /main/top/x_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_1$EN[0:0]
+
+addRenameSig "/main/top/x_1$EN [Bool]" "/main/top/x_1$EN"
+addSignal   /main/top/x_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_1[0:0]
+
+addRenameSig "/main/top/x_1 [Int#(32)]" "/main/top/x_1"
+addSignal   /main/top/x_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_2$D_IN[0:0]
+
+addRenameSig "/main/top/x_2$D_IN [Int#(32)]" "/main/top/x_2$D_IN"
+addSignal   /main/top/x_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_2$EN[0:0]
+
+addRenameSig "/main/top/x_2$EN [Bool]" "/main/top/x_2$EN"
+addSignal   /main/top/x_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_2[0:0]
+
+addRenameSig "/main/top/x_2 [Int#(32)]" "/main/top/x_2"
+addSignal   /main/top/x_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_3$D_IN[0:0]
+
+addRenameSig "/main/top/x_3$D_IN [Int#(32)]" "/main/top/x_3$D_IN"
+addSignal   /main/top/x_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_3$EN[0:0]
+
+addRenameSig "/main/top/x_3$EN [Bool]" "/main/top/x_3$EN"
+addSignal   /main/top/x_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_3[0:0]
+
+addRenameSig "/main/top/x_3 [Int#(32)]" "/main/top/x_3"
+addSignal   /main/top/x_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_0$D_IN[0:0]
+
+addRenameSig "/main/top/aa_0$D_IN [Int#(32)]" "/main/top/aa_0$D_IN"
+addSignal   /main/top/aa_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_0$EN[0:0]
+
+addRenameSig "/main/top/aa_0$EN [Bool]" "/main/top/aa_0$EN"
+addSignal   /main/top/aa_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_0[0:0]
+
+addRenameSig "/main/top/aa_0 [Int#(32)]" "/main/top/aa_0"
+addSignal   /main/top/aa_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_0$D_IN[0:0]
+
+addRenameSig "/main/top/bb_0$D_IN [Int#(32)]" "/main/top/bb_0$D_IN"
+addSignal   /main/top/bb_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_0$EN[0:0]
+
+addRenameSig "/main/top/bb_0$EN [Bool]" "/main/top/bb_0$EN"
+addSignal   /main/top/bb_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_0[0:0]
+
+addRenameSig "/main/top/bb_0 [Int#(32)]" "/main/top/bb_0"
+addSignal   /main/top/bb_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_1$D_IN[0:0]
+
+addRenameSig "/main/top/aa_1$D_IN [Int#(32)]" "/main/top/aa_1$D_IN"
+addSignal   /main/top/aa_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_1$EN[0:0]
+
+addRenameSig "/main/top/aa_1$EN [Bool]" "/main/top/aa_1$EN"
+addSignal   /main/top/aa_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_1[0:0]
+
+addRenameSig "/main/top/aa_1 [Int#(32)]" "/main/top/aa_1"
+addSignal   /main/top/aa_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_1$D_IN[0:0]
+
+addRenameSig "/main/top/bb_1$D_IN [Int#(32)]" "/main/top/bb_1$D_IN"
+addSignal   /main/top/bb_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_1$EN[0:0]
+
+addRenameSig "/main/top/bb_1$EN [Bool]" "/main/top/bb_1$EN"
+addSignal   /main/top/bb_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_1[0:0]
+
+addRenameSig "/main/top/bb_1 [Int#(32)]" "/main/top/bb_1"
+addSignal   /main/top/bb_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_2$D_IN[0:0]
+
+addRenameSig "/main/top/aa_2$D_IN [Int#(32)]" "/main/top/aa_2$D_IN"
+addSignal   /main/top/aa_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_2$EN[0:0]
+
+addRenameSig "/main/top/aa_2$EN [Bool]" "/main/top/aa_2$EN"
+addSignal   /main/top/aa_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_2[0:0]
+
+addRenameSig "/main/top/aa_2 [Int#(32)]" "/main/top/aa_2"
+addSignal   /main/top/aa_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_2$D_IN[0:0]
+
+addRenameSig "/main/top/bb_2$D_IN [Int#(32)]" "/main/top/bb_2$D_IN"
+addSignal   /main/top/bb_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_2$EN[0:0]
+
+addRenameSig "/main/top/bb_2$EN [Bool]" "/main/top/bb_2$EN"
+addSignal   /main/top/bb_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_2[0:0]
+
+addRenameSig "/main/top/bb_2 [Int#(32)]" "/main/top/bb_2"
+addSignal   /main/top/bb_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_3$D_IN[0:0]
+
+addRenameSig "/main/top/aa_3$D_IN [Int#(32)]" "/main/top/aa_3$D_IN"
+addSignal   /main/top/aa_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_3$EN[0:0]
+
+addRenameSig "/main/top/aa_3$EN [Bool]" "/main/top/aa_3$EN"
+addSignal   /main/top/aa_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_3[0:0]
+
+addRenameSig "/main/top/aa_3 [Int#(32)]" "/main/top/aa_3"
+addSignal   /main/top/aa_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_3$D_IN[0:0]
+
+addRenameSig "/main/top/bb_3$D_IN [Int#(32)]" "/main/top/bb_3$D_IN"
+addSignal   /main/top/bb_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_3$EN[0:0]
+
+addRenameSig "/main/top/bb_3$EN [Bool]" "/main/top/bb_3$EN"
+addSignal   /main/top/bb_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_3[0:0]
+
+addRenameSig "/main/top/bb_3 [Int#(32)]" "/main/top/bb_3"
+addSignal   /main/top/bb_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/ax[0:0]
+
+addRenameSig "/main/top/subis_0/ax [Bit#(3)]" "/main/top/subis_0/ax"
+addSignal   /main/top/subis_0/ax [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_0/CLK[0:0]
+
+addRenameSig "/main/top/subis_0/CLK [Clock]" "/main/top/subis_0/CLK"
+addSignal   /main/top/subis_0/CLK [Clock]
+
+addSignal -HIDDEN  /main/top/subis_0/RST_N[0:0]
+
+addRenameSig "/main/top/subis_0/RST_N [Reset]" "/main/top/subis_0/RST_N"
+addSignal   /main/top/subis_0/RST_N [Reset]
+
+addSignal -HIDDEN  /main/top/subis_0/foo_x[0:0]
+
+addRenameSig "/main/top/subis_0/foo_x [Int#(32)]" "/main/top/subis_0/foo_x"
+addSignal   /main/top/subis_0/foo_x [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/EN_foo[0:0]
+
+addRenameSig "/main/top/subis_0/EN_foo [Bool]" "/main/top/subis_0/EN_foo"
+addSignal   /main/top/subis_0/EN_foo [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/bar[0:0]
+
+addRenameSig "/main/top/subis_0/bar [Int#(32)]" "/main/top/subis_0/bar"
+addSignal   /main/top/subis_0/bar [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/RadyOnTheReadMethod[0:0]
+
+addRenameSig "/main/top/subis_0/RadyOnTheReadMethod [Bool]" "/main/top/subis_0/RadyOnTheReadMethod"
+addSignal   /main/top/subis_0/RadyOnTheReadMethod [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/foo2$D_IN[0:0]
+
+addRenameSig "/main/top/subis_0/foo2$D_IN [Int#(32)]" "/main/top/subis_0/foo2$D_IN"
+addSignal   /main/top/subis_0/foo2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/foo2$EN[0:0]
+
+addRenameSig "/main/top/subis_0/foo2$EN [Bool]" "/main/top/subis_0/foo2$EN"
+addSignal   /main/top/subis_0/foo2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/foo2[0:0]
+
+addRenameSig "/main/top/subis_0/foo2 [Int#(32)]" "/main/top/subis_0/foo2"
+addSignal   /main/top/subis_0/foo2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/barx$D_IN[0:0]
+
+addRenameSig "/main/top/subis_0/barx$D_IN [Bit#(3)]" "/main/top/subis_0/barx$D_IN"
+addSignal   /main/top/subis_0/barx$D_IN [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_0/barx$EN[0:0]
+
+addRenameSig "/main/top/subis_0/barx$EN [Bool]" "/main/top/subis_0/barx$EN"
+addSignal   /main/top/subis_0/barx$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/barx[0:0]
+
+addRenameSig "/main/top/subis_0/barx [Bit#(3)]" "/main/top/subis_0/barx"
+addSignal   /main/top/subis_0/barx [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_1/ax[0:0]
+
+addRenameSig "/main/top/subis_1/ax [Bit#(3)]" "/main/top/subis_1/ax"
+addSignal   /main/top/subis_1/ax [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_1/CLK[0:0]
+
+addRenameSig "/main/top/subis_1/CLK [Clock]" "/main/top/subis_1/CLK"
+addSignal   /main/top/subis_1/CLK [Clock]
+
+addSignal -HIDDEN  /main/top/subis_1/RST_N[0:0]
+
+addRenameSig "/main/top/subis_1/RST_N [Reset]" "/main/top/subis_1/RST_N"
+addSignal   /main/top/subis_1/RST_N [Reset]
+
+addSignal -HIDDEN  /main/top/subis_1/foo_x[0:0]
+
+addRenameSig "/main/top/subis_1/foo_x [Int#(32)]" "/main/top/subis_1/foo_x"
+addSignal   /main/top/subis_1/foo_x [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/EN_foo[0:0]
+
+addRenameSig "/main/top/subis_1/EN_foo [Bool]" "/main/top/subis_1/EN_foo"
+addSignal   /main/top/subis_1/EN_foo [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/bar[0:0]
+
+addRenameSig "/main/top/subis_1/bar [Int#(32)]" "/main/top/subis_1/bar"
+addSignal   /main/top/subis_1/bar [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/RadyOnTheReadMethod[0:0]
+
+addRenameSig "/main/top/subis_1/RadyOnTheReadMethod [Bool]" "/main/top/subis_1/RadyOnTheReadMethod"
+addSignal   /main/top/subis_1/RadyOnTheReadMethod [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/foo2$D_IN[0:0]
+
+addRenameSig "/main/top/subis_1/foo2$D_IN [Int#(32)]" "/main/top/subis_1/foo2$D_IN"
+addSignal   /main/top/subis_1/foo2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/foo2$EN[0:0]
+
+addRenameSig "/main/top/subis_1/foo2$EN [Bool]" "/main/top/subis_1/foo2$EN"
+addSignal   /main/top/subis_1/foo2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/foo2[0:0]
+
+addRenameSig "/main/top/subis_1/foo2 [Int#(32)]" "/main/top/subis_1/foo2"
+addSignal   /main/top/subis_1/foo2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/barx$D_IN[0:0]
+
+addRenameSig "/main/top/subis_1/barx$D_IN [Bit#(3)]" "/main/top/subis_1/barx$D_IN"
+addSignal   /main/top/subis_1/barx$D_IN [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_1/barx$EN[0:0]
+
+addRenameSig "/main/top/subis_1/barx$EN [Bool]" "/main/top/subis_1/barx$EN"
+addSignal   /main/top/subis_1/barx$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/barx[0:0]
+
+addRenameSig "/main/top/subis_1/barx [Bit#(3)]" "/main/top/subis_1/barx"
+addSignal   /main/top/subis_1/barx [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/i[0:0]
+
+addRenameSig "/main/top/i [Inout]" "/main/top/i"
+addSignal   /main/top/i [Inout]
+
+addSignal -HIDDEN  /main/top/y_0$D_IN[0:0]
+
+addRenameSig "/main/top/y_0$D_IN [Int#(32)]" "/main/top/y_0$D_IN"
+addSignal   /main/top/y_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_0$EN[0:0]
+
+addRenameSig "/main/top/y_0$EN [Bool]" "/main/top/y_0$EN"
+addSignal   /main/top/y_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_0[0:0]
+
+addRenameSig "/main/top/y_0 [Int#(32)]" "/main/top/y_0"
+addSignal   /main/top/y_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_1$D_IN[0:0]
+
+addRenameSig "/main/top/y_1$D_IN [Int#(32)]" "/main/top/y_1$D_IN"
+addSignal   /main/top/y_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_1$EN[0:0]
+
+addRenameSig "/main/top/y_1$EN [Bool]" "/main/top/y_1$EN"
+addSignal   /main/top/y_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_1[0:0]
+
+addRenameSig "/main/top/y_1 [Int#(32)]" "/main/top/y_1"
+addSignal   /main/top/y_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_2$D_IN[0:0]
+
+addRenameSig "/main/top/y_2$D_IN [Int#(32)]" "/main/top/y_2$D_IN"
+addSignal   /main/top/y_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_2$EN[0:0]
+
+addRenameSig "/main/top/y_2$EN [Bool]" "/main/top/y_2$EN"
+addSignal   /main/top/y_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_2[0:0]
+
+addRenameSig "/main/top/y_2 [Int#(32)]" "/main/top/y_2"
+addSignal   /main/top/y_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_3$D_IN[0:0]
+
+addRenameSig "/main/top/y_3$D_IN [Int#(32)]" "/main/top/y_3$D_IN"
+addSignal   /main/top/y_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_3$EN[0:0]
+
+addRenameSig "/main/top/y_3$EN [Bool]" "/main/top/y_3$EN"
+addSignal   /main/top/y_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_3[0:0]
+
+addRenameSig "/main/top/y_3 [Int#(32)]" "/main/top/y_3"
+addSignal   /main/top/y_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_0$D_IN[0:0]
+
+addRenameSig "/main/top/zw_0$D_IN [Int#(32)]" "/main/top/zw_0$D_IN"
+addSignal   /main/top/zw_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_0$EN[0:0]
+
+addRenameSig "/main/top/zw_0$EN [Bool]" "/main/top/zw_0$EN"
+addSignal   /main/top/zw_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_0[0:0]
+
+addRenameSig "/main/top/zw_0 [Int#(32)]" "/main/top/zw_0"
+addSignal   /main/top/zw_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_1$D_IN[0:0]
+
+addRenameSig "/main/top/zw_1$D_IN [Int#(32)]" "/main/top/zw_1$D_IN"
+addSignal   /main/top/zw_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_1$EN[0:0]
+
+addRenameSig "/main/top/zw_1$EN [Bool]" "/main/top/zw_1$EN"
+addSignal   /main/top/zw_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_1[0:0]
+
+addRenameSig "/main/top/zw_1 [Int#(32)]" "/main/top/zw_1"
+addSignal   /main/top/zw_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_2$D_IN[0:0]
+
+addRenameSig "/main/top/zw_2$D_IN [Int#(32)]" "/main/top/zw_2$D_IN"
+addSignal   /main/top/zw_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_2$EN[0:0]
+
+addRenameSig "/main/top/zw_2$EN [Bool]" "/main/top/zw_2$EN"
+addSignal   /main/top/zw_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_2[0:0]
+
+addRenameSig "/main/top/zw_2 [Int#(32)]" "/main/top/zw_2"
+addSignal   /main/top/zw_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_3$D_IN[0:0]
+
+addRenameSig "/main/top/zw_3$D_IN [Int#(32)]" "/main/top/zw_3$D_IN"
+addSignal   /main/top/zw_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_3$EN[0:0]
+
+addRenameSig "/main/top/zw_3$EN [Bool]" "/main/top/zw_3$EN"
+addSignal   /main/top/zw_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_3[0:0]
+
+addRenameSig "/main/top/zw_3 [Int#(32)]" "/main/top/zw_3"
+addSignal   /main/top/zw_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_4$D_IN[0:0]
+
+addRenameSig "/main/top/zw_4$D_IN [Int#(32)]" "/main/top/zw_4$D_IN"
+addSignal   /main/top/zw_4$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_4$EN[0:0]
+
+addRenameSig "/main/top/zw_4$EN [Bool]" "/main/top/zw_4$EN"
+addSignal   /main/top/zw_4$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_4[0:0]
+
+addRenameSig "/main/top/zw_4 [Int#(32)]" "/main/top/zw_4"
+addSignal   /main/top/zw_4 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/xx_0/V[0:0]
+
+addRenameSig "/main/top/xx_0/V [Int#(32)]" "/main/top/xx_0/V"
+addSignal   /main/top/xx_0/V [Int#(32)]
+
+addSignal -HIDDEN  /main/top/xx_0/I_IN[0:0]
+
+addRenameSig "/main/top/xx_0/I_IN [Inout]" "/main/top/xx_0/I_IN"
+addSignal   /main/top/xx_0/I_IN [Inout]
+
+addSignal -HIDDEN  /main/top/xx_0/WVAL[0:0]
+
+addRenameSig "/main/top/xx_0/WVAL [Bar]" "/main/top/xx_0/WVAL"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WVAL [Bar]
+
+addSignal -HIDDEN  /main/top/xx_0/WSET[0:0]
+
+addRenameSig "/main/top/xx_0/WSET [Bool]" "/main/top/xx_0/WSET"
+addSignal   /main/top/xx_0/WSET [Bool]
+
+addSignal -HIDDEN  /main/top/xx_0/WGET[0:0]
+
+addRenameSig "/main/top/xx_0/WGET [Bar]" "/main/top/xx_0/WGET"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WGET [Bar]
+
+addSignal -HIDDEN  /main/top/xx_0/WHAS[0:0]
+
+addRenameSig "/main/top/xx_0/WHAS [Bool]" "/main/top/xx_0/WHAS"
+addSignal   /main/top/xx_0/WHAS [Bool]
+
+addSignal -HIDDEN  /main/top/xx_0/I_OUT[0:0]
+
+addRenameSig "/main/top/xx_0/I_OUT [Inout]" "/main/top/xx_0/I_OUT"
+addSignal   /main/top/xx_0/I_OUT [Inout]
+
+addSignal -HIDDEN  /main/top/xx_1/V[0:0]
+
+addRenameSig "/main/top/xx_1/V [Int#(32)]" "/main/top/xx_1/V"
+addSignal   /main/top/xx_1/V [Int#(32)]
+
+addSignal -HIDDEN  /main/top/xx_1/I_IN[0:0]
+
+addRenameSig "/main/top/xx_1/I_IN [Inout]" "/main/top/xx_1/I_IN"
+addSignal   /main/top/xx_1/I_IN [Inout]
+
+addSignal -HIDDEN  /main/top/xx_1/WVAL[0:0]
+
+addRenameSig "/main/top/xx_1/WVAL [Bar]" "/main/top/xx_1/WVAL"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WVAL [Bar]
+
+addSignal -HIDDEN  /main/top/xx_1/WSET[0:0]
+
+addRenameSig "/main/top/xx_1/WSET [Bool]" "/main/top/xx_1/WSET"
+addSignal   /main/top/xx_1/WSET [Bool]
+
+addSignal -HIDDEN  /main/top/xx_1/WGET[0:0]
+
+addRenameSig "/main/top/xx_1/WGET [Bar]" "/main/top/xx_1/WGET"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WGET [Bar]
+
+addSignal -HIDDEN  /main/top/xx_1/WHAS[0:0]
+
+addRenameSig "/main/top/xx_1/WHAS [Bool]" "/main/top/xx_1/WHAS"
+addSignal   /main/top/xx_1/WHAS [Bool]
+
+addSignal -HIDDEN  /main/top/xx_1/I_OUT[0:0]
+
+addRenameSig "/main/top/xx_1/I_OUT [Inout]" "/main/top/xx_1/I_OUT"
+addSignal   /main/top/xx_1/I_OUT [Inout]
+
+addSignal -HIDDEN  /main/top/x_0$D_IN[0:0]
+
+addRenameSig "/main/top/x_0$D_IN [Int#(32)]" "/main/top/x_0$D_IN"
+addSignal   /main/top/x_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_0$EN[0:0]
+
+addRenameSig "/main/top/x_0$EN [Bool]" "/main/top/x_0$EN"
+addSignal   /main/top/x_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_0[0:0]
+
+addRenameSig "/main/top/x_0 [Int#(32)]" "/main/top/x_0"
+addSignal   /main/top/x_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_1$D_IN[0:0]
+
+addRenameSig "/main/top/x_1$D_IN [Int#(32)]" "/main/top/x_1$D_IN"
+addSignal   /main/top/x_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_1$EN[0:0]
+
+addRenameSig "/main/top/x_1$EN [Bool]" "/main/top/x_1$EN"
+addSignal   /main/top/x_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_1[0:0]
+
+addRenameSig "/main/top/x_1 [Int#(32)]" "/main/top/x_1"
+addSignal   /main/top/x_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_2$D_IN[0:0]
+
+addRenameSig "/main/top/x_2$D_IN [Int#(32)]" "/main/top/x_2$D_IN"
+addSignal   /main/top/x_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_2$EN[0:0]
+
+addRenameSig "/main/top/x_2$EN [Bool]" "/main/top/x_2$EN"
+addSignal   /main/top/x_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_2[0:0]
+
+addRenameSig "/main/top/x_2 [Int#(32)]" "/main/top/x_2"
+addSignal   /main/top/x_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_3$D_IN[0:0]
+
+addRenameSig "/main/top/x_3$D_IN [Int#(32)]" "/main/top/x_3$D_IN"
+addSignal   /main/top/x_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_3$EN[0:0]
+
+addRenameSig "/main/top/x_3$EN [Bool]" "/main/top/x_3$EN"
+addSignal   /main/top/x_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_3[0:0]
+
+addRenameSig "/main/top/x_3 [Int#(32)]" "/main/top/x_3"
+addSignal   /main/top/x_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_0$D_IN[0:0]
+
+addRenameSig "/main/top/aa_0$D_IN [Int#(32)]" "/main/top/aa_0$D_IN"
+addSignal   /main/top/aa_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_0$EN[0:0]
+
+addRenameSig "/main/top/aa_0$EN [Bool]" "/main/top/aa_0$EN"
+addSignal   /main/top/aa_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_0[0:0]
+
+addRenameSig "/main/top/aa_0 [Int#(32)]" "/main/top/aa_0"
+addSignal   /main/top/aa_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_0$D_IN[0:0]
+
+addRenameSig "/main/top/bb_0$D_IN [Int#(32)]" "/main/top/bb_0$D_IN"
+addSignal   /main/top/bb_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_0$EN[0:0]
+
+addRenameSig "/main/top/bb_0$EN [Bool]" "/main/top/bb_0$EN"
+addSignal   /main/top/bb_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_0[0:0]
+
+addRenameSig "/main/top/bb_0 [Int#(32)]" "/main/top/bb_0"
+addSignal   /main/top/bb_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_1$D_IN[0:0]
+
+addRenameSig "/main/top/aa_1$D_IN [Int#(32)]" "/main/top/aa_1$D_IN"
+addSignal   /main/top/aa_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_1$EN[0:0]
+
+addRenameSig "/main/top/aa_1$EN [Bool]" "/main/top/aa_1$EN"
+addSignal   /main/top/aa_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_1[0:0]
+
+addRenameSig "/main/top/aa_1 [Int#(32)]" "/main/top/aa_1"
+addSignal   /main/top/aa_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_1$D_IN[0:0]
+
+addRenameSig "/main/top/bb_1$D_IN [Int#(32)]" "/main/top/bb_1$D_IN"
+addSignal   /main/top/bb_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_1$EN[0:0]
+
+addRenameSig "/main/top/bb_1$EN [Bool]" "/main/top/bb_1$EN"
+addSignal   /main/top/bb_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_1[0:0]
+
+addRenameSig "/main/top/bb_1 [Int#(32)]" "/main/top/bb_1"
+addSignal   /main/top/bb_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_2$D_IN[0:0]
+
+addRenameSig "/main/top/aa_2$D_IN [Int#(32)]" "/main/top/aa_2$D_IN"
+addSignal   /main/top/aa_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_2$EN[0:0]
+
+addRenameSig "/main/top/aa_2$EN [Bool]" "/main/top/aa_2$EN"
+addSignal   /main/top/aa_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_2[0:0]
+
+addRenameSig "/main/top/aa_2 [Int#(32)]" "/main/top/aa_2"
+addSignal   /main/top/aa_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_2$D_IN[0:0]
+
+addRenameSig "/main/top/bb_2$D_IN [Int#(32)]" "/main/top/bb_2$D_IN"
+addSignal   /main/top/bb_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_2$EN[0:0]
+
+addRenameSig "/main/top/bb_2$EN [Bool]" "/main/top/bb_2$EN"
+addSignal   /main/top/bb_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_2[0:0]
+
+addRenameSig "/main/top/bb_2 [Int#(32)]" "/main/top/bb_2"
+addSignal   /main/top/bb_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_3$D_IN[0:0]
+
+addRenameSig "/main/top/aa_3$D_IN [Int#(32)]" "/main/top/aa_3$D_IN"
+addSignal   /main/top/aa_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_3$EN[0:0]
+
+addRenameSig "/main/top/aa_3$EN [Bool]" "/main/top/aa_3$EN"
+addSignal   /main/top/aa_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_3[0:0]
+
+addRenameSig "/main/top/aa_3 [Int#(32)]" "/main/top/aa_3"
+addSignal   /main/top/aa_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_3$D_IN[0:0]
+
+addRenameSig "/main/top/bb_3$D_IN [Int#(32)]" "/main/top/bb_3$D_IN"
+addSignal   /main/top/bb_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_3$EN[0:0]
+
+addRenameSig "/main/top/bb_3$EN [Bool]" "/main/top/bb_3$EN"
+addSignal   /main/top/bb_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_3[0:0]
+
+addRenameSig "/main/top/bb_3 [Int#(32)]" "/main/top/bb_3"
+addSignal   /main/top/bb_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/ax[0:0]
+
+addRenameSig "/main/top/subis_0/ax [Bit#(3)]" "/main/top/subis_0/ax"
+addSignal   /main/top/subis_0/ax [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_0/foo_x[0:0]
+
+addRenameSig "/main/top/subis_0/foo_x [Int#(32)]" "/main/top/subis_0/foo_x"
+addSignal   /main/top/subis_0/foo_x [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/EN_foo[0:0]
+
+addRenameSig "/main/top/subis_0/EN_foo [Bool]" "/main/top/subis_0/EN_foo"
+addSignal   /main/top/subis_0/EN_foo [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/bar[0:0]
+
+addRenameSig "/main/top/subis_0/bar [Int#(32)]" "/main/top/subis_0/bar"
+addSignal   /main/top/subis_0/bar [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/RadyOnTheReadMethod[0:0]
+
+addRenameSig "/main/top/subis_0/RadyOnTheReadMethod [Bool]" "/main/top/subis_0/RadyOnTheReadMethod"
+addSignal   /main/top/subis_0/RadyOnTheReadMethod [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/foo2$D_IN[0:0]
+
+addRenameSig "/main/top/subis_0/foo2$D_IN [Int#(32)]" "/main/top/subis_0/foo2$D_IN"
+addSignal   /main/top/subis_0/foo2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/foo2$EN[0:0]
+
+addRenameSig "/main/top/subis_0/foo2$EN [Bool]" "/main/top/subis_0/foo2$EN"
+addSignal   /main/top/subis_0/foo2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/foo2[0:0]
+
+addRenameSig "/main/top/subis_0/foo2 [Int#(32)]" "/main/top/subis_0/foo2"
+addSignal   /main/top/subis_0/foo2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/barx$D_IN[0:0]
+
+addRenameSig "/main/top/subis_0/barx$D_IN [Bit#(3)]" "/main/top/subis_0/barx$D_IN"
+addSignal   /main/top/subis_0/barx$D_IN [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_0/barx$EN[0:0]
+
+addRenameSig "/main/top/subis_0/barx$EN [Bool]" "/main/top/subis_0/barx$EN"
+addSignal   /main/top/subis_0/barx$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/barx[0:0]
+
+addRenameSig "/main/top/subis_0/barx [Bit#(3)]" "/main/top/subis_0/barx"
+addSignal   /main/top/subis_0/barx [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_1/ax[0:0]
+
+addRenameSig "/main/top/subis_1/ax [Bit#(3)]" "/main/top/subis_1/ax"
+addSignal   /main/top/subis_1/ax [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_1/foo_x[0:0]
+
+addRenameSig "/main/top/subis_1/foo_x [Int#(32)]" "/main/top/subis_1/foo_x"
+addSignal   /main/top/subis_1/foo_x [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/EN_foo[0:0]
+
+addRenameSig "/main/top/subis_1/EN_foo [Bool]" "/main/top/subis_1/EN_foo"
+addSignal   /main/top/subis_1/EN_foo [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/bar[0:0]
+
+addRenameSig "/main/top/subis_1/bar [Int#(32)]" "/main/top/subis_1/bar"
+addSignal   /main/top/subis_1/bar [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/RadyOnTheReadMethod[0:0]
+
+addRenameSig "/main/top/subis_1/RadyOnTheReadMethod [Bool]" "/main/top/subis_1/RadyOnTheReadMethod"
+addSignal   /main/top/subis_1/RadyOnTheReadMethod [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/foo2$D_IN[0:0]
+
+addRenameSig "/main/top/subis_1/foo2$D_IN [Int#(32)]" "/main/top/subis_1/foo2$D_IN"
+addSignal   /main/top/subis_1/foo2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/foo2$EN[0:0]
+
+addRenameSig "/main/top/subis_1/foo2$EN [Bool]" "/main/top/subis_1/foo2$EN"
+addSignal   /main/top/subis_1/foo2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/foo2[0:0]
+
+addRenameSig "/main/top/subis_1/foo2 [Int#(32)]" "/main/top/subis_1/foo2"
+addSignal   /main/top/subis_1/foo2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/barx$D_IN[0:0]
+
+addRenameSig "/main/top/subis_1/barx$D_IN [Bit#(3)]" "/main/top/subis_1/barx$D_IN"
+addSignal   /main/top/subis_1/barx$D_IN [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_1/barx$EN[0:0]
+
+addRenameSig "/main/top/subis_1/barx$EN [Bool]" "/main/top/subis_1/barx$EN"
+addSignal   /main/top/subis_1/barx$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/barx[0:0]
+
+addRenameSig "/main/top/subis_1/barx [Bit#(3)]" "/main/top/subis_1/barx"
+addSignal   /main/top/subis_1/barx [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/i[0:0]
+
+addRenameSig "/main/top/i [Inout]" "/main/top/i"
+addSignal   /main/top/i [Inout]
+
+addSignal -HIDDEN  /main/top/y_0$D_IN[0:0]
+
+addRenameSig "/main/top/y_0$D_IN [Int#(32)]" "/main/top/y_0$D_IN"
+addSignal   /main/top/y_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_0$EN[0:0]
+
+addRenameSig "/main/top/y_0$EN [Bool]" "/main/top/y_0$EN"
+addSignal   /main/top/y_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_0[0:0]
+
+addRenameSig "/main/top/y_0 [Int#(32)]" "/main/top/y_0"
+addSignal   /main/top/y_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_1$D_IN[0:0]
+
+addRenameSig "/main/top/y_1$D_IN [Int#(32)]" "/main/top/y_1$D_IN"
+addSignal   /main/top/y_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_1$EN[0:0]
+
+addRenameSig "/main/top/y_1$EN [Bool]" "/main/top/y_1$EN"
+addSignal   /main/top/y_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_1[0:0]
+
+addRenameSig "/main/top/y_1 [Int#(32)]" "/main/top/y_1"
+addSignal   /main/top/y_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_2$D_IN[0:0]
+
+addRenameSig "/main/top/y_2$D_IN [Int#(32)]" "/main/top/y_2$D_IN"
+addSignal   /main/top/y_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_2$EN[0:0]
+
+addRenameSig "/main/top/y_2$EN [Bool]" "/main/top/y_2$EN"
+addSignal   /main/top/y_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_2[0:0]
+
+addRenameSig "/main/top/y_2 [Int#(32)]" "/main/top/y_2"
+addSignal   /main/top/y_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_3$D_IN[0:0]
+
+addRenameSig "/main/top/y_3$D_IN [Int#(32)]" "/main/top/y_3$D_IN"
+addSignal   /main/top/y_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/y_3$EN[0:0]
+
+addRenameSig "/main/top/y_3$EN [Bool]" "/main/top/y_3$EN"
+addSignal   /main/top/y_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/y_3[0:0]
+
+addRenameSig "/main/top/y_3 [Int#(32)]" "/main/top/y_3"
+addSignal   /main/top/y_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_0$D_IN[0:0]
+
+addRenameSig "/main/top/zw_0$D_IN [Int#(32)]" "/main/top/zw_0$D_IN"
+addSignal   /main/top/zw_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_0$EN[0:0]
+
+addRenameSig "/main/top/zw_0$EN [Bool]" "/main/top/zw_0$EN"
+addSignal   /main/top/zw_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_0[0:0]
+
+addRenameSig "/main/top/zw_0 [Int#(32)]" "/main/top/zw_0"
+addSignal   /main/top/zw_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_1$D_IN[0:0]
+
+addRenameSig "/main/top/zw_1$D_IN [Int#(32)]" "/main/top/zw_1$D_IN"
+addSignal   /main/top/zw_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_1$EN[0:0]
+
+addRenameSig "/main/top/zw_1$EN [Bool]" "/main/top/zw_1$EN"
+addSignal   /main/top/zw_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_1[0:0]
+
+addRenameSig "/main/top/zw_1 [Int#(32)]" "/main/top/zw_1"
+addSignal   /main/top/zw_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_2$D_IN[0:0]
+
+addRenameSig "/main/top/zw_2$D_IN [Int#(32)]" "/main/top/zw_2$D_IN"
+addSignal   /main/top/zw_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_2$EN[0:0]
+
+addRenameSig "/main/top/zw_2$EN [Bool]" "/main/top/zw_2$EN"
+addSignal   /main/top/zw_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_2[0:0]
+
+addRenameSig "/main/top/zw_2 [Int#(32)]" "/main/top/zw_2"
+addSignal   /main/top/zw_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_3$D_IN[0:0]
+
+addRenameSig "/main/top/zw_3$D_IN [Int#(32)]" "/main/top/zw_3$D_IN"
+addSignal   /main/top/zw_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_3$EN[0:0]
+
+addRenameSig "/main/top/zw_3$EN [Bool]" "/main/top/zw_3$EN"
+addSignal   /main/top/zw_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_3[0:0]
+
+addRenameSig "/main/top/zw_3 [Int#(32)]" "/main/top/zw_3"
+addSignal   /main/top/zw_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_4$D_IN[0:0]
+
+addRenameSig "/main/top/zw_4$D_IN [Int#(32)]" "/main/top/zw_4$D_IN"
+addSignal   /main/top/zw_4$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/zw_4$EN[0:0]
+
+addRenameSig "/main/top/zw_4$EN [Bool]" "/main/top/zw_4$EN"
+addSignal   /main/top/zw_4$EN [Bool]
+
+addSignal -HIDDEN  /main/top/zw_4[0:0]
+
+addRenameSig "/main/top/zw_4 [Int#(32)]" "/main/top/zw_4"
+addSignal   /main/top/zw_4 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/xx_0/V[0:0]
+
+addRenameSig "/main/top/xx_0/V [Int#(32)]" "/main/top/xx_0/V"
+addSignal   /main/top/xx_0/V [Int#(32)]
+
+addSignal -HIDDEN  /main/top/xx_0/I_IN[0:0]
+
+addRenameSig "/main/top/xx_0/I_IN [Inout]" "/main/top/xx_0/I_IN"
+addSignal   /main/top/xx_0/I_IN [Inout]
+
+addSignal -HIDDEN  /main/top/xx_0/WVAL[0:0]
+
+addRenameSig "/main/top/xx_0/WVAL [Bar]" "/main/top/xx_0/WVAL"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WVAL [Bar]
+
+addSignal -HIDDEN  /main/top/xx_0/WSET[0:0]
+
+addRenameSig "/main/top/xx_0/WSET [Bool]" "/main/top/xx_0/WSET"
+addSignal   /main/top/xx_0/WSET [Bool]
+
+addSignal -HIDDEN  /main/top/xx_0/WGET[0:0]
+
+addRenameSig "/main/top/xx_0/WGET [Bar]" "/main/top/xx_0/WGET"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WGET [Bar]
+
+addSignal -HIDDEN  /main/top/xx_0/WHAS[0:0]
+
+addRenameSig "/main/top/xx_0/WHAS [Bool]" "/main/top/xx_0/WHAS"
+addSignal   /main/top/xx_0/WHAS [Bool]
+
+addSignal -HIDDEN  /main/top/xx_0/I_OUT[0:0]
+
+addRenameSig "/main/top/xx_0/I_OUT [Inout]" "/main/top/xx_0/I_OUT"
+addSignal   /main/top/xx_0/I_OUT [Inout]
+
+addSignal -HIDDEN  /main/top/xx_1/V[0:0]
+
+addRenameSig "/main/top/xx_1/V [Int#(32)]" "/main/top/xx_1/V"
+addSignal   /main/top/xx_1/V [Int#(32)]
+
+addSignal -HIDDEN  /main/top/xx_1/I_IN[0:0]
+
+addRenameSig "/main/top/xx_1/I_IN [Inout]" "/main/top/xx_1/I_IN"
+addSignal   /main/top/xx_1/I_IN [Inout]
+
+addSignal -HIDDEN  /main/top/xx_1/WVAL[0:0]
+
+addRenameSig "/main/top/xx_1/WVAL [Bar]" "/main/top/xx_1/WVAL"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WVAL [Bar]
+
+addSignal -HIDDEN  /main/top/xx_1/WSET[0:0]
+
+addRenameSig "/main/top/xx_1/WSET [Bool]" "/main/top/xx_1/WSET"
+addSignal   /main/top/xx_1/WSET [Bool]
+
+addSignal -HIDDEN  /main/top/xx_1/WGET[0:0]
+
+addRenameSig "/main/top/xx_1/WGET [Bar]" "/main/top/xx_1/WGET"
+aliasmapname Test.Bar_aliases
+nalias Red 	0 	NULL
+nalias Yellow 	1 	NULL
+nalias Blue 	2 	NULL
+
+aliasname Test.Bar_aliases
+addSignal  -holdScope  WGET [Bar]
+
+addSignal -HIDDEN  /main/top/xx_1/WHAS[0:0]
+
+addRenameSig "/main/top/xx_1/WHAS [Bool]" "/main/top/xx_1/WHAS"
+addSignal   /main/top/xx_1/WHAS [Bool]
+
+addSignal -HIDDEN  /main/top/xx_1/I_OUT[0:0]
+
+addRenameSig "/main/top/xx_1/I_OUT [Inout]" "/main/top/xx_1/I_OUT"
+addSignal   /main/top/xx_1/I_OUT [Inout]
+
+addSignal -HIDDEN  /main/top/x_0$D_IN[0:0]
+
+addRenameSig "/main/top/x_0$D_IN [Int#(32)]" "/main/top/x_0$D_IN"
+addSignal   /main/top/x_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_0$EN[0:0]
+
+addRenameSig "/main/top/x_0$EN [Bool]" "/main/top/x_0$EN"
+addSignal   /main/top/x_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_0[0:0]
+
+addRenameSig "/main/top/x_0 [Int#(32)]" "/main/top/x_0"
+addSignal   /main/top/x_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_1$D_IN[0:0]
+
+addRenameSig "/main/top/x_1$D_IN [Int#(32)]" "/main/top/x_1$D_IN"
+addSignal   /main/top/x_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_1$EN[0:0]
+
+addRenameSig "/main/top/x_1$EN [Bool]" "/main/top/x_1$EN"
+addSignal   /main/top/x_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_1[0:0]
+
+addRenameSig "/main/top/x_1 [Int#(32)]" "/main/top/x_1"
+addSignal   /main/top/x_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_2$D_IN[0:0]
+
+addRenameSig "/main/top/x_2$D_IN [Int#(32)]" "/main/top/x_2$D_IN"
+addSignal   /main/top/x_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_2$EN[0:0]
+
+addRenameSig "/main/top/x_2$EN [Bool]" "/main/top/x_2$EN"
+addSignal   /main/top/x_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_2[0:0]
+
+addRenameSig "/main/top/x_2 [Int#(32)]" "/main/top/x_2"
+addSignal   /main/top/x_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_3$D_IN[0:0]
+
+addRenameSig "/main/top/x_3$D_IN [Int#(32)]" "/main/top/x_3$D_IN"
+addSignal   /main/top/x_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/x_3$EN[0:0]
+
+addRenameSig "/main/top/x_3$EN [Bool]" "/main/top/x_3$EN"
+addSignal   /main/top/x_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/x_3[0:0]
+
+addRenameSig "/main/top/x_3 [Int#(32)]" "/main/top/x_3"
+addSignal   /main/top/x_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_0$D_IN[0:0]
+
+addRenameSig "/main/top/aa_0$D_IN [Int#(32)]" "/main/top/aa_0$D_IN"
+addSignal   /main/top/aa_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_0$EN[0:0]
+
+addRenameSig "/main/top/aa_0$EN [Bool]" "/main/top/aa_0$EN"
+addSignal   /main/top/aa_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_0[0:0]
+
+addRenameSig "/main/top/aa_0 [Int#(32)]" "/main/top/aa_0"
+addSignal   /main/top/aa_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_0$D_IN[0:0]
+
+addRenameSig "/main/top/bb_0$D_IN [Int#(32)]" "/main/top/bb_0$D_IN"
+addSignal   /main/top/bb_0$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_0$EN[0:0]
+
+addRenameSig "/main/top/bb_0$EN [Bool]" "/main/top/bb_0$EN"
+addSignal   /main/top/bb_0$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_0[0:0]
+
+addRenameSig "/main/top/bb_0 [Int#(32)]" "/main/top/bb_0"
+addSignal   /main/top/bb_0 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_1$D_IN[0:0]
+
+addRenameSig "/main/top/aa_1$D_IN [Int#(32)]" "/main/top/aa_1$D_IN"
+addSignal   /main/top/aa_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_1$EN[0:0]
+
+addRenameSig "/main/top/aa_1$EN [Bool]" "/main/top/aa_1$EN"
+addSignal   /main/top/aa_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_1[0:0]
+
+addRenameSig "/main/top/aa_1 [Int#(32)]" "/main/top/aa_1"
+addSignal   /main/top/aa_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_1$D_IN[0:0]
+
+addRenameSig "/main/top/bb_1$D_IN [Int#(32)]" "/main/top/bb_1$D_IN"
+addSignal   /main/top/bb_1$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_1$EN[0:0]
+
+addRenameSig "/main/top/bb_1$EN [Bool]" "/main/top/bb_1$EN"
+addSignal   /main/top/bb_1$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_1[0:0]
+
+addRenameSig "/main/top/bb_1 [Int#(32)]" "/main/top/bb_1"
+addSignal   /main/top/bb_1 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_2$D_IN[0:0]
+
+addRenameSig "/main/top/aa_2$D_IN [Int#(32)]" "/main/top/aa_2$D_IN"
+addSignal   /main/top/aa_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_2$EN[0:0]
+
+addRenameSig "/main/top/aa_2$EN [Bool]" "/main/top/aa_2$EN"
+addSignal   /main/top/aa_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_2[0:0]
+
+addRenameSig "/main/top/aa_2 [Int#(32)]" "/main/top/aa_2"
+addSignal   /main/top/aa_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_2$D_IN[0:0]
+
+addRenameSig "/main/top/bb_2$D_IN [Int#(32)]" "/main/top/bb_2$D_IN"
+addSignal   /main/top/bb_2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_2$EN[0:0]
+
+addRenameSig "/main/top/bb_2$EN [Bool]" "/main/top/bb_2$EN"
+addSignal   /main/top/bb_2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_2[0:0]
+
+addRenameSig "/main/top/bb_2 [Int#(32)]" "/main/top/bb_2"
+addSignal   /main/top/bb_2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_3$D_IN[0:0]
+
+addRenameSig "/main/top/aa_3$D_IN [Int#(32)]" "/main/top/aa_3$D_IN"
+addSignal   /main/top/aa_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/aa_3$EN[0:0]
+
+addRenameSig "/main/top/aa_3$EN [Bool]" "/main/top/aa_3$EN"
+addSignal   /main/top/aa_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/aa_3[0:0]
+
+addRenameSig "/main/top/aa_3 [Int#(32)]" "/main/top/aa_3"
+addSignal   /main/top/aa_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_3$D_IN[0:0]
+
+addRenameSig "/main/top/bb_3$D_IN [Int#(32)]" "/main/top/bb_3$D_IN"
+addSignal   /main/top/bb_3$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/bb_3$EN[0:0]
+
+addRenameSig "/main/top/bb_3$EN [Bool]" "/main/top/bb_3$EN"
+addSignal   /main/top/bb_3$EN [Bool]
+
+addSignal -HIDDEN  /main/top/bb_3[0:0]
+
+addRenameSig "/main/top/bb_3 [Int#(32)]" "/main/top/bb_3"
+addSignal   /main/top/bb_3 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/ax[0:0]
+
+addRenameSig "/main/top/subis_0/ax [Bit#(3)]" "/main/top/subis_0/ax"
+addSignal   /main/top/subis_0/ax [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_0/foo_x[0:0]
+
+addRenameSig "/main/top/subis_0/foo_x [Int#(32)]" "/main/top/subis_0/foo_x"
+addSignal   /main/top/subis_0/foo_x [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/EN_foo[0:0]
+
+addRenameSig "/main/top/subis_0/EN_foo [Bool]" "/main/top/subis_0/EN_foo"
+addSignal   /main/top/subis_0/EN_foo [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/bar[0:0]
+
+addRenameSig "/main/top/subis_0/bar [Int#(32)]" "/main/top/subis_0/bar"
+addSignal   /main/top/subis_0/bar [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/RadyOnTheReadMethod[0:0]
+
+addRenameSig "/main/top/subis_0/RadyOnTheReadMethod [Bool]" "/main/top/subis_0/RadyOnTheReadMethod"
+addSignal   /main/top/subis_0/RadyOnTheReadMethod [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/foo2$D_IN[0:0]
+
+addRenameSig "/main/top/subis_0/foo2$D_IN [Int#(32)]" "/main/top/subis_0/foo2$D_IN"
+addSignal   /main/top/subis_0/foo2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/foo2$EN[0:0]
+
+addRenameSig "/main/top/subis_0/foo2$EN [Bool]" "/main/top/subis_0/foo2$EN"
+addSignal   /main/top/subis_0/foo2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/foo2[0:0]
+
+addRenameSig "/main/top/subis_0/foo2 [Int#(32)]" "/main/top/subis_0/foo2"
+addSignal   /main/top/subis_0/foo2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_0/barx$D_IN[0:0]
+
+addRenameSig "/main/top/subis_0/barx$D_IN [Bit#(3)]" "/main/top/subis_0/barx$D_IN"
+addSignal   /main/top/subis_0/barx$D_IN [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_0/barx$EN[0:0]
+
+addRenameSig "/main/top/subis_0/barx$EN [Bool]" "/main/top/subis_0/barx$EN"
+addSignal   /main/top/subis_0/barx$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_0/barx[0:0]
+
+addRenameSig "/main/top/subis_0/barx [Bit#(3)]" "/main/top/subis_0/barx"
+addSignal   /main/top/subis_0/barx [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_1/ax[0:0]
+
+addRenameSig "/main/top/subis_1/ax [Bit#(3)]" "/main/top/subis_1/ax"
+addSignal   /main/top/subis_1/ax [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_1/foo_x[0:0]
+
+addRenameSig "/main/top/subis_1/foo_x [Int#(32)]" "/main/top/subis_1/foo_x"
+addSignal   /main/top/subis_1/foo_x [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/EN_foo[0:0]
+
+addRenameSig "/main/top/subis_1/EN_foo [Bool]" "/main/top/subis_1/EN_foo"
+addSignal   /main/top/subis_1/EN_foo [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/bar[0:0]
+
+addRenameSig "/main/top/subis_1/bar [Int#(32)]" "/main/top/subis_1/bar"
+addSignal   /main/top/subis_1/bar [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/RadyOnTheReadMethod[0:0]
+
+addRenameSig "/main/top/subis_1/RadyOnTheReadMethod [Bool]" "/main/top/subis_1/RadyOnTheReadMethod"
+addSignal   /main/top/subis_1/RadyOnTheReadMethod [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/foo2$D_IN[0:0]
+
+addRenameSig "/main/top/subis_1/foo2$D_IN [Int#(32)]" "/main/top/subis_1/foo2$D_IN"
+addSignal   /main/top/subis_1/foo2$D_IN [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/foo2$EN[0:0]
+
+addRenameSig "/main/top/subis_1/foo2$EN [Bool]" "/main/top/subis_1/foo2$EN"
+addSignal   /main/top/subis_1/foo2$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/foo2[0:0]
+
+addRenameSig "/main/top/subis_1/foo2 [Int#(32)]" "/main/top/subis_1/foo2"
+addSignal   /main/top/subis_1/foo2 [Int#(32)]
+
+addSignal -HIDDEN  /main/top/subis_1/barx$D_IN[0:0]
+
+addRenameSig "/main/top/subis_1/barx$D_IN [Bit#(3)]" "/main/top/subis_1/barx$D_IN"
+addSignal   /main/top/subis_1/barx$D_IN [Bit#(3)]
+
+addSignal -HIDDEN  /main/top/subis_1/barx$EN[0:0]
+
+addRenameSig "/main/top/subis_1/barx$EN [Bool]" "/main/top/subis_1/barx$EN"
+addSignal   /main/top/subis_1/barx$EN [Bool]
+
+addSignal -HIDDEN  /main/top/subis_1/barx[0:0]
+
+addRenameSig "/main/top/subis_1/barx [Bit#(3)]" "/main/top/subis_1/barx"
+addSignal   /main/top/subis_1/barx [Bit#(3)]
+

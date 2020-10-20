@@ -1,0 +1,24 @@
+There is no open project
+The package name is not specified
+The package 'Mult4' does not exist.
+There are no loaded packages.
+There are no loaded packages.
+The search pattern is not specified
+Unknown option: -nex
+Additional option is specified.
+Should be  either '-next' or '-previous'.
+Executing: bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries  mult4/Mult2.bsv
+WARNING: + bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries mult4/Mult2.bsv
+RESULT: checking package dependencies
+RESULT: compiling mult4/Mult.bsv
+RESULT: compiling mult4/Mult2.bsv
+RESULT: code generation for mkMult2 starts
+WARNING: Warning: "mult4/Mult2.bsv", line 23, column 8: (G0117)
+WARNING:   Rule `start' shadows the effects of `cycle' when they execute in the same
+WARNING:   clock cycle. Affected method calls:
+WARNING:     product.write, mcand.write, mplr.write
+WARNING:   To silence this warning, use the `-no-warn-action-shadowing' flag.
+RESULT: Elaborated module file created: mult4/mkMult2.ba
+RESULT: All packages are up to date.
+Mult2 Mult PreludeBSV Prelude
+The package 'Mult4' is not loaded

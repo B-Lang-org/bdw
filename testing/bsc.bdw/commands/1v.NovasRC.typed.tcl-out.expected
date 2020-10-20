@@ -1,0 +1,227 @@
+#!/bin/sh
+# Extend comment for tcl \
+exec bluetcl "$0" "$@"
+
+package require Waves
+
+
+set wave_history [list]
+
+lappend wave_history {VSignal /i 0}
+lappend wave_history {VSignal /CLK 0}
+lappend wave_history {VSignal /RST_N 0}
+lappend wave_history {VSignal /r__write_1 0}
+lappend wave_history {VSignal /EN_r__write 0}
+lappend wave_history {VSignal /RDY_r__write 0}
+lappend wave_history {VSignal /r__read 0}
+lappend wave_history {VSignal /RDY_r__read 0}
+lappend wave_history {VSignal /b 0}
+lappend wave_history {VSignal /r1/CLK 0}
+lappend wave_history {VSignal /r1/RST_N 0}
+lappend wave_history {VSignal /r1/_write_1 0}
+lappend wave_history {VSignal /r1/EN__write 0}
+lappend wave_history {VSignal /r1/RDY__write 0}
+lappend wave_history {VSignal /r1/_read 0}
+lappend wave_history {VSignal /r1/RDY__read 0}
+lappend wave_history {VSignal /r1/ptr/CLK 0}
+lappend wave_history {VSignal /r1/ptr/RST 0}
+lappend wave_history {VSignal /r1/ptr/D_IN 0}
+lappend wave_history {VSignal /r1/ptr/EN 0}
+lappend wave_history {VSignal /r1/ptr/Q_OUT 0}
+lappend wave_history {VSignal /r1/r1/CLK 0}
+lappend wave_history {VSignal /r1/r1/RST 0}
+lappend wave_history {VSignal /r1/r1/D_IN 0}
+lappend wave_history {VSignal /r1/r1/EN 0}
+lappend wave_history {VSignal /r1/r1/Q_OUT 0}
+lappend wave_history {VSignal /r1/r2/CLK 0}
+lappend wave_history {VSignal /r1/r2/RST 0}
+lappend wave_history {VSignal /r1/r2/D_IN 0}
+lappend wave_history {VSignal /r1/r2/EN 0}
+lappend wave_history {VSignal /r1/r2/Q_OUT 0}
+lappend wave_history {VSignal /r1/rHello/WILL_FIRE_RL_rHello 0}
+lappend wave_history {VSignal /r1/rHello/CAN_FIRE_RL_rHello 0}
+lappend wave_history {VSignal /r1/rWorld/WILL_FIRE_RL_rWorld 0}
+lappend wave_history {VSignal /r1/rWorld/CAN_FIRE_RL_rWorld 0}
+lappend wave_history {VSignal /r2/CLK 0}
+lappend wave_history {VSignal /r2/RST_N 0}
+lappend wave_history {VSignal /r2/_write_1 0}
+lappend wave_history {VSignal /r2/EN__write 0}
+lappend wave_history {VSignal /r2/RDY__write 0}
+lappend wave_history {VSignal /r2/_read 0}
+lappend wave_history {VSignal /r2/RDY__read 0}
+lappend wave_history {VSignal /r2/ptr/CLK 0}
+lappend wave_history {VSignal /r2/ptr/RST 0}
+lappend wave_history {VSignal /r2/ptr/D_IN 0}
+lappend wave_history {VSignal /r2/ptr/EN 0}
+lappend wave_history {VSignal /r2/ptr/Q_OUT 0}
+lappend wave_history {VSignal /r2/r1/CLK 0}
+lappend wave_history {VSignal /r2/r1/RST 0}
+lappend wave_history {VSignal /r2/r1/D_IN 0}
+lappend wave_history {VSignal /r2/r1/EN 0}
+lappend wave_history {VSignal /r2/r1/Q_OUT 0}
+lappend wave_history {VSignal /r2/r2/CLK 0}
+lappend wave_history {VSignal /r2/r2/RST 0}
+lappend wave_history {VSignal /r2/r2/D_IN 0}
+lappend wave_history {VSignal /r2/r2/EN 0}
+lappend wave_history {VSignal /r2/r2/Q_OUT 0}
+lappend wave_history {VSignal /r2/rHello/WILL_FIRE_RL_rHello 0}
+lappend wave_history {VSignal /r2/rHello/CAN_FIRE_RL_rHello 0}
+lappend wave_history {VSignal /r2/rWorld/WILL_FIRE_RL_rWorld 0}
+lappend wave_history {VSignal /r2/rWorld/CAN_FIRE_RL_rWorld 0}
+lappend wave_history {VSignal /mi/i 0}
+lappend wave_history {VSignal /mi/CLK 0}
+lappend wave_history {VSignal /mi/RST_N 0}
+lappend wave_history {VSignal /mi/b 0}
+lappend wave_history {VSignal /mb/V 0}
+lappend wave_history {VSignal /mb/I_IN 0}
+lappend wave_history {VSignal /mb/WVAL 0}
+lappend wave_history {VSignal /mb/WSET 0}
+lappend wave_history {VSignal /mb/WGET 0}
+lappend wave_history {VSignal /mb/WHAS 0}
+lappend wave_history {VSignal /mb/I_OUT 0}
+lappend wave_history {VSignal /iv/io 0}
+lappend wave_history {VSignal /iv/CLK 0}
+lappend wave_history {VSignal /iv/RST_N 0}
+lappend wave_history {VSignal /iv/vec1_0__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec1_0__write 0}
+lappend wave_history {VSignal /iv/RDY_vec1_0__write 0}
+lappend wave_history {VSignal /iv/vec1_0__read 0}
+lappend wave_history {VSignal /iv/RDY_vec1_0__read 0}
+lappend wave_history {VSignal /iv/vec1_1__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec1_1__write 0}
+lappend wave_history {VSignal /iv/RDY_vec1_1__write 0}
+lappend wave_history {VSignal /iv/vec1_1__read 0}
+lappend wave_history {VSignal /iv/RDY_vec1_1__read 0}
+lappend wave_history {VSignal /iv/vec2_0_0__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec2_0_0__write 0}
+lappend wave_history {VSignal /iv/RDY_vec2_0_0__write 0}
+lappend wave_history {VSignal /iv/vec2_0_0__read 0}
+lappend wave_history {VSignal /iv/RDY_vec2_0_0__read 0}
+lappend wave_history {VSignal /iv/vec2_0_1__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec2_0_1__write 0}
+lappend wave_history {VSignal /iv/RDY_vec2_0_1__write 0}
+lappend wave_history {VSignal /iv/vec2_0_1__read 0}
+lappend wave_history {VSignal /iv/RDY_vec2_0_1__read 0}
+lappend wave_history {VSignal /iv/vec2_1_0__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec2_1_0__write 0}
+lappend wave_history {VSignal /iv/RDY_vec2_1_0__write 0}
+lappend wave_history {VSignal /iv/vec2_1_0__read 0}
+lappend wave_history {VSignal /iv/RDY_vec2_1_0__read 0}
+lappend wave_history {VSignal /iv/vec2_1_1__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec2_1_1__write 0}
+lappend wave_history {VSignal /iv/RDY_vec2_1_1__write 0}
+lappend wave_history {VSignal /iv/vec2_1_1__read 0}
+lappend wave_history {VSignal /iv/RDY_vec2_1_1__read 0}
+lappend wave_history {VSignal /iv/vec3_0_0_0__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec3_0_0_0__write 0}
+lappend wave_history {VSignal /iv/RDY_vec3_0_0_0__write 0}
+lappend wave_history {VSignal /iv/vec3_0_0_0__read 0}
+lappend wave_history {VSignal /iv/RDY_vec3_0_0_0__read 0}
+lappend wave_history {VSignal /iv/vec3_0_0_1__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec3_0_0_1__write 0}
+lappend wave_history {VSignal /iv/RDY_vec3_0_0_1__write 0}
+lappend wave_history {VSignal /iv/vec3_0_0_1__read 0}
+lappend wave_history {VSignal /iv/RDY_vec3_0_0_1__read 0}
+lappend wave_history {VSignal /iv/vec3_0_1_0__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec3_0_1_0__write 0}
+lappend wave_history {VSignal /iv/RDY_vec3_0_1_0__write 0}
+lappend wave_history {VSignal /iv/vec3_0_1_0__read 0}
+lappend wave_history {VSignal /iv/RDY_vec3_0_1_0__read 0}
+lappend wave_history {VSignal /iv/vec3_0_1_1__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec3_0_1_1__write 0}
+lappend wave_history {VSignal /iv/RDY_vec3_0_1_1__write 0}
+lappend wave_history {VSignal /iv/vec3_0_1_1__read 0}
+lappend wave_history {VSignal /iv/RDY_vec3_0_1_1__read 0}
+lappend wave_history {VSignal /iv/vec3_1_0_0__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec3_1_0_0__write 0}
+lappend wave_history {VSignal /iv/RDY_vec3_1_0_0__write 0}
+lappend wave_history {VSignal /iv/vec3_1_0_0__read 0}
+lappend wave_history {VSignal /iv/RDY_vec3_1_0_0__read 0}
+lappend wave_history {VSignal /iv/vec3_1_0_1__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec3_1_0_1__write 0}
+lappend wave_history {VSignal /iv/RDY_vec3_1_0_1__write 0}
+lappend wave_history {VSignal /iv/vec3_1_0_1__read 0}
+lappend wave_history {VSignal /iv/RDY_vec3_1_0_1__read 0}
+lappend wave_history {VSignal /iv/vec3_1_1_0__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec3_1_1_0__write 0}
+lappend wave_history {VSignal /iv/RDY_vec3_1_1_0__write 0}
+lappend wave_history {VSignal /iv/vec3_1_1_0__read 0}
+lappend wave_history {VSignal /iv/RDY_vec3_1_1_0__read 0}
+lappend wave_history {VSignal /iv/vec3_1_1_1__write_1 0}
+lappend wave_history {VSignal /iv/EN_vec3_1_1_1__write 0}
+lappend wave_history {VSignal /iv/RDY_vec3_1_1_1__write 0}
+lappend wave_history {VSignal /iv/vec3_1_1_1__read 0}
+lappend wave_history {VSignal /iv/RDY_vec3_1_1_1__read 0}
+lappend wave_history {VSignal /iv/data1 0}
+lappend wave_history {VSignal /iv/RDY_data1 0}
+lappend wave_history {VSignal /iv/data2 0}
+lappend wave_history {VSignal /iv/RDY_data2 0}
+lappend wave_history {VSignal /iv/data3 0}
+lappend wave_history {VSignal /iv/RDY_data3 0}
+lappend wave_history {VSignal /iv/CLK_clks1_0 0}
+lappend wave_history {VSignal /iv/CLK_GATE_clks1_0 0}
+lappend wave_history {VSignal /iv/CLK_clks1_1 0}
+lappend wave_history {VSignal /iv/CLK_GATE_clks1_1 0}
+lappend wave_history {VSignal /iv/RST_N_rsts1_0 0}
+lappend wave_history {VSignal /iv/RST_N_rsts1_1 0}
+lappend wave_history {VSignal /iv/ios1_0 0}
+lappend wave_history {VSignal /iv/ios1_1 0}
+lappend wave_history {VInst / ALL}
+lappend wave_history {VInst /r1 ALL}
+lappend wave_history {VInst /r1/ptr ALL}
+lappend wave_history {VInst /r1/r1 ALL}
+lappend wave_history {VInst /r1/r2 ALL}
+lappend wave_history {VInst /r1/rHello ALL}
+lappend wave_history {VInst /r1/rWorld ALL}
+lappend wave_history {VInst /r2 ALL}
+lappend wave_history {VInst /r2/ptr ALL}
+lappend wave_history {VInst /r2/r1 ALL}
+lappend wave_history {VInst /r2/r2 ALL}
+lappend wave_history {VInst /r2/rHello ALL}
+lappend wave_history {VInst /r2/rWorld ALL}
+lappend wave_history {VInst /mi ALL}
+lappend wave_history {VInst /mb ALL}
+lappend wave_history {VInst /iv ALL}
+lappend wave_history {VInst / ALL}
+lappend wave_history {VInst /r1 ALL}
+lappend wave_history {VInst /r1/ptr ALL}
+lappend wave_history {VInst /r1/r1 ALL}
+lappend wave_history {VInst /r1/r2 ALL}
+lappend wave_history {VInst /r1/rHello ALL}
+lappend wave_history {VInst /r1/rWorld ALL}
+lappend wave_history {VInst /r2 ALL}
+lappend wave_history {VInst /r2/ptr ALL}
+lappend wave_history {VInst /r2/r1 ALL}
+lappend wave_history {VInst /r2/r2 ALL}
+lappend wave_history {VInst /r2/rHello ALL}
+lappend wave_history {VInst /r2/rWorld ALL}
+lappend wave_history {VInst /mi ALL}
+lappend wave_history {VInst /mb ALL}
+lappend wave_history {VInst /iv ALL}
+
+
+
+
+if {[info frame]  == 2 } {
+  # Default option taken from the recorded environment
+  set newargs ""
+  append newargs " "
+  append newargs " -e mkT"
+  append newargs " -backend -verilog"
+
+  # Start the viewer based on recored and command line options
+  if { [catch  [list Waves::start_replay_viewer  $newargs $argv] err] } {
+    puts stderr $err
+    Waves::start_replay_usage $argv0
+    exit -1
+  } else {
+    set viewer $err
+  }
+
+  # Replay script
+  if { [catch [list $viewer replay_history_list $wave_history] err] } {
+    puts stderr "Error:  Could not replay wave history: $err"
+    Waves::start_replay_usage $argv0
+    exit -1
+  }
+}

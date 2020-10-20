@@ -1,0 +1,25 @@
+There is no open project.
+There is no module loaded.
+The module 'mkMult4Tb' does not exist.
+There is no module loaded.
+The module 'wrong_module' does not exist.
+Executing: bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries  mult4/Mult2.bsv
+WARNING: + bsc -u -sim -simdir mult4 -bdir mult4 -info-dir . -keep-fires -p .:%/Libraries mult4/Mult2.bsv
+RESULT: checking package dependencies
+RESULT: compiling mult4/Mult.bsv
+RESULT: compiling mult4/Mult2.bsv
+RESULT: code generation for mkMult2 starts
+WARNING: Warning: "mult4/Mult2.bsv", line 23, column 8: (G0117)
+WARNING:   Rule `start' shadows the effects of `cycle' when they execute in the same
+WARNING:   clock cycle. Affected method calls:
+WARNING:     product.write, mcand.write, mplr.write
+WARNING:   To silence this warning, use the `-no-warn-action-shadowing' flag.
+RESULT: Elaborated module file created: mult4/mkMult2.ba
+RESULT: All packages are up to date.
+mkMult2
+The module 'wrong_module' does not exist.
+The rule is not specified
+Incorrect rule name "wrong_rule"
+The rules are not specified
+The second rule is not specified
+Incorrect rule name "wrong"

@@ -1,0 +1,36 @@
+set here [file join [absolute $srcdir] $subdir]
+source $here/../../bdw.tcl
+ 
+if { [info exists env(DISPLAY)] && $env(DISPLAY) != "" } {
+
+unset -nocomplain ::env(EDITOR)
+
+# Check the typecheck command
+bdw_run_compare_pass typecheck_via_bluesim_test.tcl 
+ 
+# Check the typecheck command
+bdw_run_compare_pass typecheck_via_verilog_test.tcl 
+ 
+# Check the compile command
+bdw_run_compare_pass compile_via_bluesim_test.tcl 
+ 
+# Check the compile command
+bdw_run_compare_pass compile_via_verilog_test.tcl 
+ 
+# Check the link command
+bdw_run_compare_pass link_via_bluesim_test.tcl 
+ 
+# The sed filter is to work around a bug in iverilog 0.8.5 in the upcoming two
+# tests
+
+# Check the link command
+bdw_run_compare_pass link_via_verilog_test.tcl "" {-e /\\.v:\[0-9\]*:\ warning:\ reg\ .*\ is\ used\ by\ logic\ but\ never\ assigned\\.$/d}
+ 
+# Check the simulate command
+bdw_run_compare_pass simulate_via_verilog_test.tcl "" {-e /\\.v:\[0-9\]*:\ warning:\ reg\ .*\ is\ used\ by\ logic\ but\ never\ assigned\\.$/d}
+ 
+# Check the simulate command
+bdw_run_compare_pass simulate_via_bluesim_test.tcl
+
+}
+

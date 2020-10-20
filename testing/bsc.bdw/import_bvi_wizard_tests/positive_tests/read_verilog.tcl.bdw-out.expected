@@ -1,0 +1,681 @@
+module :  BRAM1
+parameter: PIPELINED 0
+parameter: ADDR_WIDTH 1
+parameter: DATA_WIDTH 1
+parameter: MEMSIZE 1
+input: CLK {0 : 0}
+input: WE {0 : 0}
+input: ADDR {ADDR_WIDTH-1 : 0}
+input: DI {DATA_WIDTH-1 : 0}
+output: DO {DATA_WIDTH-1 : 0}
+module :  BRAM1BE
+parameter: PIPELINED 0
+parameter: ADDR_WIDTH 1
+parameter: DATA_WIDTH 1
+parameter: CHUNKSIZE 1
+parameter: WE_WIDTH 1
+parameter: MEMSIZE 1
+input: CLK {0 : 0}
+input: WE {WE_WIDTH-1 : 0}
+input: ADDR {ADDR_WIDTH-1 : 0}
+input: DI {DATA_WIDTH-1 : 0}
+output: DO {DATA_WIDTH-1 : 0}
+module :  BRAM1BELoad
+parameter: FILENAME ""
+parameter: BINARY 0
+parameter: PIPELINED 0
+parameter: ADDR_WIDTH 1
+parameter: DATA_WIDTH 1
+parameter: CHUNKSIZE 1
+parameter: WE_WIDTH 1
+parameter: MEMSIZE 1
+input: CLK {0 : 0}
+input: WE {WE_WIDTH-1 : 0}
+input: ADDR {ADDR_WIDTH-1 : 0}
+input: DI {DATA_WIDTH-1 : 0}
+output: DO {DATA_WIDTH-1 : 0}
+module :  BRAM1Load
+parameter: FILENAME ""
+parameter: BINARY 0
+parameter: PIPELINED 0
+parameter: ADDR_WIDTH 1
+parameter: DATA_WIDTH 1
+parameter: MEMSIZE 1
+input: CLK {0 : 0}
+input: WE {0 : 0}
+input: ADDR {ADDR_WIDTH-1 : 0}
+input: DI {DATA_WIDTH-1 : 0}
+output: DO {DATA_WIDTH-1 : 0}
+module :  BRAM2
+parameter: PIPELINED 0
+parameter: ADDR_WIDTH 1
+parameter: DATA_WIDTH 1
+parameter: MEMSIZE 1
+input: CLKA {0 : 0}
+input: WEA {0 : 0}
+input: ADDRA {ADDR_WIDTH-1 : 0}
+input: DIA {DATA_WIDTH-1 : 0}
+output: DOA {DATA_WIDTH-1 : 0}
+input: CLKB {0 : 0}
+input: WEB {0 : 0}
+input: ADDRB {ADDR_WIDTH-1 : 0}
+input: DIB {DATA_WIDTH-1 : 0}
+output: DOB {DATA_WIDTH-1 : 0}
+module :  BRAM2Load
+parameter: FILENAME ""
+parameter: BINARY 0
+parameter: PIPELINED 0
+parameter: ADDR_WIDTH 1
+parameter: DATA_WIDTH 1
+parameter: MEMSIZE 1
+input: CLKA {0 : 0}
+input: WEA {0 : 0}
+input: ADDRA {ADDR_WIDTH-1 : 0}
+input: DIA {DATA_WIDTH-1 : 0}
+output: DOA {DATA_WIDTH-1 : 0}
+input: CLKB {0 : 0}
+input: WEB {0 : 0}
+input: ADDRB {ADDR_WIDTH-1 : 0}
+input: DIB {DATA_WIDTH-1 : 0}
+output: DOB {DATA_WIDTH-1 : 0}
+module :  BypassWire
+parameter: width 1
+input: WVAL {width - 1  :  0}
+output: WGET {width - 1  :  0}
+module :  ClockDiv
+parameter: width 2
+parameter: lower 1
+parameter: upper 3
+parameter: offset 0
+input: CLK_IN {0 : 0}
+input: RST {0 : 0}
+output: PREEDGE {0 : 0}
+output: CLK_OUT {0 : 0}
+module :  ClockGen
+parameter: v1Width 5
+parameter: v2Width 5
+parameter: initDelay 5
+parameter: initValue 1'b0
+parameter: otherValue 1'b1
+output: CLK_OUT {0 : 0}
+module :  ClockInverter
+input: CLK_IN {0 : 0}
+output: PREEDGE {0 : 0}
+output: CLK_OUT {0 : 0}
+module :  ClockMux
+input: CLK {0 : 0}
+input: SELECT {0 : 0}
+input: SELECT_ENABLE {0 : 0}
+input: A_CLK {0 : 0}
+input: A_CLKGATE {0 : 0}
+input: B_CLK {0 : 0}
+input: B_CLKGATE {0 : 0}
+output: CLK_OUT {0 : 0}
+output: CLK_GATE_OUT {0 : 0}
+module :  ClockSelect
+parameter: RSTDELAY 2
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: SELECT {0 : 0}
+input: SELECT_ENABLE {0 : 0}
+input: A_CLK {0 : 0}
+input: A_CLKGATE {0 : 0}
+input: B_CLK {0 : 0}
+input: B_CLKGATE {0 : 0}
+output: CLK_OUT {0 : 0}
+output: CLK_GATE_OUT {0 : 0}
+output: OUT_RST {0 : 0}
+module :  ConfigRegA
+parameter: width 1
+parameter: init { width {1'b0}}
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: EN {0 : 0}
+input: D_IN {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  ConfigRegN
+parameter: width 1
+parameter: init { width {1'b0} }
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: EN {0 : 0}
+input: D_IN {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  ConfigRegUN
+parameter: width 1
+input: CLK {0 : 0}
+input: EN {0 : 0}
+input: D_IN {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  ConstrainedRandom
+parameter: width 1
+parameter: min 0
+parameter: max 0
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: EN {0 : 0}
+output: OUT {width - 1 :  0}
+module :  ConvertFromZ
+parameter: width 1
+input: IN {width - 1  :  0}
+output: OUT {width - 1  :  0}
+module :  ConvertToZ
+parameter: width 1
+input: IN {width - 1  :  0}
+input: CTL {0 : 0}
+output: OUT {width - 1  :  0}
+module :  Counter
+parameter: width 1
+parameter: init 0
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: DATA_A {width - 1  :  0}
+input: ADDA {0 : 0}
+input: DATA_B {width - 1  :  0}
+input: ADDB {0 : 0}
+input: DATA_C {width - 1  :  0}
+input: SETC {0 : 0}
+input: DATA_F {width - 1  :  0}
+input: SETF {0 : 0}
+output: Q_OUT {width - 1  :  0}
+module :  DualPortRam
+parameter: addrWidth 5
+parameter: dataWidth 16
+input: CLK {0 : 0}
+input: WE {0 : 0}
+input: WADDR {addrWidth-1 : 0}
+input: DIN {dataWidth-1 : 0}
+input: RADDR {addrWidth-1 : 0}
+output: DOUT {dataWidth-1 : 0}
+module :  Empty
+input: CLK {0 : 0}
+input: RST {0 : 0}
+module :  FIFO1
+parameter: width 1
+parameter: guarded 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: D_IN {width - 1  :  0}
+input: ENQ {0 : 0}
+input: DEQ {0 : 0}
+input: CLR {0 : 0}
+output: FULL_N {0 : 0}
+output: D_OUT {width - 1  :  0}
+output: EMPTY_N {0 : 0}
+module :  FIFO10
+parameter: guarded 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: ENQ {0 : 0}
+input: DEQ {0 : 0}
+input: CLR {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+module :  FIFO2
+parameter: width 1
+parameter: guarded 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: D_IN {width - 1  :  0}
+input: ENQ {0 : 0}
+input: DEQ {0 : 0}
+input: CLR {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+output: D_OUT {width - 1  :  0}
+module :  FIFO20
+parameter: guarded 1
+input: RST {0 : 0}
+input: CLK {0 : 0}
+input: ENQ {0 : 0}
+input: CLR {0 : 0}
+input: DEQ {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+module :  FIFOL1
+parameter: width 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: D_IN {width - 1  :  0}
+input: ENQ {0 : 0}
+input: DEQ {0 : 0}
+input: CLR {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+output: D_OUT {width - 1  :  0}
+module :  FIFOL10
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: ENQ {0 : 0}
+input: DEQ {0 : 0}
+input: CLR {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+module :  FIFOL2
+parameter: width 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: D_IN {width - 1  :  0}
+input: ENQ {0 : 0}
+input: DEQ {0 : 0}
+input: CLR {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+output: D_OUT {width - 1  :  0}
+module :  FIFOL20
+input: RST {0 : 0}
+input: CLK {0 : 0}
+input: ENQ {0 : 0}
+input: CLR {0 : 0}
+input: DEQ {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+module :  Fork
+parameter: iw 1
+parameter: ow 2
+input: i {iw - 1  :  0}
+output: o {ow - 1  :  0}
+module :  GatedClock
+parameter: init 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: COND {0 : 0}
+input: COND_EN {0 : 0}
+output: COND_OUT {0 : 0}
+input: CLK_IN {0 : 0}
+input: CLK_GATE_IN {0 : 0}
+output: CLK_OUT {0 : 0}
+output: CLK_GATE_OUT {0 : 0}
+module :  GatedClockDiv
+parameter: width 2
+parameter: lower 1
+parameter: upper 3
+parameter: offset 0
+input: CLK_IN {0 : 0}
+input: CLK_GATE_IN {0 : 0}
+input: RST {0 : 0}
+output: PREEDGE {0 : 0}
+output: CLK_OUT {0 : 0}
+output: CLK_GATE_OUT {0 : 0}
+module :  GatedClockInverter
+input: CLK_IN {0 : 0}
+input: CLK_GATE_IN {0 : 0}
+output: PREEDGE {0 : 0}
+output: CLK_OUT {0 : 0}
+output: CLK_GATE_OUT {0 : 0}
+module :  InitialReset 
+parameter: RSTHOLD 2
+input: CLK {0 : 0}
+output: OUT_RST {0 : 0}
+module :  InoutConnect
+parameter: width 1
+inout: internal { width - 1  :  0 }
+module :  MakeClock 
+parameter: initVal 0
+parameter: initGate 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: CLK_IN {0 : 0}
+input: CLK_IN_EN {0 : 0}
+input: COND_IN {0 : 0}
+input: COND_IN_EN {0 : 0}
+output: CLK_VAL_OUT {0 : 0}
+output: COND_OUT {0 : 0}
+output: CLK_OUT {0 : 0}
+output: CLK_GATE_OUT {0 : 0}
+module :  MakeReset 
+parameter: RSTDELAY 2
+parameter: init 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: ASSERT {0 : 0}
+output: ASSERT_OUT {0 : 0}
+input: DST_CLK {0 : 0}
+output: OUT_RST {0 : 0}
+module :  MakeReset0 
+parameter: init 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: ASSERT {0 : 0}
+output: ASSERT_OUT {0 : 0}
+output: OUT_RST {0 : 0}
+module :  MakeResetA 
+parameter: RSTDELAY 2
+parameter: init 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: ASSERT {0 : 0}
+output: ASSERT_OUT {0 : 0}
+input: DST_CLK {0 : 0}
+output: OUT_RST {0 : 0}
+module :  McpRegUN
+parameter: width 1
+parameter: delay 0
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: SET {0 : 0}
+input: val {width - 1  :  0}
+output: get {width - 1  :  0}
+module :  RWire
+parameter: width 1
+input: WVAL {width - 1  :  0}
+input: WSET {0 : 0}
+output: WGET {width - 1  :  0}
+output: WHAS {0 : 0}
+module :  RWire0
+input: WSET {0 : 0}
+output: WHAS {0 : 0}
+module :  RegA
+parameter: width 1
+parameter: init { width {1'b0}}
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: EN {0 : 0}
+input: D_IN {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  RegAligned
+parameter: width 1
+parameter: init { width {1'b0}}
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: EN {0 : 0}
+input: D_IN {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  RegFile
+parameter: addr_width 1
+parameter: data_width 1
+parameter: lo 0
+parameter: hi 1
+input: CLK {0 : 0}
+input: ADDR_IN {addr_width - 1  :  0}
+input: D_IN {data_width - 1  :  0}
+input: WE {0 : 0}
+input: ADDR_1 {addr_width - 1  :  0}
+output: D_OUT_1 {data_width - 1  :  0}
+input: ADDR_2 {addr_width - 1  :  0}
+output: D_OUT_2 {data_width - 1  :  0}
+input: ADDR_3 {addr_width - 1  :  0}
+output: D_OUT_3 {data_width - 1  :  0}
+input: ADDR_4 {addr_width - 1  :  0}
+output: D_OUT_4 {data_width - 1  :  0}
+input: ADDR_5 {addr_width - 1  :  0}
+output: D_OUT_5 {data_width - 1  :  0}
+module :  RegFileLoad
+parameter: file ""
+parameter: addr_width 1
+parameter: data_width 1
+parameter: lo 0
+parameter: hi 1
+parameter: binary 0
+input: CLK {0 : 0}
+input: ADDR_IN {addr_width - 1  :  0}
+input: D_IN {data_width - 1  :  0}
+input: WE {0 : 0}
+input: ADDR_1 {addr_width - 1  :  0}
+output: D_OUT_1 {data_width - 1  :  0}
+input: ADDR_2 {addr_width - 1  :  0}
+output: D_OUT_2 {data_width - 1  :  0}
+input: ADDR_3 {addr_width - 1  :  0}
+output: D_OUT_3 {data_width - 1  :  0}
+input: ADDR_4 {addr_width - 1  :  0}
+output: D_OUT_4 {data_width - 1  :  0}
+input: ADDR_5 {addr_width - 1  :  0}
+output: D_OUT_5 {data_width - 1  :  0}
+module :  RegN
+parameter: width 1
+parameter: init { width {1'b0} }
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: EN {0 : 0}
+input: D_IN {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  RegTwoA
+parameter: width 1
+parameter: init { width {1'b0 }}
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: ENA {0 : 0}
+input: ENB {0 : 0}
+input: D_INA {width - 1  :  0}
+input: D_INB {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  RegTwoN
+parameter: width 1
+parameter: init {width {1'b0}}
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: ENA {0 : 0}
+input: ENB {0 : 0}
+input: D_INA {width - 1  :  0}
+input: D_INB {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  RegTwoUN
+parameter: width 1
+input: CLK {0 : 0}
+input: ENA {0 : 0}
+input: ENB {0 : 0}
+input: D_INA {width - 1  :  0}
+input: D_INB {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  RegUN
+parameter: width 1
+input: CLK {0 : 0}
+input: EN {0 : 0}
+input: D_IN {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  ResetEither
+input: A_RST {0 : 0}
+input: B_RST {0 : 0}
+output: RST_OUT {0 : 0}
+module :  ResetInverter
+input: RESET_IN {0 : 0}
+output: RESET_OUT {0 : 0}
+module :  ResetMux
+input: CLK {0 : 0}
+input: SELECT {0 : 0}
+input: SELECT_ENABLE {0 : 0}
+input: A_RST {0 : 0}
+input: B_RST {0 : 0}
+output: RST_OUT {0 : 0}
+module :  ResetToBool
+input: RST {0 : 0}
+output: VAL {0 : 0}
+module :  ResolveZ
+parameter: width 1
+input: IN_0 {width - 1  :  0}
+input: IN_1 {width - 1  :  0}
+output: OUT {width - 1  :  0}
+module :  RevertReg
+parameter: width 1
+parameter: init { width {1'b0} }
+input: CLK {0 : 0}
+input: EN {0 : 0}
+input: D_IN {width - 1  :  0}
+output: Q_OUT {width - 1  :  0}
+module :  SizedFIFO
+parameter: p1width 1
+parameter: p2depth 3
+parameter: p3cntr_width 1
+parameter: guarded 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: CLR {0 : 0}
+input: D_IN {p1width - 1  :  0}
+input: ENQ {0 : 0}
+input: DEQ {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+output: D_OUT {p1width - 1  :  0}
+module :  SizedFIFO0
+parameter: p1depth 2
+parameter: p2cntr_width 2
+parameter: guarded 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: CLR {0 : 0}
+input: ENQ {0 : 0}
+input: DEQ {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+module :  SizedFIFOL
+parameter: p1width 1
+parameter: p2depth 3
+parameter: p3cntr_width 1
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: CLR {0 : 0}
+input: D_IN {p1width - 1  :  0}
+input: ENQ {0 : 0}
+input: DEQ {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+output: D_OUT {p1width - 1  :  0}
+module :  SizedFIFOL0
+parameter: p1depth 2
+parameter: p2cntr_width 2
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: CLR {0 : 0}
+input: ENQ {0 : 0}
+input: DEQ {0 : 0}
+output: FULL_N {0 : 0}
+output: EMPTY_N {0 : 0}
+module :  SyncBit 
+parameter: init 1'b0
+input: sCLK {0 : 0}
+input: sRST {0 : 0}
+input: sEN {0 : 0}
+input: sD_IN {0 : 0}
+input: dCLK {0 : 0}
+output: dD_OUT {0 : 0}
+module :  SyncBit05 
+parameter: init 1'b0
+input: sCLK {0 : 0}
+input: sRST {0 : 0}
+input: sEN {0 : 0}
+input: sD_IN {0 : 0}
+input: dCLK {0 : 0}
+output: dD_OUT {0 : 0}
+module :  SyncBit1 
+parameter: init 1'b0
+input: sCLK {0 : 0}
+input: sRST {0 : 0}
+input: sEN {0 : 0}
+input: sD_IN {0 : 0}
+input: dCLK {0 : 0}
+output: dD_OUT {0 : 0}
+module :  SyncBit15 
+parameter: init 1'b0
+input: sCLK {0 : 0}
+input: sRST {0 : 0}
+input: sEN {0 : 0}
+input: sD_IN {0 : 0}
+input: dCLK {0 : 0}
+output: dD_OUT {0 : 0}
+module :  SyncFIFO
+parameter: dataWidth 1
+parameter: depth 2
+parameter: indxWidth 1
+parameter: regFull 1
+parameter: regEmpty 1
+input: sCLK {0 : 0}
+input: sRST {0 : 0}
+input: sENQ {0 : 0}
+input: sD_IN {dataWidth -1  :  0}
+output: sFULL_N {0 : 0}
+input: dCLK {0 : 0}
+input: dDEQ {0 : 0}
+output: dEMPTY_N {0 : 0}
+output: dD_OUT {dataWidth -1  :  0}
+module :  SyncFIFOLevel
+parameter: dataWidth 1
+parameter: depth 2
+parameter: indxWidth 1
+parameter: init 0
+input: sCLK {0 : 0}
+input: sRST {0 : 0}
+input: sENQ {0 : 0}
+input: sD_IN {dataWidth -1  :  0}
+output: sFULL_N {0 : 0}
+input: dCLK {0 : 0}
+input: dDEQ {0 : 0}
+output: dEMPTY_N {0 : 0}
+output: dD_OUT {dataWidth -1  :  0}
+output: dCOUNT {indxWidth  :  0}
+output: sCOUNT {indxWidth  :  0}
+input: sCLR {0 : 0}
+output: sCLR_RDY {0 : 0}
+input: dCLR {0 : 0}
+output: dCLR_RDY {0 : 0}
+module :  SyncHandshake
+parameter: init 1'b0
+input: sCLK {0 : 0}
+input: sRST {0 : 0}
+input: sEN {0 : 0}
+output: sRDY {0 : 0}
+input: dCLK {0 : 0}
+output: dPulse {0 : 0}
+module :  SyncPulse
+input: sCLK {0 : 0}
+input: sRST {0 : 0}
+input: sEN {0 : 0}
+input: dCLK {0 : 0}
+output: dPulse {0 : 0}
+module :  SyncRegister
+parameter: width 1
+parameter: init { width {1'b0 }}
+input: sCLK {0 : 0}
+input: sRST {0 : 0}
+input: sEN {0 : 0}
+input: sD_IN {width -1  :  0}
+output: sRDY {0 : 0}
+input: dCLK {0 : 0}
+output: dD_OUT {width -1  :  0}
+module :  SyncReset 
+parameter: RSTDELAY 1
+input: CLK {0 : 0}
+input: IN_RST {0 : 0}
+output: OUT_RST {0 : 0}
+module :  SyncReset0 
+input: IN_RST {0 : 0}
+output: OUT_RST {0 : 0}
+module :  SyncResetA 
+parameter: RSTDELAY 1
+input: CLK {0 : 0}
+input: IN_RST {0 : 0}
+output: OUT_RST {0 : 0}
+module :  SyncWire
+parameter: width 1
+input: DIN {width - 1  :  0}
+output: DOUT {width - 1  :  0}
+module :  TriState   
+parameter: width 1
+input: OE {0 : 0}
+input: I {width-1 : 0}
+output: O {width-1 : 0}
+inout: IO {width-1 : 0}
+module :  UngatedClockMux
+input: CLK {0 : 0}
+input: SELECT {0 : 0}
+input: SELECT_ENABLE {0 : 0}
+input: A_CLK {0 : 0}
+input: B_CLK {0 : 0}
+output: CLK_OUT {0 : 0}
+module :  UngatedClockSelect
+parameter: RSTDELAY 2
+input: CLK {0 : 0}
+input: RST {0 : 0}
+input: SELECT {0 : 0}
+input: SELECT_ENABLE {0 : 0}
+input: A_CLK {0 : 0}
+input: B_CLK {0 : 0}
+output: CLK_OUT {0 : 0}
+output: OUT_RST {0 : 0}
+module :  WhitespaceTest
+input: In1 {3 : 0}
+output: Out1 {4 : 1}
+input: In2 {5 : 0}
+output: Out2 {6 : 1}
+input: In3 {7 : 0}
+output: Out3 {8 : 1}
+module :  main

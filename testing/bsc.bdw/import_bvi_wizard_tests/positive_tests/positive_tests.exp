@@ -1,0 +1,21 @@
+set here [file join [absolute $srcdir] $subdir]
+source $here/../../bdw.tcl
+
+if { [info exists env(DISPLAY)] && $env(DISPLAY) != "" } {
+
+# Check the import BVI wizard
+    bdw_run_compare_pass  import_bvi_wizard_test.tcl "" { -e /Created/d -e /version/d }
+
+# Check the import BVI wizard
+bdw_run_compare_pass  import_bvi_wizard_with_back_action_test.tcl  "" { -e /Created/d -e /version/d }
+
+    # make sure the file compiles
+    compile_pass  import_bvi1.bsv
+    compile_pass  import_bvi2.bsv
+
+
+# Check the scanning of verilog files
+bdw_run_compare_pass read_verilog.tcl
+
+}
+ 

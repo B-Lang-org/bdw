@@ -1,0 +1,18 @@
+set here [file join [absolute $srcdir] $subdir]
+source $here/../../bdw.tcl
+
+if { [info exists env(DISPLAY)] && $env(DISPLAY) != "" } {
+
+# Check the package commands
+bdw_run_compare_pass  package_commands_test.tcl
+
+# Check the type commands
+bdw_run_compare_pass  type_commands_test.tcl
+
+# Check the type commands
+bdw_run_compare_pass  module_commands_test.tcl
+
+# Check the type commands
+bdw_run_compare_pass  schedule_commands_test.tcl
+}
+ 

@@ -1,0 +1,11 @@
+set here [file join [absolute $srcdir] $subdir]
+source $here/../../bdw.tcl
+
+if { [info exists env(DISPLAY)] && $env(DISPLAY) != "" } {
+
+# Checks the new_project command
+bdw_run_compare_pass analysis_commands_test.tcl 
+bdw_run_compare_pass type_commands_test.tcl 
+bdw_run_compare_pass schedule_commands_test.tcl 
+
+}

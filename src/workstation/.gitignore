@@ -1,0 +1,6 @@
+# Ignore generated tcl files
+version_commands.tcl
+
+# Ignore generated tcl indices
+tclIndex
+pkgIndex.tcl

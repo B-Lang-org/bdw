@@ -1,0 +1,48 @@
+Project name is not specified
+The project 'project' already exists.
+Unknown option: -loc
+The option -location has already been specified
+The project name is not specified.
+The file 'project1.bspec' does not exist.
+The 'negative_tests.exp' is not a project file.
+The current project has not been saved.
+The search path is not specified
+Search path entry 'mult5' is not  a directory.
+Search path entry 'negative_tests.exp' is not  a directory.
+The editor name is not specified
+Wrong editor name. 
+The editor name can be  gvim, emacs, other
+Unknown option: -path
+Unknown option: -options
+The top file is not specified
+The compilation type is not specified
+The compilation type should be either make or bsc.
+There is no option specified
+Unknown option: -bluesimmm
+Unknown option: -opt
+Unknown option: -info-di
+The bsc type is not set to 'Verilog'.
+The bsc type is not set to 'Bluesim'.
+There are no arguments specified
+Argument -vdir expects an argument none found
+The option -vdir has already been specified
+Argument -bdir expects an argument none found
+The compilation type is not set to "make"  for the current project.
+The Makefile is not specified
+The file 'wrong_file' does not exist.
+Argument -fullclean expects an argument none found
+Unknown option: -targett
+The option -target has already been specified
+The link type is not specified
+The link type should be bsc, make, custom_command.
+The output file name for linking is not specified.
+Unknown option: -wrong
+can't create directory "subdir/wrong": permission denied
+The link type is not set to "make"  for the current project.
+The link type is not set to "bsc"  for the current project.
+The makefile for the link is not specified
+The file 'mmm' does not exist.
+Unknown option: -tget
+Argument -target expects an argument none found
+The link type is not set to "custom_comand"  for the current project.
+The custom command for the link is not specified

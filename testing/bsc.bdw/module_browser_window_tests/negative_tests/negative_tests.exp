@@ -1,0 +1,10 @@
+set here [file join [absolute $srcdir] $subdir]
+source $here/../../bdw.tcl
+
+if { [info exists env(DISPLAY)] && $env(DISPLAY) != "" } {
+
+# Checks the Module menu functionality
+bdw_run_compare_pass module_menu_test.tcl
+
+}
+ 

@@ -1,0 +1,10 @@
+module mkMult2;
+input CLK {0 : 0} clock;
+input RST {0 : 0} reset;
+input start_m1 {15 : 0} none;
+input start_m2 {15 : 0} none;
+input EN_start {0 : 0} none;
+input EN_result {0 : 0} none;
+output RDY_start {0 : 0} none;
+output result {31 : 0} none;
+output RDY_result {0 : 0} none;

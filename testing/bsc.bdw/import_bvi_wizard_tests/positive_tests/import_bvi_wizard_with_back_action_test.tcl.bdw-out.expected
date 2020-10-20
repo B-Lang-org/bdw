@@ -1,0 +1,74 @@
+// Bluespec wrapper, created by Import BVI Wizard
+// Created on: Fri Feb 27 16:43:51 AMT 2009
+// Created by: employee
+// Bluespec version: 2008.11.C 2008-11-24 15480
+
+
+interface Ifc_test;
+	(*always_ready*)
+	method Action istart_m1 (Bit#(16) start_m1);
+	(*always_ready*)
+	method Action istart_m2 (Bit#(16) start_m2);
+	method Action iEN_start ();
+	method Action iEN_result ();
+	method Bool oRDY_start ();
+	method Bit#(32) oresult ();
+	method Bool oRDY_result ();
+endinterface
+
+import "BVI" mkMult2 =
+module module_test  (Ifc_test);
+
+	default_clock clk_CLK;
+	default_reset rst_RST;
+
+	input_clock clk_CLK (CLK)  <- exposeCurrentClock;
+	input_reset rst_RST (RST) clocked_by(clk_CLK)  <- exposeCurrentReset;
+
+
+	method istart_m1 (start_m1 /*15:0*/)
+		 enable((*inhigh*)istart_m1_enable) clocked_by(clk_CLK) reset_by(rst_RST);
+	method istart_m2 (start_m2 /*15:0*/)
+		 enable((*inhigh*)istart_m2_enable) clocked_by(clk_CLK) reset_by(rst_RST);
+	method iEN_start ()
+		 enable(EN_start) clocked_by(clk_CLK) reset_by(rst_RST);
+	method iEN_result ()
+		 enable(EN_result) clocked_by(clk_CLK) reset_by(rst_RST);
+	method RDY_start oRDY_start ()
+		 clocked_by(clk_CLK) reset_by(rst_RST);
+	method result /* 31 : 0 */ oresult ()
+		 clocked_by(clk_CLK) reset_by(rst_RST);
+	method RDY_result oRDY_result ()
+		 clocked_by(clk_CLK) reset_by(rst_RST);
+
+	schedule istart_m1 C istart_m1;
+	schedule istart_m1 CF istart_m2;
+	schedule istart_m1 CF iEN_start;
+	schedule istart_m1 CF iEN_result;
+	schedule oRDY_start SB istart_m1;
+	schedule oresult SB istart_m1;
+	schedule oRDY_result SB istart_m1;
+	schedule istart_m2 C istart_m2;
+	schedule istart_m2 CF iEN_start;
+	schedule istart_m2 CF iEN_result;
+	schedule oRDY_start SB istart_m2;
+	schedule oresult SB istart_m2;
+	schedule oRDY_result SB istart_m2;
+	schedule iEN_start C iEN_start;
+	schedule iEN_start CF iEN_result;
+	schedule oRDY_start SB iEN_start;
+	schedule oresult SB iEN_start;
+	schedule oRDY_result SB iEN_start;
+	schedule iEN_result C iEN_result;
+	schedule oRDY_start SB iEN_result;
+	schedule oresult SB iEN_result;
+	schedule oRDY_result SB iEN_result;
+	schedule oRDY_start CF oRDY_start;
+	schedule oRDY_start CF oresult;
+	schedule oRDY_start CF oRDY_result;
+	schedule oresult CF oresult;
+	schedule oresult CF oRDY_result;
+	schedule oRDY_result CF oRDY_result;
+endmodule
+
+

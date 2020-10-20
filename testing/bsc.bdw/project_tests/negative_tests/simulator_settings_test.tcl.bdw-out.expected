@@ -1,0 +1,9 @@
+There is no open project
+The simulation results directory is not specified
+The file mult3 is not a directory.
+The file negative_tests.exp is not a directory.
+The simulator is not specified
+Current version does not support the simulator 'simulator'
+Argument -path expects an argument none found
+Unknown option: -paths
+The file ddd doesn't exist.
