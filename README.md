@@ -56,6 +56,29 @@ BDW can also export a project as a Makefile.
 
 ---
 
+## Community
+
+To receive announcements about BDW and related projects, subscribe to
+[b-lang-announce@groups.io](https://groups.io/g/b-lang-announce).
+
+For questions and discussion about BSC/Bluetcl source, subscribe to the
+developers' mailing list [bsc-dev@groups.io](https://groups.io/g/bsc-dev).
+
+For any questions or discussion about Bluespec HDLs, using BDW or BSC, or
+related projects, subscribe to [b-lang-discuss@groups.io](https://groups.io/g/b-lang-discuss).
+
+IRC users might try joining the `#bluespec` channel on [FreeNode](https://freenode.net).
+
+There's also a [bluespec](https://stackoverflow.com/questions/tagged/bluespec)
+tag on StackOverflow.
+
+And we've enabled the [Discussions](https://github.com/B-Lang-org/bsc/discussions)
+tab in this GitHub repo.
+This is a new feature to support discussion within the project itself.
+Feel free to give it a try and see if it can be useful to our community.
+
+---
+
 ## Requirements
 
 * [BSC] installation (with `bluetcl` in the user's `PATH`)
