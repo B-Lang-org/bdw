@@ -27,8 +27,8 @@ install: tclIndex
 	install -m644 tclIndex $(TCLFILES) $(TARGETDIR)
 
 
-.PHONY: clean realclean	
-realclean: clean
+.PHONY: clean full_clean	
+full_clean: clean
 
 clean:
 	rm -f pkgIndex.tcl tclIndex

@@ -84,7 +84,7 @@ install:
 	install -d -m755 $(TARGETDIR)
 	install -m644 $(IMAGEFILES) $(TARGETDIR)
 
-.PHONY: clean realclean
-realclean: clean
+.PHONY: clean full_clean
+full_clean: clean
 
 clean:

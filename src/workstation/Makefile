@@ -114,8 +114,8 @@ TAGS: *.tcl
 tags: *.tcl
 	ctags $+
 
-.PHONY: clean realclean clean-tix
-clean realclean: clean-tix
+.PHONY: clean full_clean clean-tix
+clean full_clean: clean-tix
 	@rm -rf tclIndex pkgIndex.tcl version_commands.tcl logs help TAGS tags
 
 clean-tix:

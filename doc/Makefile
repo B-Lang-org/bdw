@@ -30,14 +30,14 @@ INCLUDES = \
 	version.tex \
 	bluetcl.tex \
 
-.PHONY: doc clean realclean
+.PHONY: doc clean full_clean
 
 doc:	$(DOC).pdf
 
 clean:
 	${RM} -f *.dvi *.ps *.pdf figures/*.pdf
 
-realclean: clean
+full_clean: clean
 	${RM} -f *.log *.aux *.blg *.bbl *.toc *.out *.idx *.ind *.ilg user_guide.cdx user_guide.cnd
 
 $(DOC).dvi: $(DOC).tex

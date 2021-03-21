@@ -15,7 +15,7 @@ install:
 	install -d -m755 $(TARGETDIR)
 	install -m755 fixvcd.pl $(TARGETDIR)/fixvcd
 
-.PHONY: clean realclean
-realclean: clean
+.PHONY: clean full_clean
+full_clean: clean
 
 clean:

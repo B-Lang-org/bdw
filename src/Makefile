@@ -9,8 +9,8 @@ all: install
 $(PREFIX):
 	mkdir -p $@
 
-.PHONY: install clean realclean
-install clean realclean: $(PREFIX)
+.PHONY: install clean full_clean
+install clean full_clean: $(PREFIX)
 	make -C emacs          PREFIX=$(PREFIX) $@
 	make -C exec           PREFIX=$(PREFIX) $@
 	make -C gvim           PREFIX=$(PREFIX) $@
