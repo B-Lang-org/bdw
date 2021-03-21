@@ -19,7 +19,7 @@ install:
 TAGS: */*.tcl
 	ctags -R -e
 
-.PHONY: clean realclean
-realclean clean:
+.PHONY: clean full_clean
+full_clean clean:
 	rm -f TAGS
 	make -C etc $@

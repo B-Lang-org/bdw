@@ -21,7 +21,7 @@ install:
 .PHONY: TAGS
 TAGS: ../TAGS
 
-.PHONY: clean realclean
-realclean: clean
+.PHONY: clean full_clean
+full_clean: clean
 
 clean:

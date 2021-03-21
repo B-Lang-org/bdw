@@ -24,6 +24,6 @@ install:
 		$(MAKE) -C $(dir) LIBDIR=$(abspath $(TARGETDIR)/$(dir)) $@ ; )
 
 
-.PHONY: clean realclean
-clean realclean:
+.PHONY: clean full_clean
+clean full_clean:
 

@@ -101,7 +101,7 @@ For viewing scheduling graphs visually:
 
 You can install with:
 
-    $ make
+    $ make install
 
 And then you can run with:
 
@@ -112,10 +112,9 @@ And then you can run with:
 ## Documenation
 
 The `doc` directory contains a User Guide written in LaTeX.
-You can build `user_guide.pdf` with:
+You can build and install the `user_guide.pdf` with:
 
-    $ cd doc/
-    $ make
+    $ make install-doc
 
 This requires LaTex tools, such as `pdflatex`.
 

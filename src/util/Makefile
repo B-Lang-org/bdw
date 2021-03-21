@@ -58,8 +58,8 @@ TAGS:
 	make -C .. TAGS
 	ln -s ../TAGS
 
-.PHONY: clean realclean
-realclean: clean
+.PHONY: clean full_clean
+full_clean: clean
 	-rm -f TAGS
 
 clean:

@@ -19,6 +19,6 @@ install:
 	$(INSTALL) -m 644 $(FILES) $(LIBDIR)
 
 
-.PHONY: clean realclean
-clean realclean:
+.PHONY: clean full_clean
+clean full_clean:
 
