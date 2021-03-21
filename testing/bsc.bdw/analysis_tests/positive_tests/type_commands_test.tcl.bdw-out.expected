@@ -276,7 +276,7 @@ WARNING:     "farm2_ifc_end_server_3" cannot fire before "farm2_ifc_end_server_2
 WARNING:       calls to farm2_ifc_cbuff_buff.upd vs. farm2_ifc_cbuff_buff.upd
 RESULT: Elaborated module file created: mult4/mkMult4Tb.ba
 RESULT: All packages are up to date.
-Mult4 CompletionBuffer GetPut Connectable Vector RegFile Mult2 Mult1 Mult ListN Clocks Array List Inout FIFO FIFOF FIFOF_ Counter ConfigReg PreludeBSV Prelude
+Mult4 CompletionBuffer GetPut Connectable ListN Vector RegFile Mult2 Mult1 Mult Clocks Array List Inout FIFO FIFOF FIFOF_ Counter ConfigReg PreludeBSV Prelude
 Tin
 
 Tout

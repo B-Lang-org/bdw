@@ -278,5 +278,5 @@ RESULT: Elaborated module file created: mult4/mkMult4Tb.ba
 RESULT: All packages are up to date.
 mkMult2 mkMult1 mkMult4Tb
 mkMult2 mkMult1 mkMult4Tb
-Mult4Tb RandGen Mult4 LFSR CompletionBuffer GetPut Connectable Vector RegFile Mult2 Mult1 Mult ListN Clocks Array List Inout FIFO FIFOF FIFOF_ Counter ConfigReg PreludeBSV Prelude
+Mult4Tb RandGen Mult4 CompletionBuffer GetPut Connectable ListN LFSR Vector RegFile Mult2 Mult1 Mult Clocks Array List Inout FIFO FIFOF FIFOF_ Counter ConfigReg PreludeBSV Prelude
 mkMult2 mkMult1 mkMult4Tb
