@@ -183,7 +183,7 @@ jobs:
 
           export BDW=$PWD/../../bdw/inst/bin/bdw
 
-          make -C bsc.bdw check
+          xvfb-run -a make -C bsc.bdw check
 
       # Show ccache stats so we can see what the hit-rate is like.
       - name: CCache stats
@@ -275,6 +275,7 @@ jobs:
 
           export BDW=$PWD/../../bdw/inst/bin/bdw
 
+          # Without a DISPLAY, this doesn't run all tests
           make -C bsc.bdw check
 
       # Show ccache stats so we can see what the hit-rate is like.
