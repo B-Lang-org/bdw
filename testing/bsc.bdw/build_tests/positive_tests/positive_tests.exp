@@ -19,15 +19,18 @@ bdw_run_compare_pass compile_via_verilog_test.tcl
  
 # Check the link command
 bdw_run_compare_pass link_via_bluesim_test.tcl 
- 
-# The sed filter is to work around a bug in iverilog 0.8.5 in the upcoming two
-# tests
+
+# iverilog 10.1 has spurious warnings
+set ere {}
+if { $verilog_compiler == "iverilog" && $verilog_compiler_version == "10.1" } {
+    append ere { -e {/inherits dimensions from var/d}}
+}
 
 # Check the link command
-bdw_run_compare_pass link_via_verilog_test.tcl "" {-e /\\.v:\[0-9\]*:\ warning:\ reg\ .*\ is\ used\ by\ logic\ but\ never\ assigned\\.$/d}
+bdw_run_compare_pass link_via_verilog_test.tcl "" $ere
  
 # Check the simulate command
-bdw_run_compare_pass simulate_via_verilog_test.tcl "" {-e /\\.v:\[0-9\]*:\ warning:\ reg\ .*\ is\ used\ by\ logic\ but\ never\ assigned\\.$/d}
+bdw_run_compare_pass simulate_via_verilog_test.tcl "" $ere
  
 # Check the simulate command
 bdw_run_compare_pass simulate_via_bluesim_test.tcl
