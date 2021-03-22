@@ -15,7 +15,8 @@ apt-get install -y \
     tcsh \
     dejagnu \
     iverilog \
-    $ITK_PKG
+    $ITK_PKG \
+    xvfb
 
 REL=$(lsb_release -rs | tr -d .)
 if [ $REL -ge 1804 ]; then
