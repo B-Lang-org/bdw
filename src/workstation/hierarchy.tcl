@@ -400,32 +400,48 @@ itcl::body hierarchy::set_bindings {} {
     bind $itk_component(hull) <Prior> \
             [itcl::code $this yview scroll -1 page]
 
-    bind $itk_component(hull) <KP_Right> \
+    catch {
+        bind $itk_component(hull) <KP_Right> \
             [itcl::code $this arrow_move right]
+    }
 
-    bind $itk_component(hull) <KP_Left> \
+    catch {
+        bind $itk_component(hull) <KP_Left> \
             [itcl::code $this arrow_move left]
+    }
 
-    bind $itk_component(hull) <KP_Down> \
+    catch {
+        bind $itk_component(hull) <KP_Down> \
             [itcl::code $this arrow_move down]
+    }
 
-    bind $itk_component(hull) <KP_Up> \
+    catch {
+        bind $itk_component(hull) <KP_Up> \
             [itcl::code $this arrow_move up]
+    }
 
-    bind $itk_component(hull) <KP_Next> \
+    catch {
+        bind $itk_component(hull) <KP_Next> \
             [itcl::code $this yview scroll 1 page]
-    bind $itk_component(hull) <KP_Prior> \
+    }
+    catch {
+        bind $itk_component(hull) <KP_Prior> \
             [itcl::code $this yview scroll -1 page]
+    }
 
     bind $itk_component(hull) <Home> \
             [itcl::code $this yview 0]
     bind $itk_component(hull) <End> \
             [itcl::code $this yview end]
 
-    bind $itk_component(hull) <KP_Home> \
+    catch {
+        bind $itk_component(hull) <KP_Home> \
             [itcl::code $this yview 0]
-    bind $itk_component(hull) <KP_End> \
+    }
+    catch {
+        bind $itk_component(hull) <KP_End> \
             [itcl::code $this yview end]
+    }
 
 }
 
