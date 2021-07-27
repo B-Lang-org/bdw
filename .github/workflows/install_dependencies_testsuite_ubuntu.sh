@@ -12,13 +12,9 @@ ITK_PKG=itk3
 apt-get install -y \
     ccache \
     build-essential \
+    lld \
     tcsh \
     dejagnu \
     iverilog \
     $ITK_PKG \
     xvfb
-
-REL=$(lsb_release -rs | tr -d .)
-if [ $REL -ge 1804 ]; then
-    apt-get install -y lld
-fi
