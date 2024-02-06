@@ -12,7 +12,7 @@ jobs:
     name: "Build ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Download bsc
         uses: B-Lang-org/download-bsc@v1
@@ -27,7 +27,7 @@ jobs:
           tar czf inst.tar.gz inst
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.os }} build
           path: inst.tar.gz
@@ -39,7 +39,7 @@ jobs:
     name: "Build ${{ matrix.os }}"
     runs-on: ${{ matrix. os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Download bsc
         uses: B-Lang-org/download-bsc@v1
@@ -54,7 +54,7 @@ jobs:
           tar czf inst.tar.gz inst
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.os }} build
           path: inst.tar.gz
@@ -66,7 +66,7 @@ jobs:
     name: "Build doc: ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install dependencies
         shell: bash
@@ -76,7 +76,7 @@ jobs:
           make install-doc
           tar czf inst.tar.gz inst
       - name: Upload artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.os }} build doc
           path: inst.tar.gz
@@ -88,7 +88,7 @@ jobs:
     name: "Build doc: ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install dependencies
         shell: bash
@@ -101,7 +101,7 @@ jobs:
           make install-doc
           tar czf inst.tar.gz inst
       - name: Upload artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.os }} build doc
           path: inst.tar.gz
@@ -115,7 +115,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     needs: build-ubuntu
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install dependencies
         shell: bash
@@ -140,7 +140,7 @@ jobs:
           cp -r testing/bsc.bdw ../bsc-testsuite/testsuite/
 
       - name: Download bdw
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ matrix.os }} build
       - name: Install bdw
@@ -150,7 +150,7 @@ jobs:
       # in the key so that a new cache file is generated after every
       # successful build, and have the restore-key use the most recent.
       - name: CCache cache files
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ GITHUB.WORKSPACE }}/ccache
           key: ${{ matrix.os }}-ccache-${{ github.sha }}
@@ -202,7 +202,7 @@ jobs:
       # Save test logs on failure so we can diagnose
       - name: Archive test logs
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-logs-${{ matrix.os }}
           path: logs.tar.gz
@@ -215,7 +215,7 @@ jobs:
     runs-on: ${{ matrix. os }}
     needs: build-macos
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install dependencies
         shell: bash
@@ -240,7 +240,7 @@ jobs:
           cp -r testing/bsc.bdw ../bsc-testsuite/testsuite/
 
       - name: Download bdw
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ matrix.os }} build
       - name: Install bdw
@@ -250,7 +250,7 @@ jobs:
       # in the key so that a new cache file is generated after every
       # successful build, and have the restore-key use the most recent.
       - name: CCache cache files
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ GITHUB.WORKSPACE }}/ccache
           key: ${{ matrix.os }}-ccache-${{ github.sha }}
@@ -298,7 +298,7 @@ jobs:
       # Save test logs on failure so we can diagnose
       - name: Archive test logs
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-logs-${{ matrix.os }}
           path: logs.tar.gz
