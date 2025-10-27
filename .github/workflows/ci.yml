@@ -7,12 +7,12 @@ jobs:
   build-ubuntu:
     strategy:
       matrix:
-        os: [ ubuntu-20.04, ubuntu-22.04, ubuntu-24.04 ]
+        os: [ ubuntu-22.04, ubuntu-24.04 ]
       fail-fast: false
     name: "Build ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Download bsc
         uses: B-Lang-org/download-bsc@v1
@@ -35,12 +35,12 @@ jobs:
   build-macOS:
     strategy:
       matrix:
-        os: [ macos-13, macos-14, macos-15 ]
+        os: [ macos-14, macos-15, macos-15-intel, macos-26 ]
       fail-fast: false
     name: "Build ${{ matrix.os }}"
     runs-on: ${{ matrix. os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Download bsc
         uses: B-Lang-org/download-bsc@v1
@@ -63,12 +63,12 @@ jobs:
   build-doc-ubuntu:
     strategy:
       matrix:
-        os: [ ubuntu-20.04, ubuntu-22.04, ubuntu-24.04 ]
+        os: [ ubuntu-22.04, ubuntu-24.04 ]
       fail-fast: false
     name: "Build doc: ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install dependencies
         shell: bash
@@ -86,12 +86,12 @@ jobs:
   build-doc-macOS:
     strategy:
       matrix:
-        os: [ macos-13, macos-14, macos-15 ]
+        os: [ macos-14, macos-15, macos-15-intel, macos-26 ]
       fail-fast: false
     name: "Build doc: ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install dependencies
         shell: bash
@@ -112,13 +112,13 @@ jobs:
   test-ubuntu:
     strategy:
       matrix:
-        os: [ ubuntu-20.04, ubuntu-22.04, ubuntu-24.04 ]
+        os: [ ubuntu-22.04, ubuntu-24.04 ]
       fail-fast: false
     name: "Test ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
     needs: build-ubuntu
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install dependencies
         shell: bash
@@ -143,7 +143,7 @@ jobs:
           cp -r testing/bsc.bdw ../bsc-testsuite/testsuite/
 
       - name: Download bdw
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: ${{ matrix.os }} build
       - name: Install bdw
@@ -213,13 +213,13 @@ jobs:
   test-macOS:
     strategy:
       matrix:
-        os: [ macos-13, macos-14, macos-15 ]
+        os: [ macos-14, macos-15, macos-15-intel, macos-26 ]
       fail-fast: false
     name: "Test ${{ matrix.os }}"
     runs-on: ${{ matrix. os }}
     needs: build-macos
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install dependencies
         shell: bash
@@ -244,7 +244,7 @@ jobs:
           cp -r testing/bsc.bdw ../bsc-testsuite/testsuite/
 
       - name: Download bdw
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: ${{ matrix.os }} build
       - name: Install bdw
