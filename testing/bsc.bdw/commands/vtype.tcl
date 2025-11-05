@@ -1,3 +1,9 @@
+# This script does not currently work with Bluespec Haskell syntax
+# so turn that off for now.
+if {[info command Bluetcl::syntax] ne ""} {
+    Bluetcl::syntax set bsv
+}
+
 ## ------------------------------
 ## Tests for virtual object type representations
 
@@ -26,6 +32,7 @@ proc testCmdS { args }  {
     puts "---------"
     return $err
 }
+
 
 testCmd Bluetcl::bpackage load Test ClientServer
 
