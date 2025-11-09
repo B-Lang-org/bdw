@@ -1,15 +1,9 @@
-proc bluetcl_run_compare_pass_sed_wrapper { source sedfilter } {
+proc bluetcl_run_bsv_compare_pass_wrapper { source {expected ""} {sedfilter ""} } {
 
-    set num_args [llength [info args bluetcl_run_compare_pass]]
-
-    # Be compatible with testsuite code both before and after the
-    #  introduction of Bluespec Haskell syntax for bluetcl.
-    if { $num_args == 4 } {
-	bluetcl_run_compare_pass $source "" "" $sedfilter
-    } elseif { $num_args == 3 } {
-	bluetcl_run_compare_pass $source "" $sedfilter
-    } else {
-	perror "Can't handle bluetcl_run_compare_pass that takes $num_args arguments."
+    if {[llength [info procs bluetcl_run_bsv_compare_pass]] > 0} {
+	bluetcl_run_bsv_compare_pass $source $expected $sedfilter
+    } else { # bsc testsuite does not support bluetcl with BH syntax yet
+	bluetcl_run_compare_pass $source $expected $sedfilter
     }
 }
 
@@ -44,14 +38,14 @@ lappend env(BLUETCLLIBPATH) $bdwdir/tcllib/util
 
 # -------------------------
 
-bluetcl_run_compare_pass_sed_wrapper vtype.tcl $sedPosition
+bluetcl_run_bsv_compare_pass_wrapper vtype.tcl "" $sedPosition
 
 # -------------------------
 
 # Test virtual objects
 proc virtual_subset {suffix} {
     upvar sedPosition sedP
-    bluetcl_run_compare_pass_sed_wrapper virtual_$suffix.tcl $sedP
+    bluetcl_run_bsv_compare_pass_wrapper virtual_$suffix.tcl "" $sedP
     compare_file $suffix.GtkWaveScript.bits.dump
     compare_file $suffix.GtkWaveScript.typed.dump
     compare_file $suffix.NovasRC.bits.dump

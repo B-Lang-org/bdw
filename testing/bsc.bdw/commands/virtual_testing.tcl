@@ -1,13 +1,6 @@
 package require Virtual
 package require Waves
 namespace import ::Virtual::*
-
-# This script may not currently work with Bluespec Haskell syntax
-# so turn that off for now.
-if {[info command Bluetcl::syntax] ne ""} {
-    Bluetcl::syntax set bsv
-}
-
 proc inst_test_one_method {path object args} {
     puts "$path . $args = [$object {*}$args]"
 }
