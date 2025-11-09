@@ -1,0 +1,36 @@
+Test Vector Array List PreludeBSV Prelude
+
+Sz
+Alias {(Test.Sz :: #)} 9 {position {Test.bsv 7 11}}
+
+T a b
+Alias {(Test.T :: * -> * -> *) a b} {(t2, t1)} {position {Test.bsv 9 22}}
+Alias {(Test.T :: * -> * -> *) a b} {(Prelude.Int 32, Prelude.Bit 1)} {position {Test.bsv 9 22}}
+
+Bar
+Enum {(Test.Bar :: *)} {members {Red Yellow Blue}} {width 2} {position {Test.bsv 11 36}}
+
+Baz t n
+Struct {(Test.Baz :: * -> # -> *) t n} polymorphic {members {{Prelude.Bool f1 {width 1}} {{Prelude.Bit sz} f2} {{Vector.Vector sz x} v}}} {position {Test.bsv 16 18}}
+Struct {(Test.Baz :: * -> # -> *) t n} {members {{Prelude.Bool f1 {width 1}} {{Prelude.Bit 2} f2 {width 2}} {{Vector.Vector 2 Prelude.Bool} v {width 2}}}} {position {Test.bsv 16 18}}
+
+TopIFC a
+Interface {(Test.TopIFC :: * -> *) a} polymorphic {members {{method {Prelude.Bool f {ty ty} {{{-# arg_names = [x, y] #-}}}}} {interface Prelude.Clock clk_out {}} {interface Prelude.Reset rst_out {}} {method {Prelude.Bool g ty {{{-# arg_names = [z] #-}}}}} {interface {Test.SubIFC ty} s {}}}} {position {Test.bsv 18 11}}
+Interface {(Test.TopIFC :: * -> *) a} {members {{method {Prelude.Bool f {{Prelude.Bit 8} {Prelude.Bit 8}} {{{-# arg_names = [x, y] #-}}}}} {interface Prelude.Clock clk_out {}} {interface Prelude.Reset rst_out {}} {method {Prelude.Bool g {{Prelude.Bit 8}} {{{-# arg_names = [z] #-}}}}} {interface {Test.SubIFC (Prelude.Bit 8)} s {}}}} {position {Test.bsv 18 11}}
+
+SubIFC a
+Interface {(Test.SubIFC :: * -> *) a} polymorphic {members {{interface {Prelude.Reg ty} r {}}}} {position {Test.bsv 26 11}}
+Interface {(Test.SubIFC :: * -> *) a} {members {{interface {Prelude.Reg (Prelude.Bit 8)} r {}}}} {position {Test.bsv 26 11}}
+
+U a
+TaggedUnion {(Test.U :: * -> *) a} polymorphic {members {{() F1 {width 0}} {t F2} {{Prelude.List t} F3} {{Prelude.Bool -> Prelude.Bool} F4}}} {position {Test.bsv 35 3}}
+TaggedUnion {(Test.U :: * -> *) a} {members {{() F1 {width 0}} {Prelude.Bool F2 {width 1}} {{Prelude.List Prelude.Bool} F3} {{Prelude.Bool -> Prelude.Bool} F4}}} {position {Test.bsv 35 3}}
+
+U2 a
+TaggedUnion {(Test.U :: * -> *) a} polymorphic {members {{() F1 {width 0}} {t F2} {{Prelude.List t} F3} {{Prelude.Bool -> Prelude.Bool} F4}}} {position {Test.bsv 35 3}}
+TaggedUnion {(Test.U :: * -> *) a} {members {{() F1 {width 0}} {{Prelude.Bit 1} F2 {width 1}} {{Prelude.List (Prelude.Bit 1)} F3} {{Prelude.Bool -> Prelude.Bool} F4}}} {position {Test.bsv 35 3}}
+
+Foo a
+Interface {(Test.Foo :: * -> *) a} polymorphic {members {{method {{Prelude.ActionValue ()} wset x {{{-# arg_names = [x1] #-}}}}} {method {x wget {} {{{-# arg_names = [] #-}}}}} {method {Prelude.Bool whas {} {{{-# arg_names = [] #-}}}}}}} {position {Test.bsv 43 11}}
+Interface {(Test.Foo :: * -> *) a} {members {{method {{Prelude.ActionValue ()} wset {{Prelude.Int 32}} {{{-# arg_names = [x1] #-}}}}} {method {{Prelude.Int 32} wget {} {{{-# arg_names = [] #-}}}}} {method {Prelude.Bool whas {} {{{-# arg_names = [] #-}}}}}}} {position {Test.bsv 43 11}}
+
