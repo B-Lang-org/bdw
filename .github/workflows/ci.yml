@@ -7,7 +7,7 @@ jobs:
   build-ubuntu:
     strategy:
       matrix:
-        os: [ ubuntu-22.04, ubuntu-24.04 ]
+        os: [ ubuntu-22.04, ubuntu-24.04, ubuntu-24.04-arm, ubuntu-26.04, ubuntu-26.04-arm ]
       fail-fast: false
     name: "Build ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
@@ -35,7 +35,7 @@ jobs:
   build-macOS:
     strategy:
       matrix:
-        os: [ macos-14, macos-15, macos-15-intel, macos-26 ]
+        os: [ macos-15, macos-15-intel, macos-26, macos-26-intel ]
       fail-fast: false
     name: "Build ${{ matrix.os }}"
     runs-on: ${{ matrix. os }}
@@ -63,7 +63,7 @@ jobs:
   build-doc-ubuntu:
     strategy:
       matrix:
-        os: [ ubuntu-22.04, ubuntu-24.04 ]
+        os: [ ubuntu-22.04, ubuntu-24.04, ubuntu-24.04-arm, ubuntu-26.04, ubuntu-26.04-arm ]
       fail-fast: false
     name: "Build doc: ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
@@ -86,7 +86,14 @@ jobs:
   build-doc-macOS:
     strategy:
       matrix:
-        os: [ macos-14, macos-15, macos-15-intel, macos-26 ]
+        os: [ macos-15, macos-26 ]
+        brew_update: [ true ]
+        include:
+          # Homebrew no longer supports x86_64 macOS, so installs are slow
+          - os: macos-15-intel
+            brew_update: false
+          - os: macos-26-intel
+            brew_update: false
       fail-fast: false
     name: "Build doc: ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
@@ -95,6 +102,8 @@ jobs:
 
       - name: Install dependencies
         shell: bash
+        env:
+          BREW_UPDATE: ${{ matrix.brew_update }}
         run: ".github/workflows/install_dependencies_doc_macos.sh"
       - name: Build
         run: |
@@ -112,7 +121,7 @@ jobs:
   test-ubuntu:
     strategy:
       matrix:
-        os: [ ubuntu-22.04, ubuntu-24.04 ]
+        os: [ ubuntu-22.04, ubuntu-24.04, ubuntu-24.04-arm, ubuntu-26.04, ubuntu-26.04-arm ]
       fail-fast: false
     name: "Test ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
@@ -213,7 +222,14 @@ jobs:
   test-macOS:
     strategy:
       matrix:
-        os: [ macos-14, macos-15, macos-15-intel, macos-26 ]
+        os: [ macos-15, macos-26 ]
+        brew_update: [ true ]
+        include:
+          # Homebrew no longer supports x86_64 macOS, so installs are slow
+          - os: macos-15-intel
+            brew_update: false
+          - os: macos-26-intel
+            brew_update: false
       fail-fast: false
     name: "Test ${{ matrix.os }}"
     runs-on: ${{ matrix. os }}
@@ -223,6 +239,8 @@ jobs:
 
       - name: Install dependencies
         shell: bash
+        env:
+          BREW_UPDATE: ${{ matrix.brew_update }}
         run: ".github/workflows/install_dependencies_testsuite_macos.sh"
 
       # Can this be cached from the previous job?
